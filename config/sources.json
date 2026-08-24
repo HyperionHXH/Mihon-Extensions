@@ -1,0 +1,15 @@
+{
+  "upstream": {
+    "name": "Keiyoushi",
+    "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
+    "expectedSigningKey": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
+    "website": "https://keiyoushi.github.io"
+  },
+  "custom": {
+    "sourceInfo": "config/ehentai-source-info.json",
+    "apk": "apk/tachiyomi-en.ehentai-v1.6.15.apk",
+    "jar": "jar/tachiyomi-en.ehentai-v1.6.15.jar",
+    "icon": "icon-eu.kanade.tachiyomi.extension.en.ehentai.png",
+    "repositoryBaseUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo"
+  }
+}
