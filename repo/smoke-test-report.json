@@ -2,14 +2,14 @@
   "date": "2026-08-24",
   "repositoryUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
   "localIndexExtensions": 1388,
-  "remoteIndexExtensions": 1386,
+  "remoteIndexExtensions": 1388,
   "remoteApkUrls": {
-    "checked": 1386,
-    "reachable": 1386,
+    "checked": 1388,
+    "reachable": 1388,
     "failed": 0
   },
   "githubActions": {
-    "runId": 32723927110,
+    "runId": 32736391253,
     "conclusion": "success"
   },
   "suwayomi": {
