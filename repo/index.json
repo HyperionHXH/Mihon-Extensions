@@ -2218,6 +2218,26 @@
         ]
       },
       {
+        "name": "BaoziManhuaPlus",
+        "packageName": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.baozimanhuaplus-v1.4.2.apk",
+          "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.baozimanhuaplus.png"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "2",
+        "versionName": "1.4.2",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "4654438345013653772",
+            "name": "包子漫画+",
+            "language": "zh",
+            "homeUrl": "https://www.baozimh.com/"
+          }
+        ]
+      },
+      {
         "name": "BarManga",
         "packageName": "eu.kanade.tachiyomi.extension.es.barmanga",
         "resources": {
@@ -4425,6 +4445,26 @@
             "name": "Coomer",
             "language": "all",
             "homeUrl": "https://coomer.st"
+          }
+        ]
+      },
+      {
+        "name": "CopyManga",
+        "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.copymanga-v1.4.83.apk",
+          "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.copymanga.png"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "83",
+        "versionName": "1.4.83",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "6696312508930833206",
+            "name": "拷贝漫画",
+            "language": "zh",
+            "homeUrl": "https://www.mangacopy.com"
           }
         ]
       },
@@ -9161,6 +9201,48 @@
         ]
       },
       {
+        "name": "Hentai20",
+        "packageName": "eu.kanade.tachiyomi.extension.en.hentai20",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-repo@repo/apk/tachiyomi-en.hentai20-v1.4.42.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-extensions@master/src/en/hentai20/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://raw.githubusercontent.com/yuzono/cursed-manga-repo/repo/jar/tachiyomi-en.hentai20-v1.4.42.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "42",
+        "versionName": "1.4.42",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "7114409483685920616",
+            "name": "Hentai20",
+            "language": "en",
+            "homeUrl": "https://hentai20.io"
+          }
+        ]
+      },
+      {
+        "name": "Hentai2Read",
+        "packageName": "eu.kanade.tachiyomi.extension.en.hentai2read",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-repo@repo/apk/tachiyomi-en.hentai2read-v1.4.19.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-extensions@master/src/en/hentai2read/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://raw.githubusercontent.com/yuzono/cursed-manga-repo/repo/jar/tachiyomi-en.hentai2read-v1.4.19.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "19",
+        "versionName": "1.4.19",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "8314925449740051373",
+            "name": "Hentai2Read",
+            "language": "en",
+            "homeUrl": "https://hentai2read.com"
+          }
+        ]
+      },
+      {
         "name": "Hentai3z.CC",
         "packageName": "eu.kanade.tachiyomi.extension.en.hentai3zcc",
         "resources": {
@@ -10300,6 +10382,177 @@
             "name": "HistoireDHentai",
             "language": "fr",
             "homeUrl": "https://hhentai.fr"
+          }
+        ]
+      },
+      {
+        "name": "Hitomi",
+        "packageName": "eu.kanade.tachiyomi.extension.all.hitomi",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-repo@repo/apk/tachiyomi-all.hitomi-v1.4.41.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-extensions@master/src/all/hitomi/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://raw.githubusercontent.com/yuzono/cursed-manga-repo/repo/jar/tachiyomi-all.hitomi-v1.4.41.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "41",
+        "versionName": "1.4.41",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "690123758188633713",
+            "name": "Hitomi",
+            "language": "all",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "8758194323514078879",
+            "name": "Hitomi",
+            "language": "en",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "1151065481637272954",
+            "name": "Hitomi",
+            "language": "id",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "6508906416202704914",
+            "name": "Hitomi",
+            "language": "jv",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "6511868096744396893",
+            "name": "Hitomi",
+            "language": "ca",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "4174246577531268343",
+            "name": "Hitomi",
+            "language": "ceb",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "6252839110189358321",
+            "name": "Hitomi",
+            "language": "cs",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "846229581721942637",
+            "name": "Hitomi",
+            "language": "da",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "3527959698638681794",
+            "name": "Hitomi",
+            "language": "de",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "3137387913459348191",
+            "name": "Hitomi",
+            "language": "et",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "4675241818028365305",
+            "name": "Hitomi",
+            "language": "es",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "2806629479137588090",
+            "name": "Hitomi",
+            "language": "eo",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "2485667029890093714",
+            "name": "Hitomi",
+            "language": "fr",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "6889006204051558344",
+            "name": "Hitomi",
+            "language": "it",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "1934919967422980093",
+            "name": "Hitomi",
+            "language": "hi",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "5925216506653833737",
+            "name": "Hitomi",
+            "language": "hu",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "721961972020678864",
+            "name": "Hitomi",
+            "language": "pl",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "5342308195627947507",
+            "name": "Hitomi",
+            "language": "pt",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "3818599797217502124",
+            "name": "Hitomi",
+            "language": "vi",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "5379755699214980223",
+            "name": "Hitomi",
+            "language": "tr",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "3909280091773603050",
+            "name": "Hitomi",
+            "language": "ru",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "4074034220834832549",
+            "name": "Hitomi",
+            "language": "uk",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "6776904750010591906",
+            "name": "Hitomi",
+            "language": "ar",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "9053782715781498920",
+            "name": "Hitomi",
+            "language": "ko",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "1859528116737393976",
+            "name": "Hitomi",
+            "language": "zh",
+            "homeUrl": "https://hitomi.la"
+          },
+          {
+            "id": "7152495211541141858",
+            "name": "Hitomi",
+            "language": "ja",
+            "homeUrl": "https://hitomi.la"
           }
         ]
       },
@@ -11863,6 +12116,38 @@
             "name": "Kappa Beast",
             "language": "en",
             "homeUrl": "https://kappabeast.com"
+          }
+        ]
+      },
+      {
+        "name": "Kavita",
+        "packageName": "eu.kanade.tachiyomi.extension.all.kavita",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo/apk/tachiyomi-all.kavita-v1.4.24.apk",
+          "iconUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo/icon/eu.kanade.tachiyomi.extension.all.kavita.png"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "24",
+        "versionName": "1.4.24",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "7266875667263635239",
+            "name": "Kavita (1)",
+            "language": "all",
+            "homeUrl": ""
+          },
+          {
+            "id": "3764816291200082561",
+            "name": "Kavita (2)",
+            "language": "all",
+            "homeUrl": ""
+          },
+          {
+            "id": "778637366235559582",
+            "name": "Kavita (3)",
+            "language": "all",
+            "homeUrl": ""
           }
         ]
       },
@@ -20405,6 +20690,26 @@
         ]
       },
       {
+        "name": "ManwaYuPlus",
+        "packageName": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.manwayuplus-v1.4.5.apk",
+          "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.manwayuplus.png"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "5",
+        "versionName": "1.4.5",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "1506592945012434101",
+            "name": "漫蛙2+",
+            "language": "zh",
+            "homeUrl": "https://www.manwali.cc"
+          }
+        ]
+      },
+      {
         "name": "Marmota",
         "packageName": "eu.kanade.tachiyomi.extension.es.marmota",
         "resources": {
@@ -22428,6 +22733,45 @@
             "name": "NhatTruyen",
             "language": "vi",
             "homeUrl": "https://nhattruyenqq.com"
+          }
+        ]
+      },
+      {
+        "name": "NHentai",
+        "packageName": "eu.kanade.tachiyomi.extension.all.nhentai",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-repo@repo/apk/tachiyomi-all.nhentai-v1.4.62.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-extensions@master/src/all/nhentai/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://raw.githubusercontent.com/yuzono/cursed-manga-repo/repo/jar/tachiyomi-all.nhentai-v1.4.62.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "62",
+        "versionName": "1.4.62",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "7309872737163460316",
+            "name": "NHentai",
+            "language": "all",
+            "homeUrl": "https://nhentai.net"
+          },
+          {
+            "id": "3122156392225024195",
+            "name": "NHentai",
+            "language": "en",
+            "homeUrl": "https://nhentai.net"
+          },
+          {
+            "id": "4726175775739752699",
+            "name": "NHentai",
+            "language": "ja",
+            "homeUrl": "https://nhentai.net"
+          },
+          {
+            "id": "2203215402871965477",
+            "name": "NHentai",
+            "language": "zh",
+            "homeUrl": "https://nhentai.net"
           }
         ]
       },
@@ -25238,6 +25582,39 @@
             "name": "PureSkill",
             "language": "uk",
             "homeUrl": "https://pure-skill.pages.dev"
+          }
+        ]
+      },
+      {
+        "name": "Pururin",
+        "packageName": "eu.kanade.tachiyomi.extension.all.pururin",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-repo@repo/apk/tachiyomi-all.pururin-v1.4.11.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/yuzono/cursed-manga-extensions@master/src/all/pururin/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://raw.githubusercontent.com/yuzono/cursed-manga-repo/repo/jar/tachiyomi-all.pururin-v1.4.11.jar"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "11",
+        "versionName": "1.4.11",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "4326152278746463981",
+            "name": "Pururin",
+            "language": "all",
+            "homeUrl": "https://pururin.me"
+          },
+          {
+            "id": "2221515250486218861",
+            "name": "Pururin",
+            "language": "en",
+            "homeUrl": "https://pururin.me"
+          },
+          {
+            "id": "995946880114959182",
+            "name": "Pururin",
+            "language": "ja",
+            "homeUrl": "https://pururin.me"
           }
         ]
       },
@@ -28689,6 +29066,26 @@
             "name": "Sushiscan.fr",
             "language": "fr",
             "homeUrl": "https://sushiscan.fr"
+          }
+        ]
+      },
+      {
+        "name": "Suwayomi",
+        "packageName": "eu.kanade.tachiyomi.extension.all.tachidesk",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/apk/tachiyomi-all.tachidesk-v1.4.28.apk",
+          "iconUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/icon/eu.kanade.tachiyomi.extension.all.tachidesk.png"
+        },
+        "extensionLib": "1.4",
+        "versionCode": "28",
+        "versionName": "1.4.28",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "3100117499901280806",
+            "name": "Suwayomi",
+            "language": "all",
+            "homeUrl": ""
           }
         ]
       },

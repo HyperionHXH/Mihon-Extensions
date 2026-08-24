@@ -1,0 +1,93 @@
+{
+  "fetched": 1392,
+  "included": 1386,
+  "repositories": [
+    {
+      "name": "Keiyoushi",
+      "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
+      "fetched": 1375,
+      "included": 1375
+    },
+    {
+      "name": "Fucked by FAKKU",
+      "indexUrl": "https://raw.githubusercontent.com/mojuru/cursed-manga-repo/repo/index.json",
+      "fetched": 6,
+      "included": 5
+    },
+    {
+      "name": "CopyManga Copy20",
+      "indexUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/index.min.json",
+      "fetched": 4,
+      "included": 3
+    },
+    {
+      "name": "Kavita",
+      "indexUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo/index.min.json",
+      "fetched": 1,
+      "included": 1
+    },
+    {
+      "name": "Suwayomi",
+      "indexUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/index.min.json",
+      "fetched": 1,
+      "included": 1
+    },
+    {
+      "name": "Tachiyomi archive",
+      "indexUrl": "https://raw.githubusercontent.com/tachiyomiorg/extensions/repo/index.min.json",
+      "fetched": 4,
+      "included": 0
+    }
+  ],
+  "customIncluded": 1,
+  "duplicatesExcluded": [
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.vomicmh",
+      "repository": "CopyManga Copy20",
+      "reason": "duplicate site; kept Keiyoushi eu.kanade.tachiyomi.extension.zh.vomic"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.ehentai",
+      "repository": "Fucked by FAKKU",
+      "reason": "duplicate source id; kept Hyperion E-Hentai eu.kanade.tachiyomi.extension.en.ehentai"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.kavita",
+      "repository": "Tachiyomi archive",
+      "reason": "duplicate package; kept Kavita 1.4.24"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.komga",
+      "repository": "Tachiyomi archive",
+      "reason": "duplicate package; kept Keiyoushi 1.6.69"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.lanraragi",
+      "repository": "Tachiyomi archive",
+      "reason": "duplicate package; kept Keiyoushi 1.4.25"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.tachidesk",
+      "repository": "Tachiyomi archive",
+      "reason": "duplicate package; kept Suwayomi 1.4.28"
+    }
+  ],
+  "repositoriesExcluded": [
+    {
+      "name": "Zosetsu",
+      "reason": "Published index URL returns HTTP 404"
+    },
+    {
+      "name": "Yuzono manga-repo",
+      "reason": "Repository now contains only migration placeholders"
+    },
+    {
+      "name": "Mihonyomi Komga",
+      "reason": "Same package is already newer in Keiyoushi"
+    },
+    {
+      "name": "stevenyomi CopyManga",
+      "reason": "Same package is older than copymanga-copy20"
+    }
+  ]
+}

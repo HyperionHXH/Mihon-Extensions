@@ -1,10 +1,64 @@
 {
-  "upstream": {
-    "name": "Keiyoushi",
-    "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-    "expectedSigningKey": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
-    "website": "https://keiyoushi.github.io"
-  },
+  "repositories": [
+    {
+      "name": "Keiyoushi",
+      "format": "modern",
+      "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
+      "expectedSigningKey": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
+      "website": "https://keiyoushi.github.io",
+      "priority": 100
+    },
+    {
+      "name": "Fucked by FAKKU",
+      "format": "modern",
+      "indexUrl": "https://raw.githubusercontent.com/mojuru/cursed-manga-repo/repo/index.json",
+      "expectedSigningKey": "a5e2027162d4b7294d54fd069af923eee4078cc097765d3a0d84a747d3a8356e",
+      "website": "https://github.com/mojuru/cursed-manga-repo",
+      "priority": 80
+    },
+    {
+      "name": "CopyManga Copy20",
+      "format": "legacy",
+      "indexUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/index.min.json",
+      "assetBaseUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo",
+      "iconBaseUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon",
+      "website": "https://github.com/LittleSurvival/copymanga-copy20",
+      "priority": 90
+    },
+    {
+      "name": "Kavita",
+      "format": "legacy",
+      "indexUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo/index.min.json",
+      "assetBaseUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo",
+      "iconBaseUrl": "https://raw.githubusercontent.com/Kareadita/tach-extension/repo/icon",
+      "website": "https://github.com/Kareadita/tach-extension",
+      "priority": 90
+    },
+    {
+      "name": "Suwayomi",
+      "format": "legacy",
+      "indexUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/index.min.json",
+      "assetBaseUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo",
+      "iconBaseUrl": "https://raw.githubusercontent.com/Suwayomi/tachiyomi-extension/repo/icon",
+      "website": "https://github.com/Suwayomi/tachiyomi-extension",
+      "priority": 90
+    },
+    {
+      "name": "Tachiyomi archive",
+      "format": "legacy",
+      "indexUrl": "https://raw.githubusercontent.com/tachiyomiorg/extensions/repo/index.min.json",
+      "assetBaseUrl": "https://raw.githubusercontent.com/tachiyomiorg/extensions/repo",
+      "iconBaseUrl": "https://raw.githubusercontent.com/tachiyomiorg/extensions/repo/icon",
+      "website": "https://github.com/tachiyomiorg/extensions",
+      "priority": 10
+    }
+  ],
+  "excludedRepositories": [
+    {"name": "Zosetsu", "reason": "Published index URL returns HTTP 404"},
+    {"name": "Yuzono manga-repo", "reason": "Repository now contains only migration placeholders"},
+    {"name": "Mihonyomi Komga", "reason": "Same package is already newer in Keiyoushi"},
+    {"name": "stevenyomi CopyManga", "reason": "Same package is older than copymanga-copy20"}
+  ],
   "custom": {
     "sourceInfo": "config/ehentai-source-info.json",
     "apk": "apk/tachiyomi-en.ehentai-v1.6.15.apk",

@@ -24,12 +24,12 @@ jobs:
       - name: Rebuild and validate index
         run: |
           python tools/build_index.py
-          python tools/validate_index.py
+          python tools/validate_index.py --check-urls --url-report repo/url-report.json
 
       - name: Commit refreshed index
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add repo/index.json repo/index.min.json repo/repo.json repo/checksums.json
+          git add repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/url-report.json
           git diff --cached --quiet || git commit -m "Refresh extension index"
           git push

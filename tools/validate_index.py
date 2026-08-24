@@ -4,21 +4,43 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import json
 import re
 import sys
+import time
 import urllib.request
 from pathlib import Path
 from urllib.parse import urlparse
 
 
 PACKAGE = re.compile(r"^[a-zA-Z][a-zA-Z0-9_]*(?:\.[a-zA-Z][a-zA-Z0-9_]*)+$")
+USER_AGENT = "HyperionHXH-Mihon-Extensions/1.0"
+
+
+def check_url(item: tuple[str, str]) -> tuple[str, str, str]:
+    package_name, url = item
+    last_error = ""
+    for attempt in range(2):
+        request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                if response.status < 400:
+                    return package_name, url, "ok"
+                last_error = f"HTTP {response.status}"
+        except Exception as error:  # noqa: BLE001 - every network failure belongs in the report
+            last_error = str(error)
+        if attempt == 0:
+            time.sleep(0.5)
+    return package_name, url, last_error
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("index", type=Path, nargs="?", default=Path("repo/index.json"))
     parser.add_argument("--check-urls", action="store_true")
+    parser.add_argument("--workers", type=int, default=24)
+    parser.add_argument("--url-report", type=Path)
     args = parser.parse_args()
     document = json.loads(args.index.read_text(encoding="utf-8"))
     extensions = document["extensionList"]["extensions"]
@@ -40,15 +62,22 @@ def main() -> int:
         if int(extension.get("versionCode", 0)) < 1:
             errors.append(f"invalid versionCode: {package_name}")
     if args.check_urls:
-        for extension in extensions:
-            url = extension["resources"]["apkUrl"]
-            request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "HyperionHXH-Mihon-Extensions/1.0"})
-            try:
-                with urllib.request.urlopen(request, timeout=20) as response:
-                    if response.status >= 400:
-                        errors.append(f"{response.status} {url}")
-            except Exception as error:  # noqa: BLE001 - report all broken upstream URLs
-                errors.append(f"unreachable {url}: {error}")
+        work = [(extension["packageName"], extension["resources"]["apkUrl"]) for extension in extensions]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:
+            results = list(executor.map(check_url, work))
+        failures = [
+            {"packageName": package_name, "url": url, "error": status}
+            for package_name, url, status in results
+            if status != "ok"
+        ]
+        if args.url_report:
+            args.url_report.parent.mkdir(parents=True, exist_ok=True)
+            args.url_report.write_text(json.dumps({
+                "checked": len(results),
+                "reachable": len(results) - len(failures),
+                "failed": failures,
+            }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        errors.extend(f"unreachable {item['packageName']}: {item['error']} {item['url']}" for item in failures)
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1

@@ -13,6 +13,16 @@
 - Package: `eu.kanade.tachiyomi.extension.en.ehentai`
 - The local APK/JAR are built from the source repository above. Account cookies and login values are never stored here.
 
+## Additional repositories
+
+- Removed adult sources: <https://github.com/mojuru/cursed-manga-repo>
+- Chinese CopyManga and related sources: <https://github.com/LittleSurvival/copymanga-copy20>
+- Kavita: <https://github.com/Kareadita/tach-extension>
+- Suwayomi connector: <https://github.com/Suwayomi/tachiyomi-extension>
+- Archived Tachiyomi metadata, used only when no maintained replacement exists: <https://github.com/tachiyomiorg/extensions>
+
+The generated `repo/build-report.json` records how many entries were fetched and retained from each repository. Zosetsu is currently excluded because its published index returns HTTP 404. The old Yuzono manga index is excluded because it only contains migration placeholders.
+
 ## Scope
 
-Only entries present in the configured upstream index are published. A source can disappear when its upstream maintainer removes it or when validation fails. This is intentional: the repository does not redistribute abandoned or unlicensed binaries merely to increase its count.
+Only entries present in configured, attributable indexes are published. A source can disappear when its upstream maintainer removes it or when validation fails. The repository does not redistribute unknown binaries merely to increase its count.
