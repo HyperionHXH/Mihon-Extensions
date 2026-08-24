@@ -1,6 +1,6 @@
 # Hyperion Mihon Extensions
 
-独立的 Mihon / Suwayomi 漫画扩展聚合索引。它汇集当前仍可获取的主流仓库，并额外维护 E-Hentai / ExHentai。上游 APK 保留原下载地址和签名，不重新打包。
+独立的 Mihon / Suwayomi 漫画扩展聚合索引。它汇集当前仍可获取的主流仓库，并额外维护 E-Hentai / ExHentai 与经验证可用的历史来源。上游 APK 保留原下载地址和签名，不重新打包。
 
 ## 添加到 Mihon / Suwayomi
 
@@ -22,9 +22,9 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。
 - 按包名、源 ID 和跨仓库站点地址去重；同一上游仓库明确并存的不同实现会保留。
-- 当前构建共包含 1,386 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
+- 当前构建共包含 1,388 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
 - 上游 APK/JAR 不复制、不改签，下载仍来自上游 Release。
-- E-Hentai APK/JAR 和图标放在 `repo/`，方便离线保存和直接验证。
+- 自维护扩展的 APK/JAR 和图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
 - GitHub Actions 每周刷新索引，并检查包名、版本号、源信息、重复项和所有 APK 下载地址。
 - 已失效、只剩迁移占位符、来源不明或存在更新版本的仓库会排除并记录原因。
 
@@ -35,6 +35,7 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 - GitHub Actions 已成功完成一次完整的远程刷新和校验。
 - 远程索引包含 1,386 个扩展，1,386 个 APK 下载地址全部可达。
 - CopyManga `1.4.83` 已在 Suwayomi 中从本仓库安装，热门列表、详情、章节、30 页页面列表、封面和正文图片均通过烟测。
+- Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
 
 ## 本地构建和校验
@@ -47,7 +48,7 @@ python tools/validate_index.py
 python tools/validate_index.py --check-urls --url-report repo/url-report.json
 ```
 
-构建脚本会拒绝上游签名指纹变化，避免把错误或被替换的索引静默发布。更新 E-Hentai APK/JAR 时，同时更新 `config/ehentai-source-info.json` 和 `config/sources.json` 中的文件名，再运行上述命令。
+构建脚本会拒绝上游签名指纹变化，避免把错误或被替换的索引静默发布。更新自维护扩展时，同时更新对应的 `config/*-source-info.json` 和 `config/sources.json` 中的文件名，再运行上述命令。
 
 ## 许可和归属
 

@@ -13,6 +13,13 @@
 - Package: `eu.kanade.tachiyomi.extension.en.ehentai`
 - The local APK/JAR are built from the source repository above. Account cookies and login values are never stored here.
 
+## Super Hentais
+
+- Maintained source code: <https://github.com/HyperionHXH/E-extensions/tree/main/src/pt/superhentais>
+- Historical implementation: <https://github.com/kevin01523/tachiyomi-extensions/tree/c6278d246/src/pt/supermangas>
+- Package: `eu.kanade.tachiyomi.extension.pt.superhentais`
+- The source keeps the historical source ID and was migrated to the current KeiSource API. The APK, JAR and icon are built locally from the maintained source.
+
 ## Additional repositories
 
 - Removed adult sources: <https://github.com/mojuru/cursed-manga-repo>

@@ -1,6 +1,7 @@
 {
   "date": "2026-08-24",
   "repositoryUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
+  "localIndexExtensions": 1388,
   "remoteIndexExtensions": 1386,
   "remoteApkUrls": {
     "checked": 1386,
@@ -29,6 +30,41 @@
       "firstChapterPages": 30,
       "thumbnail": {"status": 200, "contentType": "image/jpeg", "bytes": 50356},
       "firstPage": {"status": 200, "contentType": "image/jpeg", "bytes": 294888}
+    },
+    "superHentais": {
+      "extension": {
+        "name": "Super Hentais",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.superhentais",
+        "versionName": "1.6.1",
+        "installed": true,
+        "format": "jar"
+      },
+      "source": {
+        "id": "6434607482102119984",
+        "popularPage1Entries": 24,
+        "popularPage2Entries": 24,
+        "latestEntries": 24,
+        "textSearch": "Otomedori",
+        "textSearchEntries": 1,
+        "unreadableVideoResultsFiltered": true,
+        "filters": {
+          "contentType": true,
+          "initialLetter": true,
+          "status": true,
+          "censure": true,
+          "sort": true,
+          "includedTag": {"tag": "Vanilla", "results": 9, "verified": 9},
+          "excludedTag": {"tag": "Gore", "resultsChecked": 24, "verified": 24},
+          "allTags": {"tags": ["Vanilla", "Romance"], "results": 3, "verified": 3},
+          "anyTagsHasNextPage": true
+        },
+        "mangaDetailsLoaded": true,
+        "longMangaChapters": 37,
+        "longMangaLastChapterPages": 10,
+        "thumbnails": {"checked": 3, "status200": 3},
+        "otomedoriPages": {"checked": 33, "status200": 33},
+        "longMangaLastChapterImages": {"checked": 2, "status200": 2}
+      }
     }
   }
 }

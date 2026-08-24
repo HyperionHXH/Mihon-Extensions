@@ -1,12 +1,12 @@
 {
-  "fetched": 1392,
-  "included": 1386,
+  "fetched": 1394,
+  "included": 1388,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1375,
-      "included": 1375
+      "fetched": 1376,
+      "included": 1376
     },
     {
       "name": "Fucked by FAKKU",
@@ -39,7 +39,10 @@
       "included": 0
     }
   ],
-  "customIncluded": 1,
+  "customIncluded": {
+    "Hyperion E-Hentai": 1,
+    "Hyperion Recovered Sources": 1
+  },
   "duplicatesExcluded": [
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.vomicmh",

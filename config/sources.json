@@ -60,10 +60,22 @@
     {"name": "stevenyomi CopyManga", "reason": "Same package is older than copymanga-copy20"}
   ],
   "custom": {
-    "sourceInfo": "config/ehentai-source-info.json",
-    "apk": "apk/tachiyomi-en.ehentai-v1.6.15.apk",
-    "jar": "jar/tachiyomi-en.ehentai-v1.6.15.jar",
-    "icon": "icon-eu.kanade.tachiyomi.extension.en.ehentai.png",
-    "repositoryBaseUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo"
+    "repositoryBaseUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo",
+    "extensions": [
+      {
+        "repository": "Hyperion E-Hentai",
+        "sourceInfo": "config/ehentai-source-info.json",
+        "apk": "apk/tachiyomi-en.ehentai-v1.6.15.apk",
+        "jar": "jar/tachiyomi-en.ehentai-v1.6.15.jar",
+        "icon": "icon-eu.kanade.tachiyomi.extension.en.ehentai.png"
+      },
+      {
+        "repository": "Hyperion Recovered Sources",
+        "sourceInfo": "config/superhentais-source-info.json",
+        "apk": "apk/tachiyomi-pt.superhentais-v1.6.1.apk",
+        "jar": "jar/tachiyomi-pt.superhentais-v1.6.1.jar",
+        "icon": "icon-eu.kanade.tachiyomi.extension.pt.superhentais.png"
+      }
+    ]
   }
 }

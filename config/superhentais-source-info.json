@@ -1,0 +1,18 @@
+{
+  "module": "pt.superhentais",
+  "theme": null,
+  "packageName": "eu.kanade.tachiyomi.extension.pt.superhentais",
+  "name": "Super Hentais",
+  "versionCode": 1,
+  "versionName": "1.6.1",
+  "extensionLib": "1.6",
+  "contentWarning": 3,
+  "sources": [
+    {
+      "id": 6434607482102119984,
+      "name": "Super Hentais",
+      "lang": "pt-BR",
+      "baseUrl": "https://superhentais.com"
+    }
+  ]
+}

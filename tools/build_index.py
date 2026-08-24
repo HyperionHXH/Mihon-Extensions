@@ -70,7 +70,7 @@ def local_extension(info: dict[str, Any], custom: dict[str, Any], base_url: str)
         "versionName": info["versionName"],
         "contentWarning": "CONTENT_WARNING_NSFW" if info["contentWarning"] == 3 else "CONTENT_WARNING_MIXED",
         "sources": sources,
-        "_repository": "Hyperion E-Hentai",
+        "_repository": custom["repository"],
         "_priority": 1000,
     }
 
@@ -221,13 +221,14 @@ def main() -> int:
     config = read_json(args.config)
     custom = config["custom"]
     output = args.output
-    source_info_path = Path(custom["sourceInfo"])
-    if not source_info_path.is_absolute():
-        source_info_path = Path(__file__).resolve().parents[1] / source_info_path
-    info = read_json(source_info_path)
     base_url = (args.base_url or custom["repositoryBaseUrl"]).rstrip("/")
 
-    candidates = [local_extension(info, custom, base_url)]
+    candidates = []
+    for extension in custom["extensions"]:
+        source_info_path = Path(extension["sourceInfo"])
+        if not source_info_path.is_absolute():
+            source_info_path = Path(__file__).resolve().parents[1] / source_info_path
+        candidates.append(local_extension(read_json(source_info_path), extension, base_url))
     repository_report: list[dict[str, Any]] = []
     signing_key = ""
     for repository in config["repositories"]:
@@ -276,16 +277,20 @@ def main() -> int:
 
     checksums: dict[str, str] = {}
     project_root = Path(__file__).resolve().parents[1]
-    for relative in (custom["apk"], custom["jar"], custom["icon"]):
-        path = project_root / "repo" / relative
-        if path.is_file():
-            checksums[relative] = sha256(path)
+    for extension in custom["extensions"]:
+        for relative in (extension["apk"], extension["jar"], extension["icon"]):
+            path = project_root / "repo" / relative
+            if path.is_file():
+                checksums[relative] = sha256(path)
     (output / "checksums.json").write_text(json.dumps(checksums, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     report = {
         "fetched": len(candidates),
         "included": len(merged),
         "repositories": repository_report,
-        "customIncluded": included_counts.get("Hyperion E-Hentai", 0),
+        "customIncluded": {
+            extension["repository"]: included_counts.get(extension["repository"], 0)
+            for extension in custom["extensions"]
+        },
         "duplicatesExcluded": duplicate_report,
         "repositoriesExcluded": config.get("excludedRepositories", []),
     }
