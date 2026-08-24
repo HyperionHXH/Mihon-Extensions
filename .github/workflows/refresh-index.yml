@@ -1,6 +1,16 @@
 name: Refresh extension index
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/refresh-index.yml"
+      - "config/**"
+      - "repo/apk/**"
+      - "repo/jar/**"
+      - "repo/icon-*"
+      - "tools/**"
   workflow_dispatch:
   schedule:
     - cron: "17 3 * * 1"
