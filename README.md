@@ -30,6 +30,13 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 下载可达不等同于漫画网站始终可用。Cloudflare、登录权限、地区限制和站点改版都可能影响搜索、章节或图片加载；这些问题需要按具体源持续维护，不能仅靠索引检查证明。
 
+## 验证状态
+
+- GitHub Actions 已成功完成一次完整的远程刷新和校验。
+- 远程索引包含 1,386 个扩展，1,386 个 APK 下载地址全部可达。
+- CopyManga `1.4.83` 已在 Suwayomi 中从本仓库安装，热门列表、详情、章节、30 页页面列表、封面和正文图片均通过烟测。
+- 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
+
 ## 本地构建和校验
 
 需要 Python 3.11+，不需要第三方依赖：

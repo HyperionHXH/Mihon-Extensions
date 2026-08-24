@@ -1,0 +1,34 @@
+{
+  "date": "2026-08-24",
+  "repositoryUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
+  "remoteIndexExtensions": 1386,
+  "remoteApkUrls": {
+    "checked": 1386,
+    "reachable": 1386,
+    "failed": 0
+  },
+  "githubActions": {
+    "runId": 32723927110,
+    "conclusion": "success"
+  },
+  "suwayomi": {
+    "storeAdded": true,
+    "storeFormat": "modern",
+    "extension": {
+      "name": "CopyManga",
+      "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
+      "versionName": "1.4.83",
+      "installed": true
+    },
+    "source": {
+      "id": "6696312508930833206",
+      "name": "拷贝漫画",
+      "popularEntries": 21,
+      "mangaDetailsLoaded": true,
+      "chaptersLoaded": 14,
+      "firstChapterPages": 30,
+      "thumbnail": {"status": 200, "contentType": "image/jpeg", "bytes": 50356},
+      "firstPage": {"status": 200, "contentType": "image/jpeg", "bytes": 294888}
+    }
+  }
+}
