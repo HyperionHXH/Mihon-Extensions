@@ -26,6 +26,7 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 - 上游 APK/JAR 不复制、不改签，下载仍来自上游 Release。
 - 自维护扩展的 APK/JAR 和图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
 - GitHub Actions 每周刷新索引，并检查包名、版本号、源信息、重复项和所有 APK 下载地址。
+- 所有推送和拉取请求都会扫描常见凭据格式；工作流依赖固定到审核过的提交 SHA。
 - 已失效、只剩迁移占位符、来源不明或存在更新版本的仓库会排除并记录原因。
 
 下载可达不等同于漫画网站始终可用。Cloudflare、登录权限、地区限制和站点改版都可能影响搜索、章节或图片加载；这些问题需要按具体源持续维护，不能仅靠索引检查证明。

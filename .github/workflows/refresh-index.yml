@@ -15,26 +15,71 @@ on:
   schedule:
     - cron: "17 3 * * 1"
 
-permissions:
-  contents: write
+permissions: {}
+
+concurrency:
+  group: extension-index
+  cancel-in-progress: false
 
 jobs:
-  refresh:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
+
+      - name: Scan tracked files
+        run: python tools/security_scan.py
 
       - name: Rebuild and validate index
         run: |
           python tools/build_index.py
           python tools/validate_index.py --check-urls --url-report repo/url-report.json
+
+      - name: Prepare verified index bundle
+        run: |
+          mkdir index-bundle
+          cp repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/url-report.json index-bundle/
+          (cd index-bundle && sha256sum *.json > sha256sums.txt)
+
+      - name: Upload verified index bundle
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: extension-index
+          path: index-bundle
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository for publishing
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Download index bundle
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: extension-index
+          path: index-bundle
+
+      - name: Verify and install index bundle
+        run: |
+          (cd index-bundle && sha256sum -c sha256sums.txt)
+          cp index-bundle/*.json repo/
 
       - name: Commit refreshed index
         run: |
