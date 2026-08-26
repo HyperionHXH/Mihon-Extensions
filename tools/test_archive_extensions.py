@@ -1,6 +1,7 @@
 import importlib.util
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from unittest import mock
 
@@ -146,6 +147,29 @@ class ArchiveExtensionsTest(unittest.TestCase):
             ["3", "2"],
         )
         self.assertEqual(failures, [])
+
+    def test_extract_apk_icon_selects_highest_density_raster(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            apk = root / "extension.apk"
+            with zipfile.ZipFile(apk, "w") as output:
+                output.writestr("res/low.png", b"low")
+                output.writestr("res/high.png", b"high")
+            badging = "\n".join([
+                "application-icon-160:'res/low.png'",
+                "application-icon-640:'res/high.png'",
+            ])
+            with mock.patch.object(archive, "command_output", return_value=badging):
+                path, name, resource = archive.extract_apk_icon(
+                    apk,
+                    root / "output",
+                    "eu.kanade.example",
+                    "aapt",
+                )
+
+            self.assertEqual(path.read_bytes(), b"high")
+            self.assertEqual(name, "eu.kanade.example--icon.png")
+            self.assertEqual(resource, "res/high.png")
 
     @staticmethod
     def extension(version_name, version_code, apk_url):

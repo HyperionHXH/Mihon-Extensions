@@ -14,6 +14,7 @@ import subprocess
 import sys
 import time
 import urllib.request
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -27,6 +28,7 @@ PACKAGE_LINE = re.compile(
 CERT_DIGEST = re.compile(r"SHA-256 digest:\s*([0-9A-Fa-f:]+)")
 SAFE_ASSET = re.compile(r"[^A-Za-z0-9._-]+")
 ICON_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+APK_ICON_LINE = re.compile(r"application-icon-(\d+):'([^']+)'")
 
 
 def read_json(path: Path) -> Any:
@@ -148,6 +150,35 @@ def verify_apk(
     return certificate
 
 
+def extract_apk_icon(
+    apk_path: Path,
+    destination_dir: Path,
+    package_name: str,
+    aapt: str,
+) -> tuple[Path, str, str]:
+    candidates = [
+        (int(density), resource)
+        for density, resource in APK_ICON_LINE.findall(
+            command_output([aapt, "dump", "badging", str(apk_path)]),
+        )
+    ]
+    if not candidates:
+        raise ValueError("APK has no raster launcher icon")
+    _, resource = max(candidates)
+    suffix = Path(resource).suffix.lower()
+    if suffix not in ICON_SUFFIXES - {".svg"}:
+        raise ValueError(f"unsupported APK icon format: {suffix or 'none'}")
+    with zipfile.ZipFile(apk_path) as archive:
+        content = archive.read(resource)
+    if not content or len(content) > 5 * 1024 * 1024:
+        raise ValueError("APK launcher icon has an invalid size")
+    name = f"{sanitize(package_name)}--icon{suffix}"
+    path = destination_dir / name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(content)
+    return path, name, resource
+
+
 def asset_record(path: Path, upstream_url: str, mirror_url: str, name: str) -> dict[str, Any]:
     return {
         "assetName": name,
@@ -258,7 +289,22 @@ def archive_extension(
             uploads.append(icon_path)
         except OSError as error:
             icon_path.unlink(missing_ok=True)
-            failures.append(f"icon: {error}")
+            try:
+                icon_path, icon_name, resource = extract_apk_icon(
+                    apk_path,
+                    asset_dir,
+                    package_name,
+                    aapt,
+                )
+                icon = asset_record(
+                    icon_path,
+                    f"{apk_url}#{resource}",
+                    release_url(repository, tag, icon_name),
+                    icon_name,
+                )
+                uploads.append(icon_path)
+            except (OSError, ValueError, KeyError, zipfile.BadZipFile) as fallback_error:
+                failures.append(f"icon: {error}; APK fallback: {fallback_error}")
 
     snapshot = copy.deepcopy(extension)
     snapshot["resources"]["apkUrl"] = apk["url"]
