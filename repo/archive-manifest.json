@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T05:39:44.240638Z",
+  "generatedAt": "2026-08-26T05:46:32.615047Z",
   "releaseTagPrefix": "extension-archive",
   "releaseShardCount": 4,
   "retentionPerPackage": 2,
@@ -22973,11 +22973,18 @@
       "shard": 3,
       "upstreamPresent": true,
       "selected": true,
+      "icon": {
+        "assetName": "eu.kanade.tachiyomi.extension.zh.manwayuplus--icon.png",
+        "url": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--icon.png",
+        "upstreamUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.manwayuplus-v1.4.5.apk#res/o-.png",
+        "sha256": "8ae34a88b1096ac5a9dffec8ede1987fa4763898f9e130bb279b036d5209da95",
+        "size": 57750
+      },
       "versions": [
         {
           "versionCode": "5",
           "versionName": "1.4.5",
-          "archivedAt": "2026-08-26T05:39:28.401130Z",
+          "archivedAt": "2026-08-26T05:46:32.614416Z",
           "apk": {
             "assetName": "eu.kanade.tachiyomi.extension.zh.manwayuplus--v1.4.5--c5.apk",
             "url": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--v1.4.5--c5.apk",
@@ -22991,7 +22998,7 @@
             "packageName": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
             "resources": {
               "apkUrl": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--v1.4.5--c5.apk",
-              "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.manwayuplus.png"
+              "iconUrl": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--icon.png"
             },
             "extensionLib": "1.4",
             "versionCode": "5",

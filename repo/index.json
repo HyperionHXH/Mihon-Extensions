@@ -20673,7 +20673,7 @@
         "packageName": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
         "resources": {
           "apkUrl": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--v1.4.5--c5.apk",
-          "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.manwayuplus.png"
+          "iconUrl": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.zh.manwayuplus--icon.png"
         },
         "extensionLib": "1.4",
         "versionCode": "5",
