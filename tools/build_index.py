@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import sys
@@ -139,6 +140,61 @@ def public_extension(extension: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in extension.items() if not key.startswith("_")}
 
 
+def same_version(extension: dict[str, Any], version: dict[str, Any]) -> bool:
+    return (
+        str(extension["versionCode"]) == str(version.get("versionCode"))
+        and str(extension["versionName"]) == str(version.get("versionName"))
+    )
+
+
+def apply_archive_manifest(
+    included: list[dict[str, Any]],
+    manifest: dict[str, Any],
+) -> tuple[list[dict[str, Any]], dict[str, int], list[dict[str, str]]]:
+    packages = manifest.get("packages", {})
+    present_packages = {item["packageName"] for item in included}
+    result: list[dict[str, Any]] = []
+    mirrored = 0
+
+    for extension in included:
+        package = packages.get(extension["packageName"])
+        versions = package.get("versions", []) if package else []
+        if versions and same_version(extension, versions[0]):
+            mirrored_extension = copy.deepcopy(extension)
+            archived_resources = versions[0]["extension"]["resources"]
+            for key in ("apkUrl", "jarUrl", "iconUrl"):
+                if archived_resources.get(key):
+                    mirrored_extension["resources"][key] = archived_resources[key]
+            mirrored_extension["_archiveMirrored"] = True
+            result.append(mirrored_extension)
+            mirrored += 1
+        else:
+            result.append(extension)
+
+    fallback_candidates = []
+    for package_name, package in packages.items():
+        if package_name in present_packages or not package.get("versions"):
+            continue
+        fallback = copy.deepcopy(package["versions"][0]["extension"])
+        fallback["_repository"] = "Hyperion Archive"
+        fallback["_priority"] = 5
+        fallback["_archiveRecovered"] = True
+        fallback_candidates.append(fallback)
+
+    archive_duplicates: list[dict[str, str]] = []
+    recovered = 0
+    if fallback_candidates:
+        result, archive_duplicates = deduplicate(result + fallback_candidates)
+        recovered = sum(bool(item.get("_archiveRecovered")) for item in result)
+    report = {
+        "mirrored": mirrored,
+        "recovered": recovered,
+        "retainedPackages": len(packages),
+        "retainedVersions": sum(len(package.get("versions", [])) for package in packages.values()),
+    }
+    return result, report, archive_duplicates
+
+
 def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, str]]]:
     ordered = sorted(
         candidates,
@@ -216,6 +272,8 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=Path("config/sources.json"))
     parser.add_argument("--output", type=Path, default=Path("repo"))
     parser.add_argument("--base-url", help="Override the public repo directory URL")
+    parser.add_argument("--archive-manifest", type=Path, default=Path("repo/archive-manifest.json"))
+    parser.add_argument("--ignore-archive", action="store_true")
     args = parser.parse_args()
 
     config = read_json(args.config)
@@ -245,6 +303,13 @@ def main() -> int:
         raise ValueError("Keiyoushi signing key is unavailable")
 
     included, duplicate_report = deduplicate(candidates)
+    archive_report = {"mirrored": 0, "recovered": 0, "retainedPackages": 0, "retainedVersions": 0}
+    if not args.ignore_archive and args.archive_manifest.is_file():
+        included, archive_report, archive_duplicates = apply_archive_manifest(
+            included,
+            read_json(args.archive_manifest),
+        )
+        duplicate_report.extend(archive_duplicates)
     merged = sorted((public_extension(item) for item in included), key=lambda item: (item["name"].lower(), item["packageName"]))
     included_counts: dict[str, int] = {}
     for item in included:
@@ -293,6 +358,7 @@ def main() -> int:
         },
         "duplicatesExcluded": duplicate_report,
         "repositoriesExcluded": config.get("excludedRepositories", []),
+        "archive": archive_report,
     }
     (output / "build-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"built {len(merged)} extensions from {len(config['repositories'])} repositories; excluded {len(duplicate_report)} duplicates")

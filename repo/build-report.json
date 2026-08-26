@@ -100,5 +100,11 @@
       "name": "LIVID Adult Extensions",
       "reason": "Aniyomi video extensions are not compatible with Mihon manga sources"
     }
-  ]
+  ],
+  "archive": {
+    "mirrored": 0,
+    "recovered": 0,
+    "retainedPackages": 0,
+    "retainedVersions": 0
+  }
 }

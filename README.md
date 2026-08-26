@@ -23,13 +23,20 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。
 - 按包名、源 ID 和跨仓库站点地址去重；同一上游仓库明确并存的不同实现会保留。
 - 当前构建共包含 1,388 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
-- 上游 APK/JAR 不复制、不改签，下载仍来自上游 Release。
+- 成人内容扩展和 CopyManga 会复制到本仓库的四个归档 Release；归档文件不改签，并在上传前校验包名、版本和签名证书。
+- 每个已归档插件保留当前版和上一版。即使上游仓库删除插件，最后归档版本仍会继续出现在本索引中。
 - 自维护扩展的 APK/JAR 和图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
-- GitHub Actions 每周刷新索引，并检查包名、版本号、源信息、重复项和所有 APK 下载地址。
+- GitHub Actions 每周刷新索引和归档，并检查包名、版本号、源信息、重复项和所有 APK 下载地址。
 - 所有推送和拉取请求都会扫描常见凭据格式；工作流依赖固定到审核过的提交 SHA。
 - 已失效、只剩迁移占位符、来源不明或存在更新版本的仓库会排除并记录原因。
 
 下载可达不等同于漫画网站始终可用。Cloudflare、登录权限、地区限制和站点改版都可能影响搜索、章节或图片加载；这些问题需要按具体源持续维护，不能仅靠索引检查证明。
+
+## 归档的代价和限制
+
+归档占用 GitHub Releases 的文件存储和 GitHub Actions 的运行时间，不占用你电脑或手机的空间，除非你实际下载安装插件。APK、可用的 JAR 和图标按包名固定分到 `extension-archive-0` 至 `extension-archive-3`，避免单个 Release 超过 1,000 个资源；Git 仓库历史本身只保存较小的索引和校验清单。
+
+归档解决的是“上游文件被删除后无法安装”，不能自动修复漫画网站接口变更。签名证书发生变化、APK 元数据与索引不一致或下载失败时，自动化不会把该文件收入归档，错误会记录在 `repo/archive-report.json`。如果新版本失败而旧版已经归档，旧版不会被误删。
 
 ## 验证状态
 
