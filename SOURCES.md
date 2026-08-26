@@ -30,6 +30,13 @@
 
 The generated `repo/build-report.json` records how many entries were fetched and retained from each repository. Zosetsu is currently excluded because its published index returns HTTP 404. The old Yuzono manga index is excluded because it only contains migration placeholders.
 
+## Reviewed repository aliases and exclusions
+
+- **TheNano** is the owner/branding used by LittleSurvival. Its `copymanga-copy20` repository is included above.
+- **cofedream** publishes the same `eu.kanade.tachiyomi.extension.zh.copymanga` package at version `1.4.18`. It is excluded because the included TheNano/LittleSurvival build is version `1.4.83`; publishing both would create a package/signature conflict rather than an additional source.
+- **LIVID (18+)** is `livid96/Aniyomi-Adult-Extensions`. Those APKs implement Aniyomi video providers, not Mihon manga sources, so they cannot be loaded by Mihon and are intentionally excluded.
+- **Keiyoushi** is the primary configured repository and is included in full before cross-repository deduplication.
+
 ## Scope
 
 Only entries present in configured, attributable indexes are published. A source can disappear when its upstream maintainer removes it or when validation fails. The repository does not redistribute unknown binaries merely to increase its count.

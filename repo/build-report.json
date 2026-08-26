@@ -91,6 +91,14 @@
     {
       "name": "stevenyomi CopyManga",
       "reason": "Same package is older than copymanga-copy20"
+    },
+    {
+      "name": "cofedream CopyManga",
+      "reason": "Same package is version 1.4.18; TheNano/LittleSurvival copymanga-copy20 is version 1.4.83"
+    },
+    {
+      "name": "LIVID Adult Extensions",
+      "reason": "Aniyomi video extensions are not compatible with Mihon manga sources"
     }
   ]
 }

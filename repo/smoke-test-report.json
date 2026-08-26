@@ -15,6 +15,29 @@
   "suwayomi": {
     "storeAdded": true,
     "storeFormat": "modern",
+    "eHentaiCandidate": {
+      "date": "2026-08-26",
+      "versionName": "1.6.16",
+      "published": false,
+      "note": "Locally tested candidate; publication is waiting for the existing release signing key.",
+      "source": {
+        "id": "57122881048805941",
+        "favoritesEntries": 3,
+        "watchedEntries": 25,
+        "accountTagRules": {"watched": 15, "hidden": 14},
+        "watchedThumbnails": {"rounds": 3, "checked": 75, "status200": 75},
+        "galleryPages": {"rounds": 3, "checked": 60, "status200": 60},
+        "exHentaiMirror": {
+          "popularEntries": 43,
+          "watchedEntries": 25,
+          "favoritesEntries": 3,
+          "thumbnails": {"checked": 25, "status200": 25},
+          "mangaDetailsLoaded": true,
+          "chaptersLoaded": 1,
+          "pages": {"checked": 20, "status200": 20}
+        }
+      }
+    },
     "extension": {
       "name": "CopyManga",
       "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",

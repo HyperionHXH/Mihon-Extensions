@@ -57,7 +57,9 @@
     {"name": "Zosetsu", "reason": "Published index URL returns HTTP 404"},
     {"name": "Yuzono manga-repo", "reason": "Repository now contains only migration placeholders"},
     {"name": "Mihonyomi Komga", "reason": "Same package is already newer in Keiyoushi"},
-    {"name": "stevenyomi CopyManga", "reason": "Same package is older than copymanga-copy20"}
+    {"name": "stevenyomi CopyManga", "reason": "Same package is older than copymanga-copy20"},
+    {"name": "cofedream CopyManga", "reason": "Same package is version 1.4.18; TheNano/LittleSurvival copymanga-copy20 is version 1.4.83"},
+    {"name": "LIVID Adult Extensions", "reason": "Aniyomi video extensions are not compatible with Mihon manga sources"}
   ],
   "custom": {
     "repositoryBaseUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo",
