@@ -93,7 +93,8 @@ jobs:
 
       - name: Create releases and upload changed assets
         run: |
-          for shard in 0 1 2 3; do
+          mapfile -t shards < <(python -c 'import json; print(*range(json.load(open("archive-bundle/archive-manifest.json"))["releaseShardCount"]), sep="\n")')
+          for shard in "${shards[@]}"; do
             tag="extension-archive-$shard"
             if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
               gh release create "$tag" \
@@ -111,7 +112,8 @@ jobs:
 
       - name: Prune assets outside the retention manifest
         run: |
-          for shard in 0 1 2 3; do
+          mapfile -t shards < <(python -c 'import json; print(*range(json.load(open("archive-bundle/archive-manifest.json"))["releaseShardCount"]), sep="\n")')
+          for shard in "${shards[@]}"; do
             tag="extension-archive-$shard"
             release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" --jq .id)
             gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' | sort > "existing-$shard.txt"

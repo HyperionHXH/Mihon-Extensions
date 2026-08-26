@@ -1,11 +1,10 @@
 {
   "schemaVersion": 1,
-  "contentWarnings": ["CONTENT_WARNING_NSFW"],
-  "packages": [
-    "eu.kanade.tachiyomi.extension.zh.copymanga"
-  ],
+  "archiveAll": true,
+  "contentWarnings": [],
+  "packages": [],
   "retentionPerPackage": 2,
-  "releaseShardCount": 4,
+  "releaseShardCount": 8,
   "releaseTagPrefix": "extension-archive",
   "maxWorkers": 8,
   "requestTimeoutSeconds": 90,

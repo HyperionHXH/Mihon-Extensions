@@ -34,6 +34,18 @@ class ArchiveExtensionsTest(unittest.TestCase):
         selected = archive.selected_extensions(index, config)
         self.assertEqual([item["packageName"] for item in selected], ["adult", "common"])
 
+    def test_selection_can_archive_every_extension(self):
+        index = {
+            "extensionList": {
+                "extensions": [
+                    {"packageName": "safe", "contentWarning": "CONTENT_WARNING_SAFE"},
+                    {"packageName": "adult", "contentWarning": "CONTENT_WARNING_NSFW"},
+                ],
+            },
+        }
+        selected = archive.selected_extensions(index, {"archiveAll": True})
+        self.assertEqual([item["packageName"] for item in selected], ["safe", "adult"])
+
     def test_shard_is_stable(self):
         first = archive.shard_for("eu.kanade.example", 4)
         self.assertEqual(first, archive.shard_for("eu.kanade.example", 4))
@@ -146,6 +158,33 @@ class ArchiveExtensionsTest(unittest.TestCase):
             [version["versionCode"] for version in package["versions"]],
             ["3", "2"],
         )
+        self.assertEqual(failures, [])
+
+    def test_existing_package_keeps_its_original_shard(self):
+        extension = self.extension("1.6.3", "3", "https://upstream/new.apk")
+        extension["resources"].pop("iconUrl")
+        existing = {"shard": 1, "versions": []}
+
+        def download(_url, destination, _timeout):
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(b"apk")
+
+        config = self.archive_config()
+        config["releaseShardCount"] = 8
+        with tempfile.TemporaryDirectory() as temp_dir, \
+                mock.patch.object(archive, "download", side_effect=download), \
+                mock.patch.object(archive, "verify_apk", return_value="a" * 64):
+            package, _, failures = archive.archive_extension(
+                extension,
+                existing,
+                Path(temp_dir),
+                "owner/repo",
+                config,
+                "apksigner",
+                "aapt",
+            )
+
+        self.assertEqual(package["shard"], 1)
         self.assertEqual(failures, [])
 
     def test_extract_apk_icon_selects_highest_density_raster(self):

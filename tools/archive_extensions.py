@@ -230,7 +230,11 @@ def archive_extension(
     aapt: str,
 ) -> tuple[dict[str, Any] | None, list[Path], list[str]]:
     package_name = extension["packageName"]
-    shard = shard_for(package_name, int(config["releaseShardCount"]))
+    shard = (
+        int(existing["shard"])
+        if existing and "shard" in existing
+        else shard_for(package_name, int(config["releaseShardCount"]))
+    )
     tag = f"{config['releaseTagPrefix']}-{shard}"
     asset_dir = output / "assets" / f"shard-{shard}"
     resources = extension.get("resources", {})
@@ -337,9 +341,11 @@ def archive_extension(
 
 
 def selected_extensions(index: dict[str, Any], config: dict[str, Any]) -> list[dict[str, Any]]:
+    extensions = index["extensionList"]["extensions"]
+    if config.get("archiveAll", False):
+        return extensions
     warnings = set(config.get("contentWarnings", []))
     packages = set(config.get("packages", []))
-    extensions = index["extensionList"]["extensions"]
     return [
         extension
         for extension in extensions
