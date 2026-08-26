@@ -1,6 +1,6 @@
 {
-  "fetched": 1395,
-  "included": 1389,
+  "fetched": 1394,
+  "included": 1388,
   "repositories": [
     {
       "name": "Keiyoushi",
@@ -41,8 +41,7 @@
   ],
   "customIncluded": {
     "Hyperion E-Hentai": 1,
-    "Hyperion Recovered Sources": 1,
-    "Hyperion PixEz": 1
+    "Hyperion Recovered Sources": 1
   },
   "duplicatesExcluded": [
     {

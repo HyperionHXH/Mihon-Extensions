@@ -77,14 +77,6 @@
         "apk": "apk/tachiyomi-pt.superhentais-v1.6.1.apk",
         "jar": "jar/tachiyomi-pt.superhentais-v1.6.1.jar",
         "icon": "icon-eu.kanade.tachiyomi.extension.pt.superhentais.png"
-      },
-      {
-        "repository": "Hyperion PixEz",
-        "allowDuplicateSite": true,
-        "sourceInfo": "config/pixez-source-info.json",
-        "apk": "apk/tachiyomi-all.pixez-v1.6.3.apk",
-        "jar": "jar/tachiyomi-all.pixez-v1.6.3.jar",
-        "icon": "icon-eu.kanade.tachiyomi.extension.all.pixez.png"
       }
     ]
   }

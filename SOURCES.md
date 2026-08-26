@@ -20,11 +20,11 @@
 - Package: `eu.kanade.tachiyomi.extension.pt.superhentais`
 - The source keeps the historical source ID and was migrated to the current KeiSource API. The APK, JAR and icon are built locally from the maintained source.
 
-## PixEz
+## Archived PixEz
 
 - Source code: <https://github.com/HyperionHXH/PixEz-extensions>
 - Package: `eu.kanade.tachiyomi.extension.all.pixez`
-- The signed APK/JAR are copied from the repository's verified GitHub Release. PixEz intentionally coexists with the upstream Pixiv extension because it has a separate package and adds PixEz-style account, feed, bookmark and series behavior.
+- The project is archived because the implementation was not reliable enough for the active aggregate. The source and signed historical APK/JAR remain available in the GitHub repository, but PixEz is intentionally excluded from the current Mihon-Extensions index.
 
 ## Additional repositories
 
