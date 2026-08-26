@@ -22,10 +22,10 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。
 - 按包名、源 ID 和跨仓库站点地址去重；同一上游仓库明确并存的不同实现会保留。
-- 当前构建共包含 1,388 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
+- 当前构建共包含 1,389 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
 - 聚合索引中的全部扩展都会复制到本仓库的分片归档 Release；归档文件不改签，并在上传前校验包名、版本和签名证书。
 - 每个已归档插件保留当前版和上一版。即使上游仓库删除插件，最后归档版本仍会继续出现在本索引中。
-- 自维护扩展的 APK/JAR 和图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
+- 自维护的 E-Hentai、Super Hentais 和 PixEz 扩展的 APK/JAR 与图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
 - GitHub Actions 每周刷新索引和归档，并检查包名、版本号、源信息、重复项和所有 APK 下载地址。
 - 所有推送和拉取请求都会扫描常见凭据格式；工作流依赖固定到审核过的提交 SHA。
 - 已失效、只剩迁移占位符、来源不明或存在更新版本的仓库会排除并记录原因。
@@ -45,6 +45,7 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 - 归档镜像已收录全部 1,388 个插件、4,159 个 Release 资源，约 230.29 MiB；八个分片均低于 1,000 个资源限制，1,388 个镜像 APK 地址全部可达。
 - CopyManga `1.4.83` 已在 Suwayomi 中从本仓库安装，热门列表、详情、章节、30 页页面列表、封面和正文图片均通过烟测。
 - Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
+- PixEz `1.6.3` 与原 Pixiv 扩展并存；5 个语言源、热门、搜索、单篇及系列章节、封面和正文图片均已在 Suwayomi 中通过烟测。登录后的私人收藏、关注与书签标签需要用户自己的 Pixiv refresh token。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
 
 ## 本地构建和校验

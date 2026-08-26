@@ -1,8 +1,11 @@
 {
+  "apk/tachiyomi-all.pixez-v1.6.3.apk": "36aa92cbd9ee0292b1f322cba872353ce9d8b8db6924f7a7d37c1f2d07c9d5c4",
   "apk/tachiyomi-en.ehentai-v1.6.16.apk": "f01aa1bc508fa2cbaaf35217b5dbb16bffe82e42a515b344b3e04b8c63d44d7e",
   "apk/tachiyomi-pt.superhentais-v1.6.1.apk": "58bab0bc50e63b7f7f7dd3577b0be71f3ea67ba9c3aa12e2406f9cc54747a184",
+  "icon-eu.kanade.tachiyomi.extension.all.pixez.png": "f1adb725edbe566cffee5bbd5415fcd3f59fb910bac1b42f687a57ae59defb27",
   "icon-eu.kanade.tachiyomi.extension.en.ehentai.png": "9ecaff2b2295bac22407507e77ba629bc2fc1954f24bacbb3843ca52531e22ab",
   "icon-eu.kanade.tachiyomi.extension.pt.superhentais.png": "ccfdb02708264916b23464f13e7609d2aedbca10d1e284b5053fb065da5c2adf",
+  "jar/tachiyomi-all.pixez-v1.6.3.jar": "59d5090c07258957950c872dd7e34e745c1431d735b89c6173a2a63c37423ab0",
   "jar/tachiyomi-en.ehentai-v1.6.16.jar": "28a2c36c382b80aacc5704d8dce33afb3a10126969e962ed085222142fbd86dd",
   "jar/tachiyomi-pt.superhentais-v1.6.1.jar": "47d1e7090a245a9e545879a266fbd174acb210900c07e0f7b1370d78974c4019"
 }

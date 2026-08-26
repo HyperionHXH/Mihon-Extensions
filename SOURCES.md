@@ -20,6 +20,12 @@
 - Package: `eu.kanade.tachiyomi.extension.pt.superhentais`
 - The source keeps the historical source ID and was migrated to the current KeiSource API. The APK, JAR and icon are built locally from the maintained source.
 
+## PixEz
+
+- Source code: <https://github.com/HyperionHXH/PixEz-extensions>
+- Package: `eu.kanade.tachiyomi.extension.all.pixez`
+- The signed APK/JAR are copied from the repository's verified GitHub Release. PixEz intentionally coexists with the upstream Pixiv extension because it has a separate package and adds PixEz-style account, feed, bookmark and series behavior.
+
 ## Additional repositories
 
 - Removed adult sources: <https://github.com/mojuru/cursed-manga-repo>

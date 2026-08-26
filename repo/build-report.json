@@ -1,6 +1,6 @@
 {
-  "fetched": 1394,
-  "included": 1388,
+  "fetched": 1395,
+  "included": 1389,
   "repositories": [
     {
       "name": "Keiyoushi",
@@ -41,7 +41,8 @@
   ],
   "customIncluded": {
     "Hyperion E-Hentai": 1,
-    "Hyperion Recovered Sources": 1
+    "Hyperion Recovered Sources": 1,
+    "Hyperion PixEz": 1
   },
   "duplicatesExcluded": [
     {
@@ -102,7 +103,7 @@
     }
   ],
   "archive": {
-    "mirrored": 1388,
+    "mirrored": 1384,
     "recovered": 0,
     "retainedPackages": 1388,
     "retainedVersions": 1388

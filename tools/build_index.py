@@ -73,6 +73,7 @@ def local_extension(info: dict[str, Any], custom: dict[str, Any], base_url: str)
         "sources": sources,
         "_repository": custom["repository"],
         "_priority": 1000,
+        "_allowDuplicateSite": bool(custom.get("allowDuplicateSite", False)),
     }
 
 
@@ -228,6 +229,8 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
         urls.discard("")
         if urls and all(url in source_urls for url in urls) and all(
             source_urls[url]["_repository"] != extension["_repository"] for url in urls
+        ) and not extension.get("_allowDuplicateSite") and all(
+            not source_urls[url].get("_allowDuplicateSite") for url in urls
         ):
             kept = source_urls[next(iter(urls))]
             excluded.append({
