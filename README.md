@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 - GitHub Actions 已成功完成一次完整的远程刷新和校验。
 - 远程索引包含 1,388 个扩展，1,388 个 APK 下载地址全部可达。
-- 归档镜像已收录 393 个插件、1,177 个 Release 资源，四个分片均低于 1,000 个资源限制；无更新复跑上传 0 个文件且无失败。
+- 归档镜像已收录全部 1,388 个插件、4,159 个 Release 资源，约 230.29 MiB；八个分片均低于 1,000 个资源限制，1,388 个镜像 APK 地址全部可达。
 - CopyManga `1.4.83` 已在 Suwayomi 中从本仓库安装，热门列表、详情、章节、30 页页面列表、封面和正文图片均通过烟测。
 - Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
