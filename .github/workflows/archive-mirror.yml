@@ -104,10 +104,31 @@ jobs:
                 --notes "Verified extension archive managed by archive-mirror.yml."
             fi
 
+            release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" --jq .id)
+            gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' | sort > "uploaded-$shard.txt"
             mapfile -t uploads < <(find "archive-bundle/assets/shard-$shard" -maxdepth 1 -type f 2>/dev/null | sort)
-            if ((${#uploads[@]})); then
-              gh release upload "$tag" "${uploads[@]}" --clobber --repo "$GITHUB_REPOSITORY"
-            fi
+            for asset in "${uploads[@]}"; do
+              name=$(basename "$asset")
+              if grep -Fqx "$name" "uploaded-$shard.txt"; then
+                continue
+              fi
+
+              uploaded=false
+              for attempt in 1 2 3 4 5; do
+                if gh release upload "$tag" "$asset" --repo "$GITHUB_REPOSITORY"; then
+                  uploaded=true
+                  break
+                fi
+                gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' | sort > "uploaded-$shard.txt"
+                if grep -Fqx "$name" "uploaded-$shard.txt"; then
+                  uploaded=true
+                  break
+                fi
+                sleep $((attempt * 30))
+              done
+              $uploaded || exit 1
+              sleep 0.5
+            done
           done
 
       - name: Prune assets outside the retention manifest
