@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-26",
   "repositoryUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
   "localIndexExtensions": 1388,
   "remoteIndexExtensions": 1388,
@@ -18,8 +18,12 @@
     "eHentaiCandidate": {
       "date": "2026-08-26",
       "versionName": "1.6.16",
-      "published": false,
-      "note": "Locally tested candidate; publication is waiting for the existing release signing key.",
+      "published": true,
+      "note": "Official GitHub release installed in Suwayomi and verified with the existing release signing certificate.",
+      "releaseUrl": "https://github.com/HyperionHXH/E-extensions/releases/tag/v1.6.16",
+      "signingCertificateSha256": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54",
+      "apkSha256": "f01aa1bc508fa2cbaaf35217b5dbb16bffe82e42a515b344b3e04b8c63d44d7e",
+      "jarSha256": "28a2c36c382b80aacc5704d8dce33afb3a10126969e962ed085222142fbd86dd",
       "source": {
         "id": "57122881048805941",
         "favoritesEntries": 3,

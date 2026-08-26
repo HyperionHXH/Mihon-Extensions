@@ -3,8 +3,8 @@
   "theme": null,
   "packageName": "eu.kanade.tachiyomi.extension.en.ehentai",
   "name": "E-Hentai",
-  "versionCode": 15,
-  "versionName": "1.6.15",
+  "versionCode": 16,
+  "versionName": "1.6.16",
   "extensionLib": "1.6",
   "contentWarning": 3,
   "sources": [
