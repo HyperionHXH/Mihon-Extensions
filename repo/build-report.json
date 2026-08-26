@@ -102,9 +102,9 @@
     }
   ],
   "archive": {
-    "mirrored": 393,
+    "mirrored": 1388,
     "recovered": 0,
-    "retainedPackages": 393,
-    "retainedVersions": 393
+    "retainedPackages": 1388,
+    "retainedVersions": 1388
   }
 }
