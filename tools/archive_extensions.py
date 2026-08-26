@@ -206,7 +206,11 @@ def same_version(extension: dict[str, Any], version: dict[str, Any]) -> bool:
     )
 
 
-def needs_archive(extension: dict[str, Any], package: dict[str, Any] | None) -> bool:
+def needs_archive(
+    extension: dict[str, Any],
+    package: dict[str, Any] | None,
+    available_assets: set[str] | None = None,
+) -> bool:
     if not package or not package.get("versions"):
         return True
     current = package["versions"][0]
@@ -217,6 +221,13 @@ def needs_archive(extension: dict[str, Any], package: dict[str, Any] | None) -> 
         return True
     if resources.get("iconUrl") and not package.get("icon"):
         return True
+    if available_assets is not None:
+        records = [current.get("apk"), current.get("jar"), package.get("icon")]
+        if any(
+            record and record.get("assetName") not in available_assets
+            for record in records
+        ):
+            return True
     return False
 
 
@@ -375,11 +386,20 @@ def main() -> int:
     parser.add_argument("--repository", required=True)
     parser.add_argument("--apksigner", required=True)
     parser.add_argument("--aapt", required=True)
+    parser.add_argument("--available-assets-dir", type=Path)
     args = parser.parse_args()
 
     config = read_json(args.config)
     index = read_json(args.index)
     existing = read_json(args.existing) if args.existing.is_file() else {"packages": {}}
+    available_assets = None
+    if args.available_assets_dir:
+        available_assets = {
+            name
+            for path in args.available_assets_dir.glob("*.txt")
+            for name in path.read_text(encoding="utf-8").splitlines()
+            if name
+        }
     args.output.mkdir(parents=True, exist_ok=True)
     selected = selected_extensions(index, config)
     all_packages = {item["packageName"] for item in index["extensionList"]["extensions"]}
@@ -393,7 +413,7 @@ def main() -> int:
     def task(extension: dict[str, Any]) -> tuple[str, dict[str, Any] | None, list[Path], list[str], bool]:
         package_name = extension["packageName"]
         current = existing_packages.get(package_name)
-        if not needs_archive(extension, current):
+        if not needs_archive(extension, current, available_assets):
             package = copy.deepcopy(current)
             package["upstreamPresent"] = True
             package["selected"] = True

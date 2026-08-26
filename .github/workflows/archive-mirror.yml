@@ -48,6 +48,23 @@ jobs:
       - name: Build unmirrored upstream index
         run: python tools/build_index.py --ignore-archive --output archive-work/upstream
 
+      - name: Inventory uploaded release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p archive-work/available-assets
+          mapfile -t shards < <(python -c 'import json; print(*range(json.load(open("config/archive.json"))["releaseShardCount"]), sep="\n")')
+          for shard in "${shards[@]}"; do
+            tag="extension-archive-$shard"
+            output="archive-work/available-assets/shard-$shard.txt"
+            if release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" --jq .id 2>/dev/null); then
+              gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" \
+                --jq '.[] | select(.state == "uploaded") | .name' | sort > "$output"
+            else
+              : > "$output"
+            fi
+          done
+
       - name: Download and verify archive candidates
         run: |
           python tools/archive_extensions.py \
@@ -55,7 +72,8 @@ jobs:
             --output archive-work/result \
             --repository "$GITHUB_REPOSITORY" \
             --apksigner "$APKSIGNER" \
-            --aapt "$AAPT"
+            --aapt "$AAPT" \
+            --available-assets-dir archive-work/available-assets
 
       - name: Prepare verified archive bundle
         run: |
@@ -101,7 +119,7 @@ jobs:
           upload_shard() {
             local shard="$1"
             local tag="extension-archive-$shard"
-            local release_id name asset uploaded
+            local release_id name asset uploaded record asset_id asset_state
             local -a uploads
 
             if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
@@ -113,7 +131,13 @@ jobs:
             fi
 
             release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" --jq .id)
-            gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' | sort > "uploaded-$shard.txt"
+            gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" \
+              --jq '.[] | select(.state != "uploaded") | [.id, .name] | @tsv' > "incomplete-$shard.txt"
+            while IFS=$'\t' read -r asset_id _; do
+              test -z "$asset_id" || gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$asset_id"
+            done < "incomplete-$shard.txt"
+            gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" \
+              --jq '.[] | select(.state == "uploaded") | .name' | sort > "uploaded-$shard.txt"
             mapfile -t uploads < <(find "archive-bundle/assets/shard-$shard" -maxdepth 1 -type f 2>/dev/null | sort)
             for asset in "${uploads[@]}"; do
               name=$(basename "$asset")
@@ -127,10 +151,15 @@ jobs:
                   uploaded=true
                   break
                 fi
-                gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --jq '.[].name' | sort > "uploaded-$shard.txt"
-                if grep -Fqx "$name" "uploaded-$shard.txt"; then
+                record=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" \
+                  --jq ".[] | select(.name == \"$name\") | [.id, .state] | @tsv" | tail -n 1)
+                IFS=$'\t' read -r asset_id asset_state <<< "$record"
+                if [[ "$asset_state" == "uploaded" ]]; then
                   uploaded=true
                   break
+                fi
+                if [[ -n "$asset_id" ]]; then
+                  gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/assets/$asset_id"
                 fi
                 sleep $((attempt * 30))
               done
@@ -162,6 +191,17 @@ jobs:
             while IFS= read -r asset; do
               test -z "$asset" || gh release delete-asset "$tag" "$asset" --yes --repo "$GITHUB_REPOSITORY"
             done < "prune-$shard.txt"
+          done
+
+      - name: Verify release assets match the retention manifest
+        run: |
+          mapfile -t shards < <(python -c 'import json; print(*range(json.load(open("archive-bundle/archive-manifest.json"))["releaseShardCount"]), sep="\n")')
+          for shard in "${shards[@]}"; do
+            tag="extension-archive-$shard"
+            release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" --jq .id)
+            gh api --paginate "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" \
+              --jq '.[] | select(.state == "uploaded") | .name' | sort > "verified-$shard.txt"
+            diff -u "archive-bundle/desired-assets/shard-$shard.txt" "verified-$shard.txt"
           done
 
       - name: Install manifest and rebuild index

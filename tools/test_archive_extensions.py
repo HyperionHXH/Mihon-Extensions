@@ -51,6 +51,21 @@ class ArchiveExtensionsTest(unittest.TestCase):
         self.assertEqual(first, archive.shard_for("eu.kanade.example", 4))
         self.assertIn(first, range(4))
 
+    def test_missing_release_asset_requires_repair(self):
+        extension = self.extension("1.6.2", "2", "https://upstream/current.apk")
+        package = {
+            "icon": {"assetName": "icon.png"},
+            "versions": [{
+                "versionCode": "2",
+                "versionName": "1.6.2",
+                "apk": {"assetName": "current.apk"},
+            }],
+        }
+        self.assertTrue(archive.needs_archive(extension, package, {"icon.png"}))
+        self.assertFalse(
+            archive.needs_archive(extension, package, {"icon.png", "current.apk"}),
+        )
+
     def test_certificate_parser_accepts_colons(self):
         digest = "D7:03:01:D3:31:61:D1:83:34:5F:A7:CD:4D:65:1C:D0:FF:89:2E:A9:BE:28:0E:7A:4D:F4:F3:C5:32:D0:2C:54"
         self.assertEqual(
