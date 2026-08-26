@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-26T07:07:12.842687Z",
+  "generatedAt": "2026-08-26T07:17:51.007933Z",
   "selected": 1388,
-  "archivedOrRepaired": 995,
-  "reused": 393,
+  "archivedOrRepaired": 2,
+  "reused": 1386,
   "retainedPackages": 1388,
-  "uploadedAssets": 2982,
-  "uploadedBytes": 174615086,
+  "uploadedAssets": 6,
+  "uploadedBytes": 415202,
   "failures": []
 }

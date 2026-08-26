@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T07:07:12.842687Z",
+  "generatedAt": "2026-08-26T07:17:51.007933Z",
   "releaseTagPrefix": "extension-archive",
   "releaseShardCount": 8,
   "retentionPerPackage": 2,
@@ -28722,7 +28722,7 @@
         {
           "versionCode": "60",
           "versionName": "1.6.60",
-          "archivedAt": "2026-08-26T07:06:22.254933Z",
+          "archivedAt": "2026-08-26T07:17:50.994737Z",
           "apk": {
             "assetName": "eu.kanade.tachiyomi.extension.en.manhuaplus--v1.6.60--c60.apk",
             "url": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.en.manhuaplus--v1.6.60--c60.apk",
@@ -29826,7 +29826,7 @@
         {
           "versionCode": "53",
           "versionName": "1.6.53",
-          "archivedAt": "2026-08-26T07:06:24.450194Z",
+          "archivedAt": "2026-08-26T07:17:51.007065Z",
           "apk": {
             "assetName": "eu.kanade.tachiyomi.extension.en.manhwareads--v1.6.53--c53.apk",
             "url": "https://github.com/HyperionHXH/Mihon-Extensions/releases/download/extension-archive-3/eu.kanade.tachiyomi.extension.en.manhwareads--v1.6.53--c53.apk",
