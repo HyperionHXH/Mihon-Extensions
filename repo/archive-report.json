@@ -1,10 +1,15 @@
 {
-  "generatedAt": null,
-  "selected": 0,
-  "archivedOrRepaired": 0,
+  "generatedAt": "2026-08-26T05:39:44.240638Z",
+  "selected": 393,
+  "archivedOrRepaired": 393,
   "reused": 0,
-  "retainedPackages": 0,
-  "uploadedAssets": 0,
-  "uploadedBytes": 0,
-  "failures": []
+  "retainedPackages": 393,
+  "uploadedAssets": 1176,
+  "uploadedBytes": 66802633,
+  "failures": [
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
+      "error": "icon: download failed: HTTP Error 404: Not Found"
+    }
+  ]
 }
