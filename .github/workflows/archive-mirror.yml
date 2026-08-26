@@ -1,6 +1,11 @@
 name: Archive extension mirror
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/archive-mirror.yml"
   workflow_dispatch:
   schedule:
     - cron: "41 4 * * 2"
