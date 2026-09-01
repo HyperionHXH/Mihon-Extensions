@@ -1,5 +1,11 @@
 {
-  "checked": 1393,
-  "reachable": 1393,
-  "failed": []
+  "checked": 1407,
+  "reachable": 1406,
+  "failed": [
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.ehentai",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/apk/tachiyomi-en.ehentai-v1.6.20.apk",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
 }
