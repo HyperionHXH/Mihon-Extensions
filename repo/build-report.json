@@ -1,6 +1,6 @@
 {
   "fetched": 1412,
-  "included": 1407,
+  "included": 1408,
   "repositories": [
     {
       "name": "Keiyoushi",
@@ -102,8 +102,8 @@
     }
   ],
   "archive": {
-    "mirrored": 11,
-    "recovered": 1,
+    "mirrored": 10,
+    "recovered": 2,
     "retainedPackages": 1388,
     "retainedVersions": 1388
   }
