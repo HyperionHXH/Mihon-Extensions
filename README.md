@@ -18,6 +18,17 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 如果应用显示扩展未受信任，请在应用内确认扩展签名。聚合仓库包含多个原作者的签名，Mihon 只允许仓库声明一个默认签名，因此非 Keiyoushi 扩展首次安装后可能需要手动信任。不要同时从签名不同的仓库安装同一包名，否则 Android 会拒绝覆盖安装。
 
+### Komikku 的归属显示
+
+Komikku 会用“仓库声明的签名指纹”匹配已安装 APK，并且一个仓库只能声明一个指纹。聚合索引为了兼容 Mihon 保留 Keiyoushi 的默认签名，所以 E-Hentai 和拷贝漫画在聚合入口中可能显示“无归属”。在 Komikku 中请分别添加下面两个入口，才能显示正确的仓库归属：
+
+```text
+https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/ehentai/repo.json
+https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/copymanga/repo.json
+```
+
+两个入口由索引刷新工作流自动生成，只包含对应包名，并固定校验 APK 的签名证书；它们与主聚合索引共用归档下载地址，不会重复占用 APK 存储。Komikku 不需要添加同一插件的多个仓库，若已经从聚合入口安装，请先在 Komikku 中卸载该包，再从对应单源入口安装，以免 Android 因签名不同拒绝覆盖。
+
 ## 内容和更新策略
 
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。

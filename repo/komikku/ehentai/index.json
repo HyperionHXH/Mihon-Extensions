@@ -1,0 +1,38 @@
+{
+  "name": "Hyperion E-Hentai",
+  "badgeLabel": "EH",
+  "signingKey": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54",
+  "contact": {
+    "website": "https://github.com/HyperionHXH/E-extensions",
+    "discord": null
+  },
+  "extensionList": {
+    "extensions": [
+      {
+        "name": "E-Hentai",
+        "packageName": "eu.kanade.tachiyomi.extension.en.ehentai",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/apk/tachiyomi-en.ehentai-v1.6.20.apk",
+          "iconUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/icon-eu.kanade.tachiyomi.extension.en.ehentai.png",
+          "jarUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/jar/tachiyomi-en.ehentai-v1.6.20.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "20",
+        "versionName": "1.6.20",
+        "contentWarning": "CONTENT_WARNING_NSFW",
+        "sources": [
+          {
+            "id": "57122881048805941",
+            "name": "E-Hentai",
+            "language": "en",
+            "homeUrl": "https://e-hentai.org",
+            "mirrorUrls": [
+              "https://e-hentai.org",
+              "https://exhentai.org"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

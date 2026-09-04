@@ -11,6 +11,7 @@
 
 - Source code: <https://github.com/HyperionHXH/E-extensions>
 - Package: `eu.kanade.tachiyomi.extension.en.ehentai`
+- Komikku single-source repository: <https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/ehentai/repo.json> (certificate `d70301d3...d02c54`)
 - The local APK/JAR are built from the source repository above. Account cookies and login values are never stored here.
 
 ## Super Hentais
@@ -30,6 +31,7 @@
 
 - Removed adult sources: <https://github.com/mojuru/cursed-manga-repo>
 - Chinese CopyManga and related sources: <https://github.com/LittleSurvival/copymanga-copy20>
+- Komikku single-source repository: <https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/copymanga/repo.json> (certificate `896d1ca3...005e79`)
 - Kavita: <https://github.com/Kareadita/tach-extension>
 - Suwayomi connector: <https://github.com/Suwayomi/tachiyomi-extension>
 - Archived Tachiyomi metadata, used only when no maintained replacement exists: <https://github.com/tachiyomiorg/extensions>

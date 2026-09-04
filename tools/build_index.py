@@ -270,6 +270,48 @@ def legacy_entry(extension: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def write_komikku_repositories(
+    output: Path,
+    base_url: str,
+    extensions: list[dict[str, Any]],
+    repositories: list[dict[str, Any]],
+) -> None:
+    """Publish one-signing-key indexes for Komikku's attribution model."""
+    by_package = {item["packageName"]: item for item in extensions}
+    for repository in repositories:
+        package_name = repository["packageName"]
+        extension = by_package.get(package_name)
+        if extension is None:
+            raise ValueError(f"Komikku repository package is missing: {package_name}")
+        target = output / repository["path"]
+        target.mkdir(parents=True, exist_ok=True)
+        modern = {
+            "name": repository["name"],
+            "badgeLabel": repository.get("badgeLabel", repository["name"]),
+            "signingKey": repository["signingKey"].replace(":", "").lower(),
+            "contact": {"website": repository["website"], "discord": None},
+            "extensionList": {"extensions": [extension]},
+        }
+        (target / "index.json").write_text(
+            json.dumps(modern, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
+        )
+        (target / "index.min.json").write_text(
+            json.dumps([legacy_entry(extension)], ensure_ascii=False, separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        (target / "repo.json").write_text(
+            json.dumps({
+                "index_v2": f"{base_url}/{repository['path']}/index.json",
+                "meta": {
+                    "name": repository["name"],
+                    "shortName": repository.get("badgeLabel", repository["name"]),
+                    "website": repository["website"],
+                    "signingKeyFingerprint": modern["signingKey"],
+                },
+            }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
+        )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=Path("config/sources.json"))
@@ -342,6 +384,13 @@ def main() -> int:
             "signingKeyFingerprint": signing_key,
         },
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    write_komikku_repositories(
+        output,
+        base_url,
+        merged,
+        config.get("komikkuRepositories", []),
+    )
 
     checksums: dict[str, str] = {}
     project_root = Path(__file__).resolve().parents[1]

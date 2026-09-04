@@ -1,0 +1,9 @@
+{
+  "index_v2": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/ehentai/index.json",
+  "meta": {
+    "name": "Hyperion E-Hentai",
+    "shortName": "EH",
+    "website": "https://github.com/HyperionHXH/E-extensions",
+    "signingKeyFingerprint": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54"
+  }
+}

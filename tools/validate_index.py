@@ -35,6 +35,30 @@ def check_url(item: tuple[str, str]) -> tuple[str, str, str]:
     return package_name, url, last_error
 
 
+def validate_komikku_repositories(root: Path) -> list[str]:
+    errors: list[str] = []
+    if not root.is_dir():
+        return errors
+    for index_path in sorted(root.glob("*/index.json")):
+        repo_path = index_path.with_name("repo.json")
+        try:
+            index = json.loads(index_path.read_text(encoding="utf-8"))
+            repo = json.loads(repo_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as error:
+            errors.append(f"invalid Komikku repository {index_path.parent}: {error}")
+            continue
+        extensions = index.get("extensionList", {}).get("extensions", [])
+        signing_key = str(index.get("signingKey", "")).replace(":", "").lower()
+        meta_key = str(repo.get("meta", {}).get("signingKeyFingerprint", "")).replace(":", "").lower()
+        if len(extensions) != 1:
+            errors.append(f"Komikku repository must contain one extension: {index_path.parent}")
+        if not re.fullmatch(r"[0-9a-f]{64}", signing_key):
+            errors.append(f"invalid Komikku signing key: {index_path}")
+        if signing_key != meta_key:
+            errors.append(f"Komikku signing key mismatch: {index_path.parent}")
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("index", type=Path, nargs="?", default=Path("repo/index.json"))
@@ -61,6 +85,7 @@ def main() -> int:
             errors.append(f"no sources: {package_name}")
         if int(extension.get("versionCode", 0)) < 1:
             errors.append(f"invalid versionCode: {package_name}")
+    errors.extend(validate_komikku_repositories(args.index.parent / "komikku"))
     if args.check_urls:
         work = [(extension["packageName"], extension["resources"]["apkUrl"]) for extension in extensions]
         with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:

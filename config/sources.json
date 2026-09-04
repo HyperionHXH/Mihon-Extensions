@@ -79,5 +79,23 @@
         "icon": "icon-eu.kanade.tachiyomi.extension.pt.superhentais.png"
       }
     ]
-  }
+  },
+  "komikkuRepositories": [
+    {
+      "name": "Hyperion E-Hentai",
+      "badgeLabel": "EH",
+      "path": "komikku/ehentai",
+      "packageName": "eu.kanade.tachiyomi.extension.en.ehentai",
+      "signingKey": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54",
+      "website": "https://github.com/HyperionHXH/E-extensions"
+    },
+    {
+      "name": "Hyperion CopyManga",
+      "badgeLabel": "CM",
+      "path": "komikku/copymanga",
+      "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
+      "signingKey": "896d1ca35175c42baf61b1a157e4354df9568beed4ccc82a03762d1167005e79",
+      "website": "https://github.com/LittleSurvival/copymanga-copy20"
+    }
+  ]
 }

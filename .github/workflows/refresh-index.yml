@@ -10,6 +10,7 @@ on:
       - "repo/apk/**"
       - "repo/jar/**"
       - "repo/icon-*"
+      - "repo/komikku/**"
       - "tools/**"
   workflow_dispatch:
   schedule:
@@ -50,7 +51,8 @@ jobs:
         run: |
           mkdir index-bundle
           cp repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/url-report.json index-bundle/
-          (cd index-bundle && sha256sum *.json > sha256sums.txt)
+          cp -R repo/komikku index-bundle/komikku
+          (cd index-bundle && find . -type f ! -name sha256sums.txt -print0 | sort -z | xargs -0 sha256sum > sha256sums.txt)
 
       - name: Upload verified index bundle
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -80,11 +82,13 @@ jobs:
         run: |
           (cd index-bundle && sha256sum -c sha256sums.txt)
           cp index-bundle/*.json repo/
+          rm -rf repo/komikku
+          cp -R index-bundle/komikku repo/komikku
 
       - name: Commit refreshed index
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/url-report.json
+          git add repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/url-report.json repo/komikku
           git diff --cached --quiet || git commit -m "Refresh extension index"
           git push
