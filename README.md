@@ -20,7 +20,7 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.m
 
 ### Komikku 的归属显示
 
-主聚合索引已经包含 E-Hentai 和拷贝漫画，Komikku 只需添加上面的主地址即可正常安装和更新。Komikku 会用“仓库声明的签名指纹”匹配已安装 APK，并且一个仓库只能声明一个指纹；由于这两个 APK 保留了原作者签名，它们在主聚合入口中可能显示“无归属”，不影响插件使用。
+主聚合索引已经包含 E-Hentai 和拷贝漫画，Komikku 只需添加上面的主地址即可正常安装和更新。Komikku 会用“仓库声明的签名指纹”匹配已安装 APK，并且一个仓库只能声明一个指纹；由于这两个 APK 保留了原作者签名，它们在主聚合入口中可能显示“无归属”，不影响插件使用。E-Hentai 使用的是正式发布证书，不是 Debug 包。
 
 只有在你特别需要显示精确的仓库名称时，才需要额外添加下面两个可选入口：
 
