@@ -42,6 +42,13 @@ jobs:
       - name: Scan tracked files
         run: python tools/security_scan.py
 
+      - name: Verify maintained E-Hentai certificate
+        run: |
+          apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
+          test -x "$apksigner"
+          cert=$($apksigner verify --print-certs repo/apk/tachiyomi-en.ehentai-v1.6.20.apk | awk '/SHA-256 digest:/ {print tolower($NF); exit}')
+          test "$cert" = "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54"
+
       - name: Rebuild and validate index
         run: |
           python tools/build_index.py
