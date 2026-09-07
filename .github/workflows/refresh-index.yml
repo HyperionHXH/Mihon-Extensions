@@ -46,7 +46,9 @@ jobs:
         run: |
           apksigner=$(find "$ANDROID_HOME/build-tools" -type f -name apksigner | sort -V | tail -n 1)
           test -x "$apksigner"
-          cert=$($apksigner verify --print-certs repo/apk/tachiyomi-en.ehentai-v1.6.20.apk | awk '/SHA-256 digest:/ {print tolower($NF); exit}')
+          eh_apk=$(find repo/apk -maxdepth 1 -type f -name 'tachiyomi-en.ehentai-v*.apk' | sort -V | tail -n 1)
+          test -n "$eh_apk"
+          cert=$($apksigner verify --print-certs "$eh_apk" | awk '/SHA-256 digest:/ {print tolower($NF); exit}')
           test "$cert" = "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54"
 
       - name: Rebuild and validate index
