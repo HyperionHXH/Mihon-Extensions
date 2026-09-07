@@ -3,8 +3,8 @@
   "theme": null,
   "packageName": "eu.kanade.tachiyomi.extension.en.ehentai",
   "name": "E-Hentai",
-  "versionCode": 20,
-  "versionName": "1.6.20",
+  "versionCode": 21,
+  "versionName": "1.6.21",
   "extensionLib": "1.6",
   "contentWarning": 3,
   "sources": [
@@ -13,7 +13,10 @@
       "name": "E-Hentai",
       "lang": "en",
       "baseUrl": "https://e-hentai.org",
-      "mirrorUrls": ["https://e-hentai.org", "https://exhentai.org"]
+      "mirrorUrls": [
+        "https://e-hentai.org",
+        "https://exhentai.org"
+      ]
     }
   ]
 }
