@@ -6399,8 +6399,8 @@
           "jarUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/jar/tachiyomi-en.ehentai-v1.6.23.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "22",
-        "versionName": "1.6.22",
+        "versionCode": "23",
+        "versionName": "1.6.23",
         "contentWarning": "CONTENT_WARNING_NSFW",
         "sources": [
           {
