@@ -12,12 +12,12 @@
         "name": "CopyManga",
         "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
         "resources": {
-          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.copymanga-v1.4.84.apk",
+          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.copymanga-v1.4.85.apk",
           "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.copymanga.png"
         },
         "extensionLib": "1.4",
-        "versionCode": "84",
-        "versionName": "1.4.84",
+        "versionCode": "85",
+        "versionName": "1.4.85",
         "contentWarning": "CONTENT_WARNING_NSFW",
         "sources": [
           {
