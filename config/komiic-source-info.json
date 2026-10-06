@@ -1,0 +1,22 @@
+{
+  "module": "zh.komiic",
+  "theme": null,
+  "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
+  "name": "Komiic",
+  "versionCode": 11,
+  "versionName": "1.6.11",
+  "extensionLib": "1.6",
+  "contentWarning": 1,
+  "sources": [
+    {
+      "id": 792932060924485302,
+      "name": "Komiic",
+      "lang": "zh",
+      "baseUrl": "https://komiic.com",
+      "mirrorUrls": [
+        "https://komiic.com",
+        "https://komiic.cc"
+      ]
+    }
+  ]
+}

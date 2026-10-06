@@ -77,6 +77,13 @@
         "apk": "apk/tachiyomi-pt.superhentais-v1.6.1.apk",
         "jar": "jar/tachiyomi-pt.superhentais-v1.6.1.jar",
         "icon": "icon-eu.kanade.tachiyomi.extension.pt.superhentais.png"
+      },
+      {
+        "repository": "Hyperion Komiic",
+        "sourceInfo": "config/komiic-source-info.json",
+        "apk": "apk/tachiyomi-zh.komiic-v1.6.11.apk",
+        "jar": "jar/tachiyomi-zh.komiic-v1.6.11.jar",
+        "icon": "icon-eu.kanade.tachiyomi.extension.zh.komiic.png"
       }
     ]
   },

@@ -1,12 +1,12 @@
 {
-  "fetched": 1427,
-  "included": 1473,
+  "fetched": 1432,
+  "included": 1477,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1409,
-      "included": 1409
+      "fetched": 1413,
+      "included": 1412
     },
     {
       "name": "Fucked by FAKKU",
@@ -41,9 +41,15 @@
   ],
   "customIncluded": {
     "Hyperion E-Hentai": 1,
-    "Hyperion Recovered Sources": 1
+    "Hyperion Recovered Sources": 1,
+    "Hyperion Komiic": 1
   },
   "duplicatesExcluded": [
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
+      "repository": "Keiyoushi",
+      "reason": "duplicate package; kept Hyperion Komiic 1.6.11"
+    },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.vomicmh",
       "repository": "CopyManga Copy20",

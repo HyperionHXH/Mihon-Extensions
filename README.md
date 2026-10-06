@@ -31,11 +31,13 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku
 
 两个入口由索引刷新工作流自动生成，只包含对应包名，并固定校验 APK 的签名证书；它们与主聚合索引共用归档下载地址，不会重复占用 APK 存储。Komikku 不需要添加同一插件的多个仓库，若已经从聚合入口安装，请先在 Komikku 中卸载该包，再从对应单源入口安装，以免 Android 因签名不同拒绝覆盖。
 
+Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.11`，并已纳入本聚合索引。安装后在 Komiic 插件设置中填写 Komiic 官网邮箱和密码；插件会在首次读取正文图片时调用官网登录接口并保存会话令牌。账号的每日额度、赞助等级和可见章节仍由 Komiic 服务器决定，插件不会绕过这些限制。密码只保存在 Mihon/Suwayomi 的本地私有设置中，不会上传到 GitHub。
+
 ## 内容和更新策略
 
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。
 - 按包名、源 ID 和跨仓库站点地址去重；同一上游仓库明确并存的不同实现会保留。
-- 当前构建共包含 1,388 个扩展，具体来源数量和排除原因见 `repo/build-report.json`。
+- 当前构建共包含 1,477 个扩展，具体来源数量和排除原因见 `repo/build-report.json`（该数字会随上游刷新变化）。
 - 聚合索引中的全部扩展都会复制到本仓库的分片归档 Release；归档文件不改签，并在上传前校验包名、版本和签名证书。
 - 每个已归档插件保留当前版和上一版。即使上游仓库删除插件，最后归档版本仍会继续出现在本索引中。
 - 自维护的 E-Hentai 和 Super Hentais 扩展的 APK/JAR 与图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
@@ -55,9 +57,9 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku
 ## 验证状态
 
 - GitHub Actions 已成功完成一次完整的远程刷新和校验。
-- 远程索引包含 1,388 个扩展，1,388 个 APK 下载地址全部可达。
-- 归档镜像已收录全部 1,388 个插件、4,159 个 Release 资源，约 230.29 MiB；八个分片均低于 1,000 个资源限制，1,388 个镜像 APK 地址全部可达。
-- CopyManga `1.4.83` 已在 Suwayomi 中从本仓库安装，热门列表、详情、章节、30 页页面列表、封面和正文图片均通过烟测。
+- 本次验证索引包含 1,477 个扩展；逐项数量、版本、签名和下载地址见 `repo/build-report.json` 与 `repo/url-report.json`。
+- 归档资源数量和体积会随上游变化，不在 README 中硬编码；当前分片及校验结果以 `repo/archive-report.json` 为准。
+- CopyManga 和 Komiic 的正式 APK/JAR 已纳入本仓库；Komiic 登录后可按账号权限读取可用章节和图片额度。
 - Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
 - PixEz 已归档，不再列入当前合集；需要旧版时可从其 GitHub Release 手动获取。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
