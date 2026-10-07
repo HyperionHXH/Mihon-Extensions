@@ -65,12 +65,13 @@ Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.13`，正式包保存�
 ## 验证状态
 
 - GitHub Actions 已成功完成一次完整的远程刷新和校验。
-- 本次验证索引包含 1,477 个扩展；逐项数量、版本、签名和下载地址见 `repo/build-report.json` 与 `repo/url-report.json`。
+- 主索引已通过校验；当前数量、版本、签名和下载地址见 `repo/build-report.json` 与 `repo/url-report.json`。
 - 归档资源数量和体积会随上游变化，不在 README 中硬编码；当前分片及校验结果以 `repo/archive-report.json` 为准。
 - CopyManga 和 Komiic 的正式 APK/JAR 已纳入本仓库主索引，并提供 Komikku 签名匹配入口；Komiic 登录后可按账号权限读取可用章节和图片额度。
 - Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
 - PixEz 已归档，不再列入当前合集；需要旧版时可从其 GitHub Release 手动获取。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
+- 2026-10-07 的 Komiic 登录状态栏、主仓库归属和 E-Hentai 下载回归结果见 [专项验证记录](repo/komiic-ehentai-verification.json)。真实 Komiic 账号登录和手机 Komikku 界面尚未验证。
 
 ## 本地构建和校验
 

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-07",
+  "repositoryUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
+  "remoteMainCommit": "8c27695f81f820f4bd029457ece1a916d2ef85f7",
+  "mainIndex": {
+    "modernExtensionCount": 1481,
+    "modernKomiicVersionCode": 13,
+    "legacyKomiicVersionName": "1.6.13",
+    "legacyKomiicVersionCode": 13,
+    "aggregateActionsRun": "https://github.com/HyperionHXH/Mihon-Extensions/actions/runs/37630615309",
+    "aggregateActionsConclusion": "success"
+  },
+  "komiic": {
+    "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
+    "sourceId": "792932060924485302",
+    "versionName": "1.6.13",
+    "versionCode": 13,
+    "signingCertificateSha256": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54",
+    "apkSha256": "9815255bf09b5f875f8ada1eef91abf4f70cbab5d6ed191d48bf18b6e9c8fd70",
+    "jarSha256": "282ce0ae15dbcb00cb3f94f4e48f9fae74c9844e2a7c2e76b4d0c2c3926f611f",
+    "releaseAndAggregateHashesMatch": true,
+    "sourceActionsRun": "https://github.com/HyperionHXH/E-extensions/actions/runs/37630593767",
+    "sourceActionsConclusion": "success",
+    "accountUnitTests": {"tests": 9, "failures": 0, "errors": 0},
+    "releaseLint": "passed",
+    "suwayomi": {
+      "installed": true,
+      "repositoryMatchesMainIndex": true,
+      "settingsUiVerified": true,
+      "manualVerificationUiVerified": true,
+      "loginStatus": "游客模式（未登录）",
+      "imageLimitQueryVerified": true,
+      "completedDownloads": [
+        {"chapterId": 1108, "pageCount": 3, "isDownloaded": true},
+        {"chapterId": 1151, "pageCount": 10, "isDownloaded": true},
+        {"chapterId": 1152, "pageCount": 10, "isDownloaded": true}
+      ]
+    },
+    "realAccountLoginVerified": false,
+    "androidKomikkuUiVerified": false,
+    "upstreamComparison": {
+      "versionName": "1.6.10",
+      "versionCode": 106010,
+      "packageNameMatches": true,
+      "signingCertificateSha256": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
+      "androidInPlaceUpgradeCompatible": false,
+      "reason": "Different APK signing certificates and a lower maintained versionCode. Suwayomi JAR installation does not prove Android APK upgrade compatibility."
+    }
+  },
+  "ehentai": {
+    "versionName": "1.6.36",
+    "sourceId": "57122881048805941",
+    "repositoryMatchesMainIndex": true,
+    "reproducedFailure": "Remote host terminated the handshake; the download exhausted the client retries and failed at 17:13:20.",
+    "sameTaskAfterFix": {
+      "chapterId": 1095,
+      "pageCount": 44,
+      "isDownloaded": true,
+      "downloadCompletedAt": "2026-10-07 18:25:27",
+      "failedQueueEntries": 0
+    }
+  },
+  "limitations": [
+    "Komikku matches installed extensions by package name and the repository signing key. One main store cannot declare all certificates in a mixed-signature aggregate.",
+    "Restoring Komiic to the main index fixes its omission and Suwayomi repository association; it does not make Android accept a differently signed APK.",
+    "Real Komiic account authentication, sponsored quotas and the user's phone download failure remain unverified.",
+    "No extension uninstall or data migration was performed."
+  ]
+}
