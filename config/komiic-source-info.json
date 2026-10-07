@@ -3,8 +3,8 @@
   "theme": null,
   "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
   "name": "Komiic",
-  "versionCode": 12,
-  "versionName": "1.6.12",
+  "versionCode": 13,
+  "versionName": "1.6.13",
   "extensionLib": "1.6",
   "contentWarning": 1,
   "sources": [

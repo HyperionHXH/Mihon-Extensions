@@ -81,8 +81,8 @@
       {
         "repository": "Hyperion Komiic",
         "sourceInfo": "config/komiic-source-info.json",
-        "apk": "apk/tachiyomi-zh.komiic-v1.6.12.apk",
-        "jar": "jar/tachiyomi-zh.komiic-v1.6.12.jar",
+        "apk": "apk/tachiyomi-zh.komiic-v1.6.13.apk",
+        "jar": "jar/tachiyomi-zh.komiic-v1.6.13.jar",
         "icon": "icon-eu.kanade.tachiyomi.extension.zh.komiic.png",
         "komikkuOnly": true
       }
