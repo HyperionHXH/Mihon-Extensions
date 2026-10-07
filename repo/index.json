@@ -13520,6 +13520,31 @@
         ]
       },
       {
+        "name": "Komiic",
+        "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
+        "resources": {
+          "apkUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/apk/tachiyomi-zh.komiic-v1.6.13.apk",
+          "iconUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/icon-eu.kanade.tachiyomi.extension.zh.komiic.png",
+          "jarUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/jar/tachiyomi-zh.komiic-v1.6.13.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "13",
+        "versionName": "1.6.13",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "792932060924485302",
+            "name": "Komiic",
+            "language": "zh",
+            "homeUrl": "https://komiic.com",
+            "mirrorUrls": [
+              "https://komiic.com",
+              "https://komiic.cc"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Komik Dewasa",
         "packageName": "eu.kanade.tachiyomi.extension.id.komikdewasa",
         "resources": {
