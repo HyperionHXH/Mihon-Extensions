@@ -74,6 +74,7 @@ def local_extension(info: dict[str, Any], custom: dict[str, Any], base_url: str)
         "_repository": custom["repository"],
         "_priority": 1000,
         "_allowDuplicateSite": bool(custom.get("allowDuplicateSite", False)),
+        "_komikkuOnly": bool(custom.get("komikkuOnly", False)),
     }
 
 
@@ -355,7 +356,8 @@ def main() -> int:
             read_json(args.archive_manifest),
         )
         duplicate_report.extend(archive_duplicates)
-    merged = sorted((public_extension(item) for item in included), key=lambda item: (item["name"].lower(), item["packageName"]))
+    merged_all = sorted((public_extension(item) for item in included), key=lambda item: (item["name"].lower(), item["packageName"]))
+    merged = sorted((public_extension(item) for item in included if not item.get("_komikkuOnly")), key=lambda item: (item["name"].lower(), item["packageName"]))
     included_counts: dict[str, int] = {}
     for item in included:
         included_counts[item["_repository"]] = included_counts.get(item["_repository"], 0) + 1
@@ -388,7 +390,7 @@ def main() -> int:
     write_komikku_repositories(
         output,
         base_url,
-        merged,
+        merged_all,
         config.get("komikkuRepositories", []),
     )
 

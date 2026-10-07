@@ -83,7 +83,8 @@
         "sourceInfo": "config/komiic-source-info.json",
         "apk": "apk/tachiyomi-zh.komiic-v1.6.11.apk",
         "jar": "jar/tachiyomi-zh.komiic-v1.6.11.jar",
-        "icon": "icon-eu.kanade.tachiyomi.extension.zh.komiic.png"
+        "icon": "icon-eu.kanade.tachiyomi.extension.zh.komiic.png",
+        "komikkuOnly": true
       }
     ]
   },
@@ -103,6 +104,14 @@
       "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
       "signingKey": "896d1ca35175c42baf61b1a157e4354df9568beed4ccc82a03762d1167005e79",
       "website": "https://github.com/LittleSurvival/copymanga-copy20"
+    },
+    {
+      "name": "Hyperion Komiic",
+      "badgeLabel": "KO",
+      "path": "komikku/komiic",
+      "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
+      "signingKey": "d70301d33161d183345fa7cd4d651cd0ff892ea9be280e7a4df4f3c532d02c54",
+      "website": "https://github.com/HyperionHXH/E-extensions"
     }
   ]
 }

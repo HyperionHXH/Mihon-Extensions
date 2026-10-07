@@ -29,9 +29,15 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku
 https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/copymanga/repo.json
 ```
 
+Komiic（Komikku 专用入口）：
+
+```text
+https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/komikku/komiic/repo.json
+```
+
 两个入口由索引刷新工作流自动生成，只包含对应包名，并固定校验 APK 的签名证书；它们与主聚合索引共用归档下载地址，不会重复占用 APK 存储。Komikku 不需要添加同一插件的多个仓库，若已经从聚合入口安装，请先在 Komikku 中卸载该包，再从对应单源入口安装，以免 Android 因签名不同拒绝覆盖。
 
-Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.11`，并已纳入本聚合索引。安装后在 Komiic 插件设置中填写 Komiic 官网邮箱和密码；插件会在首次读取正文图片时调用官网登录接口并保存会话令牌。账号的每日额度、赞助等级和可见章节仍由 Komiic 服务器决定，插件不会绕过这些限制。密码只保存在 Mihon/Suwayomi 的本地私有设置中，不会上传到 GitHub。
+Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.11`。由于该 APK 使用独立签名证书，不能放入声明 Keiyoushi 证书的主聚合索引；请在 Komikku 中添加上面的 Komiic 专用入口。安装后在 Komiic 插件设置中填写 Komiic 官网邮箱和密码；插件会在首次读取正文图片时调用官网登录接口并保存会话令牌。账号的每日额度、赞助等级和可见章节仍由 Komiic 服务器决定，插件不会绕过这些限制。密码只保存在 Mihon/Suwayomi 的本地私有设置中，不会上传到 GitHub。
 
 ## 内容和更新策略
 
@@ -59,7 +65,7 @@ Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.11`，并已纳入本�
 - GitHub Actions 已成功完成一次完整的远程刷新和校验。
 - 本次验证索引包含 1,477 个扩展；逐项数量、版本、签名和下载地址见 `repo/build-report.json` 与 `repo/url-report.json`。
 - 归档资源数量和体积会随上游变化，不在 README 中硬编码；当前分片及校验结果以 `repo/archive-report.json` 为准。
-- CopyManga 和 Komiic 的正式 APK/JAR 已纳入本仓库；Komiic 登录后可按账号权限读取可用章节和图片额度。
+- CopyManga 和 Komiic 的正式 APK/JAR 已纳入本仓库；Komiic 通过专用 Komikku 入口分发，登录后可按账号权限读取可用章节和图片额度。
 - Super Hentais `1.6.1` 已迁移到当前 KeiSource API；热门、最新、搜索、完整筛选、详情、长篇章节、封面和正文图片均已在 Suwayomi 中通过烟测。
 - PixEz 已归档，不再列入当前合集；需要旧版时可从其 GitHub Release 手动获取。
 - 详细的合并结果、URL 检查和 Suwayomi 烟测见 `repo/build-report.json`、`repo/url-report.json` 和 `repo/smoke-test-report.json`。
