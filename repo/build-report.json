@@ -1,12 +1,12 @@
 {
-  "fetched": 1436,
-  "included": 1481,
+  "fetched": 1453,
+  "included": 1500,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1417,
-      "included": 1416
+      "fetched": 1433,
+      "included": 1432
     },
     {
       "name": "Fucked by FAKKU",
@@ -17,8 +17,8 @@
     {
       "name": "CopyManga Copy20",
       "indexUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/index.min.json",
-      "fetched": 4,
-      "included": 3
+      "fetched": 5,
+      "included": 4
     },
     {
       "name": "Kavita",
@@ -68,7 +68,7 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.komga",
       "repository": "Tachiyomi archive",
-      "reason": "duplicate package; kept Keiyoushi 1.6.70"
+      "reason": "duplicate package; kept Keiyoushi 1.6.73"
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.lanraragi",
@@ -109,7 +109,7 @@
   ],
   "archive": {
     "mirrored": 1,
-    "recovered": 52,
+    "recovered": 54,
     "retainedPackages": 1388,
     "retainedVersions": 1388
   }
