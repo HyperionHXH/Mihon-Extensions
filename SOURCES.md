@@ -53,6 +53,9 @@ The generated `repo/build-report.json` records how many entries were fetched and
 - Optional `apkPackages` mappings explicitly associate a hand-maintained rule with an existing Android package. `repo/triomi/compatibility.json` reports these associations and the remaining packages requiring manual ports; it is not a certificate of feature parity or live-site functionality.
 - The Android aggregate and archived APK/JAR files remain separate. Only the explicitly authored Triomi subset is compatible with the JavaScript runtime; no universal conversion of the Android catalog is claimed.
 - Static validation does not execute upstream binaries or JavaScript. Review the original license and preserve required notices when creating or updating a port; execute real runtime and site tests separately before release.
+- General Chinese-source assessment: `triomi/chinese-port-audit.json` records every one of the 21 upstream-SAFE Chinese packages, twelve new installable ports, nine evidence-backed blockers, and the additional DM5/Manhuaren image-header transport limitation.
+- A working browse-only source may omit `search` entirely. The generator still requires `discover`, `detail` and `content`, emits only actual exports, and rejects claimed-but-unimplemented capabilities. No empty search stub is used to satisfy publication.
+- The same 116 source behavior contracts execute against desktop QuickJS and are wired into actual iOS WebKit acceptance; deterministic HTTP fixtures are separate from the recorded anonymous public-site probes. CI result is recorded in the app status, not inferred from schema validation.
 
 
 ## Scope

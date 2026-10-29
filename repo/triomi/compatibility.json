@@ -3,9 +3,9 @@
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
     "androidPackages": 1571,
-    "ported": 5,
-    "manualPortRequired": 1566,
-    "trackedRules": 5
+    "ported": 17,
+    "manualPortRequired": 1554,
+    "trackedRules": 17
   },
   "extensions": [
     {
@@ -9083,20 +9083,26 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
       "name": "BaoziManhuaPlus",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "baozimanhuaplus"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.baozimhorg",
       "name": "GoDa",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "baozimhorg"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.bh3",
       "name": "BH3",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "bh3"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.bilimanga",
@@ -9143,8 +9149,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
       "name": "Dongman Manhua",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "dongmanmanhua"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -9167,8 +9175,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.guazimanhua",
       "name": "Guazimanhua",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "guazimanhua"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.hanabimanga",
@@ -9221,8 +9231,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.iqiyi",
       "name": "Iqiyi",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "iqiyi"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.jcomic",
@@ -9253,8 +9265,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
       "name": "Kuaikanmanhua",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "kuaikanmanhua"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mangabz",
@@ -9315,8 +9329,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mh1234",
       "name": "MH1234",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "mh1234"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mh160",
@@ -9327,8 +9343,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.miaoqu",
       "name": "Miaoqu Manhua",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "miaoqu"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mycomic",
@@ -9381,8 +9399,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.terrahistoricus",
       "name": "Terra Historicus",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "terrahistoricus"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.tongli",
@@ -9429,14 +9449,18 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.zaimanhua",
       "name": "Zaimanhua",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "zaimanhua"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.zazhimi",
       "name": "Zazhimi",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "zazhimi"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.zerobyw",

@@ -45,6 +45,114 @@
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.all.webtoons"
       ]
+    },
+    {
+      "file": "bh3.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/bh3",
+      "attribution": "Independently authored official Chinese BH3 public HTML/JSON adapter. Full catalog and local title filtering, numerically ordered public chapters and original HTTPS images. No Android app bridge or website script execution.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.bh3"
+      ]
+    },
+    {
+      "file": "terrahistoricus.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/terrahistoricus",
+      "attribution": "Independent official Chinese Terra Historicus and Talos-II public JSON adapter. Topic-qualified IDs, complete ordered episodes, bounded four-worker page URL resolution and fresh signatures on chapter reload. No image-403 interception or entitlement bypass.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.terrahistoricus"
+      ]
+    },
+    {
+      "file": "kuaikanmanhua.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/kuaikanmanhua",
+      "attribution": "Independent Kuaikan public catalog/search and free chapter adapter. Bounded Nuxt literal/alias data parsing without executing website code; paid, login, age and app-only access restrictions remain enforced.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua"
+      ]
+    },
+    {
+      "file": "mh1234.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/mh1234",
+      "attribution": "Independent public MH1234 desktop/mobile HTML protocol port. Literal reader redirects, ordered public pages and refreshed signed image URLs; no page-script execution or account/access-control bypass.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.mh1234"
+      ]
+    },
+    {
+      "file": "guazimanhua.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/guazimanhua",
+      "attribution": "Independent public Guazi HTML adapter with server pagination, search and grouped chapter reading order; literal reader data only, no external JavaScript execution.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.guazimanhua"
+      ]
+    },
+    {
+      "file": "miaoqu.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/miaoqu",
+      "attribution": "Independent public Miaoqu browse/detail/reader adapter. Website search currently returns HTTP 404: no search export or capability is advertised. Data-only bounded image decoding; no arbitrary webpage evaluation.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.miaoqu"
+      ]
+    },
+    {
+      "file": "iqiyi.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/iqiyi",
+      "attribution": "Independent official Iqiyi public comic API adapter with request signing, ordered chapters/pages and explicit paid/authPass rejection. No account identity or access-control bypass.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.iqiyi"
+      ]
+    },
+    {
+      "file": "dongmanmanhua.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/dongmanmanhua",
+      "attribution": "Independent Simplified Chinese Dongman official public web adapter. Distinct source/host from Traditional WEBTOON, complete public chapter pagination and original image URLs; no paid or app-only unlocking.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.dongmanmanhua"
+      ]
+    },
+    {
+      "file": "baozimanhuaplus.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://cn.webmota.com/",
+      "attribution": "Independent public Webmota HTML/AMP adapter mapped to the owned BaoziManhuaPlus catalog identity. Complete in-chapter pagination with overlap deduplication; no upstream implementation copied, app-only or verification requirements are not bypassed.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus"
+      ]
+    },
+    {
+      "file": "baozimhorg.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/baozimhorg",
+      "attribution": "Independent public GoDa HTML/API reader with bounded data-only page decoding and complete page ordering. No website-code evaluation, binary image transformation or verification bypass.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.baozimhorg"
+      ]
+    },
+    {
+      "file": "zaimanhua.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/zaimanhua",
+      "attribution": "Independent public guest Zaimanhua chapter adapter preserving editions, numeric reading order and signed HD URLs. Public PC metadata fallback only; no login, entitlement or image-interceptor bypass.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.zaimanhua"
+      ]
+    },
+    {
+      "file": "zazhimi.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/zazhimi",
+      "attribution": "Independent public Zazhimi magazine index/search/show API adapter. One complete issue is one chapter, all page order preserved; general magazines rather than a manga-only catalog.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.zazhimi"
+      ]
     }
   ]
 }

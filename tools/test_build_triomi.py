@@ -161,6 +161,29 @@ class TriomiCatalogTests(unittest.TestCase):
         self.rule["capabilities"] = list(build_triomi.FUNCTIONS)
         build_triomi.validate_rule(self.rule, "example.json")
 
+    def test_browse_only_rule_does_not_advertise_unimplemented_search(self):
+        functions = ("discover", "detail", "content")
+        self.rule["script"] = "\n".join(f"async function {name}() {{ return {{}}; }}" for name in functions)
+        self.rule["capabilities"] = list(functions)
+        self.save("triomi/rules/example.json", self.rule)
+        build_triomi.build(self.root)
+        entry = self.load("repo/triomi/index.json")["sources"][0]
+        self.assertEqual(entry["capabilities"], list(functions))
+        self.assertNotIn("search", entry["capabilities"])
+
+    def test_browse_only_rule_cannot_claim_search_or_omit_reading(self):
+        for missing in ("discover", "detail", "content"):
+            rule = {**self.rule, "script": "\n".join(
+                f"async function {name}() {{ return {{}}; }}"
+                for name in build_triomi.FUNCTIONS if name != missing
+            )}
+            with self.subTest(missing=missing), self.assertRaisesRegex(ValueError, "missing JavaScript function"):
+                build_triomi.validate_rule(rule, "example.json")
+        self.rule["script"] = "function discover() {} function detail() {} function content() {}"
+        self.rule["capabilities"] = list(build_triomi.FUNCTIONS)
+        with self.assertRaisesRegex(ValueError, "capabilities"):
+            build_triomi.validate_rule(self.rule, "example.json")
+
     def test_invalid_semver_engine_type_and_metadata_are_rejected(self):
         for field, invalid in (("version", "01.0.0"), ("version", "1.0"), ("engine", "apk"), ("type", "novel"), ("requireLogin", "false"), ("name", "")):
             with self.subTest(field=field, invalid=invalid):

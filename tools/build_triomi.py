@@ -26,6 +26,7 @@ MAX_SCRIPT_BYTES = 1024 * 1024
 MAX_CATALOG_BYTES = 2 * 1024 * 1024
 MAX_RULES = 1000
 FUNCTIONS = ("discover", "search", "detail", "content")
+REQUIRED_FUNCTIONS = ("discover", "detail", "content")
 SEMVER = re.compile(
     r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)"
     r"(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)"
@@ -133,7 +134,7 @@ def validate_rule(rule: Any, filename: str) -> dict[str, Any]:
     if not isinstance(script, str) or not script.strip() or len(script.encode("utf-8")) > MAX_SCRIPT_BYTES:
         raise ValueError(f"{filename}: script is empty or exceeds {MAX_SCRIPT_BYTES} bytes")
     functions = defined_functions(script)
-    missing = set(FUNCTIONS) - functions
+    missing = set(REQUIRED_FUNCTIONS) - functions
     if missing:
         raise ValueError(f"{filename}: missing JavaScript function definitions: {', '.join(sorted(missing))}")
     feeds = rule.get("feeds")
@@ -234,7 +235,7 @@ def expected_outputs(root: Path) -> dict[str, bytes]:
         outputs[f"rules/{filename}"] = data
         entry = {key: rule[key] for key in ("id", "name", "type", "lang", "version")}
         entry.update({"url": f"{PUBLIC_BASE}/rules/{filename}", "hash": hashlib.sha256(data).hexdigest()})
-        entry["capabilities"] = list(FUNCTIONS)
+        entry["capabilities"] = [name for name in FUNCTIONS if name in defined_functions(rule["script"])]
         entry["license"] = row["license"]
         if "nsfw" in rule:
             entry["nsfw"] = rule["nsfw"]

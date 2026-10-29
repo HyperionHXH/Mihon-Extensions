@@ -3,6 +3,102 @@
   "name": "Hyperion Triomi Sources",
   "sources": [
     {
+      "id": "baozimanhuaplus",
+      "name": "包子漫画+（Webmota 公开漫画）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/baozimanhuaplus.json",
+      "hash": "8a035fcdfa27648456cca641f9fee5ae90406fb8faf72d1939fdb3a8e49b5a03",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; independent public-protocol implementation"
+    },
+    {
+      "id": "baozimhorg",
+      "name": "GoDa漫画（公开漫画）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/baozimhorg.json",
+      "hash": "d3b2c4c09274f7cac7f9b2b62f88b3be7cfa8174895a82e466d9976f81e80859",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "bh3",
+      "name": "崩坏3官方漫画",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/bh3.json",
+      "hash": "f2845a9a6dfcd6197d1ed884054e9ef56fa5ed2d82524de07e2cce8a734a44a1",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "dongmanmanhua",
+      "name": "咚漫（简体中文官方公开网页）",
+      "type": "manga",
+      "lang": "zh-Hans",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/dongmanmanhua.json",
+      "hash": "2bd5fc969a00190102f5ada49f94029a011d37ac8e067e8f1943695d894b26c7",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "guazimanhua",
+      "name": "瓜子漫画",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/guazimanhua.json",
+      "hash": "b42727df731bf355e3f5222491b669c4515438942741978883382271afdd9651",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "iqiyi",
+      "name": "爱奇艺叭嗒（官方公开漫画）",
+      "type": "manga",
+      "lang": "zh-Hans",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/iqiyi.json",
+      "hash": "fba4b3d458427fe502c533ff5da9042cb904cd76ad3f1e11c1cbd4ad4551008f",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
       "id": "komiic",
       "name": "Komiic",
       "type": "manga",
@@ -17,6 +113,22 @@
         "content"
       ],
       "license": "Apache-2.0"
+    },
+    {
+      "id": "kuaikanmanhua",
+      "name": "快看漫画",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/kuaikanmanhua.json",
+      "hash": "f393049e0ddab272fcd18e10ee3fc6270f918c67ebb079fbc00d57eb40690fcf",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
     },
     {
       "id": "mangadex",
@@ -42,6 +154,53 @@
       "version": "1.0.0",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/manhuagui.json",
       "hash": "ab5dfc3868d9b0f3f440963e4f4027e08a04cdcdc498ba332775b20f7ccb75c6",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "mh1234",
+      "name": "漫画1234",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/mh1234.json",
+      "hash": "de93e25420a8c23fc986b322980e42d6b957f8d82140bed30d2504c437288e1d",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "miaoqu",
+      "name": "喵趣漫画（仅浏览，站点搜索不可用）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/miaoqu.json",
+      "hash": "f495095c227503109514d793e54817e8605971942af1ff22f474e809b3b41fd5",
+      "capabilities": [
+        "discover",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "terrahistoricus",
+      "name": "泰拉记事社（官方漫画）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/terrahistoricus.json",
+      "hash": "0200d25d77a98a0af339e9939e81637043f8b532a4687462f9cc7deb73633ec9",
       "capabilities": [
         "discover",
         "search",
@@ -81,6 +240,38 @@
         "content"
       ],
       "license": "GPL-3.0-or-later; xkcd content CC BY-NC 2.5"
+    },
+    {
+      "id": "zaimanhua",
+      "name": "再漫画（公开章节）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/zaimanhua.json",
+      "hash": "88a64f41dbc8181fa3aa443493e8b2828f359a1acbb1952235424244ba52f8eb",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "zazhimi",
+      "name": "杂志迷（公开整刊）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/zazhimi.json",
+      "hash": "6b5613483e4bb13dc0995df93f59502e19ff38539fc47501c2c5674b71e7664e",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
     }
   ]
 }

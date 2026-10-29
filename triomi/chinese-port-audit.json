@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-29",
+  "catalogUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/index.json",
+  "upstreamProtocolCommit": "dbf6c05d6a9520c60533f1626616263522bbe71a",
+  "notice": "一般中文来源逐站公开协议移植，不是APK转换；站点未来变化及网络可达性需持续维护。没有制作成人内容检索/阅读插件。",
+  "inventory": {
+    "chineseLanguagePackages": 62,
+    "upstreamSafe": 21,
+    "upstreamMixed": 22,
+    "upstreamNsfw": 19,
+    "newGeneralRules": 12,
+    "safeBlocked": 9,
+    "totalCompatibleRules": 17
+  },
+  "contractValidation": {
+    "windowsRuntime": "QuickJS with real selectors and deterministic HTTP fixtures",
+    "testsPassed": 116,
+    "iosRuntime": "pending actual WebKit CI; not inferred from desktop tests"
+  },
+  "sources": [
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
+      "sourceId": "baozimanhua",
+      "name": "Baozi Manhua",
+      "status": "blocked",
+      "installable": false,
+      "reason": "baozimh 主目录连接重置，appcn/appgb 返回 Cloudflare403 与 App 阅读墙；独立公开 Webmota 镜像以 baozimanhuaplus 发布，不假冒主站已通过。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
+      "sourceId": "baozimanhuaplus",
+      "name": "BaoziManhuaPlus",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "baozimanhuaplus",
+      "mode": "discover_search_read",
+      "evidence": "公开Webmota章节6个分页面共274张去重图片，首/末HTTP200；不是baozimh主站验证。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.baozimhorg",
+      "sourceId": "baozimhorg",
+      "name": "GoDa",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "baozimhorg",
+      "mode": "discover_search_read",
+      "evidence": "公开API/data-only解码150图，首/末HTTP200；无网页代码执行。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.bh3",
+      "sourceId": "bh3",
+      "name": "BH3",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "bh3",
+      "mode": "discover_search_read",
+      "evidence": "生产 JsSource/QuickJS/Dart HTTPS：23部目录、标题搜索、7章，首章29图，首张800×1131 JPEG解码。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.comicabc",
+      "sourceId": "comicabc",
+      "name": "Comicabc",
+      "status": "blocked",
+      "installable": false,
+      "reason": "公开首页和发现页均返回 Cloudflare403，无法证明完整公开阅读链路。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.creativecomic",
+      "sourceId": "creativecomic",
+      "name": "Creative Comic Collection",
+      "status": "blocked",
+      "installable": false,
+      "reason": "公开章节图片需要 SHA-512/AES-CBC 密钥派生及二进制响应解码；当前客户端图片宿主不支持该链路，不发布只有目录的规则。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+      "sourceId": "dongmanmanhua",
+      "name": "Dongman Manhua",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "dongmanmanhua",
+      "mode": "discover_search_read",
+      "evidence": "独立简中官方域名、完整公开分页及112图章节，首/末JPEG取回；不绕过App专属限制。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.dumanwu",
+      "sourceId": "dumanwu",
+      "name": "Dumanwu",
+      "status": "blocked",
+      "installable": false,
+      "reason": "已配置移动站及上游桌面站均重置经过证书验证的 HTTPS 连接；不关闭证书校验。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.guazimanhua",
+      "sourceId": "guazimanhua",
+      "name": "Guazimanhua",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "guazimanhua",
+      "mode": "discover_search_read",
+      "evidence": "公开搜索、341章目录、12图章节，首/中/末JPEG请求HTTP200。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.iqiyi",
+      "sourceId": "iqiyi",
+      "name": "Iqiyi",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "iqiyi",
+      "mode": "discover_search_read",
+      "evidence": "官方公开API签名、目录、免费5图章节及首/末图片取回；authPass/付费限制不绕过。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
+      "sourceId": "kuaikanmanhua",
+      "name": "Kuaikanmanhua",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "kuaikanmanhua",
+      "mode": "discover_search_read",
+      "evidence": "公开搜索和分页、377章目录、8图免费章节，首图1280×1000 JPEG；付费10103拒绝保留。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.mangabz",
+      "sourceId": "mangabz",
+      "name": "Mangabz",
+      "status": "blocked",
+      "installable": false,
+      "reason": "主域及记录中的镜像连接超时/重置，未取得真实章节图片证据；候选代码隔离，不加入应用或目录。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.manhuawu",
+      "sourceId": "manhuawu",
+      "name": "Manhuawu",
+      "status": "blocked",
+      "installable": false,
+      "reason": "桌面目录为 Cloudflare403 交互验证，移动域名无法解析；未绕过验证。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.mh1234",
+      "sourceId": "mh1234",
+      "name": "MH1234",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "mh1234",
+      "mode": "discover_search_read",
+      "evidence": "公开搜索、554章目录、旧/新章节，样本23张WebP均HTTP200；签名URL不改写。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.mh160",
+      "sourceId": "mh160",
+      "name": "Manhua160",
+      "status": "blocked",
+      "installable": false,
+      "reason": "公开搜索为 Cloudflare403，阅读器解析出的样本图返回415；未发布不可读规则。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.miaoqu",
+      "sourceId": "miaoqu",
+      "name": "Miaoqu Manhua",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "miaoqu",
+      "mode": "browse_only",
+      "evidence": "299章、52图，首/中/末JPEG请求HTTP200；站点搜索404，不导出搜索能力。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.rumanhua",
+      "sourceId": "rumanhua",
+      "name": "Rumanhua",
+      "status": "blocked",
+      "installable": false,
+      "reason": "移动和桌面域名的 TLS 证书主机名校验失败；未使用 HTTP 或关闭主机名验证。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.terrahistoricus",
+      "sourceId": "terrahistoricus",
+      "name": "Terra Historicus",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "terrahistoricus",
+      "mode": "discover_search_read",
+      "evidence": "两个官方主题21/6部，公开58页样本及首图1200×1670 JPEG；另有生产Dart HTTPS读取通过。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.vomic",
+      "sourceId": "vomic",
+      "name": "vomic",
+      "status": "blocked",
+      "installable": false,
+      "reason": "公开章节要求登录，App 协议也要求注册凭据；缺少发布方支持的匿名阅读接口。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.zaimanhua",
+      "sourceId": "zaimanhua",
+      "name": "Zaimanhua",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "zaimanhua",
+      "mode": "discover_search_read",
+      "evidence": "公开游客章节36张签名HD图，首/末HTTP200；每次读取刷新签名，图过期后需重载章节。"
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.zazhimi",
+      "sourceId": "zazhimi",
+      "name": "Zazhimi",
+      "status": "ported",
+      "installable": true,
+      "ruleId": "zazhimi",
+      "mode": "discover_search_read",
+      "evidence": "完整252页公开刊物及首/末HTTP200；来源为杂志，不宣称仅漫画。"
+    }
+  ],
+  "additionalGeneralProtocolChecks": [
+    {
+      "id": "dm5",
+      "status": "blocked_dynamic_image_headers",
+      "installable": false,
+      "reason": "公开目录/章节及正确Referer图片可读，但同图使用来源根Referer返回404。当前ChapterContent无法保留章节专属图片请求头；需先补齐客户端传输及离线持久化，不能仅发布JSON。"
+    },
+    {
+      "id": "manhuaren",
+      "status": "blocked_dynamic_image_headers",
+      "installable": false,
+      "reason": "公开目录/章节及正确Referer图片可读，但同图使用来源根Referer返回404。当前ChapterContent无法保留章节专属图片请求头；需先补齐客户端传输及离线持久化，不能仅发布JSON。"
+    }
+  ]
+}
