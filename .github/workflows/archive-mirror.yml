@@ -209,6 +209,8 @@ jobs:
           cp archive-bundle/archive-manifest.json repo/archive-manifest.json
           cp archive-bundle/archive-report.json repo/archive-report.json
           python tools/build_index.py
+          python tools/build_triomi.py
+          python tools/build_triomi.py --check
           python tools/validate_index.py
 
       - name: Summarize archive result
@@ -235,7 +237,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add repo/archive-manifest.json repo/archive-report.json repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/komikku
+          git add repo/archive-manifest.json repo/archive-report.json repo/index.json repo/index.min.json repo/repo.json repo/checksums.json repo/build-report.json repo/komikku repo/triomi
           git diff --cached --quiet || git commit -m "Refresh extension archive"
           git push
 

@@ -1,0 +1,3 @@
+# Rules are SHA-256 pinned by their exact distributed bytes.
+triomi/** text eol=lf
+repo/triomi/** text eol=lf

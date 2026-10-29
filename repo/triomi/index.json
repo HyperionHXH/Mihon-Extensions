@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "name": "Hyperion Triomi Sources",
+  "sources": [
+    {
+      "id": "komiic",
+      "name": "Komiic",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/komiic.json",
+      "hash": "ca7592ef6b122b1e4582033a865efc495d8a3c7d52d01bb267a13f0d2c48cdf2",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "mangadex",
+      "name": "MangaDex 漫画（开放 API）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.5",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/mangadex.json",
+      "hash": "78576edf47bc6a7c523941c362e9cffa71416a2e4dc32577bd1e6cdffe50c056",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; site content rights remain with publishers"
+    },
+    {
+      "id": "manhuagui",
+      "name": "漫画柜（公开漫画）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/manhuagui.json",
+      "hash": "ab5dfc3868d9b0f3f440963e4f4027e08a04cdcdc498ba332775b20f7ccb75c6",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "webtoons-zh",
+      "name": "WEBTOON 繁體中文（公開網頁）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/webtoons-zh.json",
+      "hash": "85b8237b60870a7716f265c7d92e1ccd8869f5ef7045aa9d3ccae7f512c06be0",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
+    },
+    {
+      "id": "xkcd",
+      "name": "xkcd（官方公开 API · 编号搜索）",
+      "type": "manga",
+      "lang": "en",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/xkcd.json",
+      "hash": "8ff989684ad496ac7724b1ac6df9003e9df1584bc798b1a40495a7987b481262",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; xkcd content CC BY-NC 2.5"
+    }
+  ]
+}

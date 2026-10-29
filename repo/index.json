@@ -1,6 +1,10 @@
 {
   "name": "Hyperion Mihon Extensions",
   "badgeLabel": "HYP",
+  "triomi": {
+    "indexUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/index.json",
+    "name": "Hyperion Triomi Sources"
+  },
   "signingKey": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2",
   "contact": {
     "website": "https://github.com/HyperionHXH/Mihon-Extensions",

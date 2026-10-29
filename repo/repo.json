@@ -1,5 +1,9 @@
 {
   "index_v2": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/index.json",
+  "triomi": {
+    "indexUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/index.json",
+    "name": "Hyperion Triomi Sources"
+  },
   "meta": {
     "name": "Hyperion Mihon Extensions",
     "shortName": "HYP",

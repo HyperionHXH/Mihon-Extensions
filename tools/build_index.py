@@ -13,6 +13,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
+from build_triomi import discovery_marker
+
 
 USER_AGENT = "HyperionHXH-Mihon-Extensions/1.0"
 
@@ -373,12 +375,14 @@ def main() -> int:
             "website": "https://github.com/HyperionHXH/Mihon-Extensions",
             "discord": None,
         },
+        "triomi": discovery_marker(),
         "extensionList": {"extensions": merged},
     }
     (output / "index.json").write_text(json.dumps(modern, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (output / "index.min.json").write_text(json.dumps([legacy_entry(item) for item in merged], ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     (output / "repo.json").write_text(json.dumps({
         "index_v2": f"{base_url}/index.json",
+        "triomi": discovery_marker(),
         "meta": {
             "name": modern["name"],
             "shortName": modern["badgeLabel"],

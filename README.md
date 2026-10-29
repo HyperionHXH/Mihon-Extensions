@@ -41,11 +41,69 @@ Komiic 已由 Hyperion E-extensions 单独维护为 `1.6.13`，正式包保存�
 
 本机 Suwayomi 已验证游客状态、额度查询及 3 页和 10 页章节下载；真实账号登录和手机 Komikku 界面尚未验证。
 
+## Triomi iOS：兼容规则子集
+
+Triomi 的 JavaScript 漫画规则使用单独的目录，不执行 Android APK/JAR。可添加同一个主仓库 URL，应用通过现代索引中的显式 `triomi.indexUrl` 发现兼容目录；也可直接添加：
+
+```text
+https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/index.json
+```
+
+`repo/index.json` 和 `repo/repo.json` 的 `triomi` 字段只是附加发现信息；原 Android/Windows 扩展条目、签名与 APK/JAR 下载地址保留，旧版列表 `repo/index.min.json` 不增加该字段。
+
+**Android扩展数量不等于iOS规则数量。** 这里只发布已人工编写、单独维护且列入 `triomi/catalog.json` 的 Triomi 规则，不提供通用 APK 转 JavaScript 转换器。`repo/triomi/compatibility.json` 按 Android 包名列出 `ported` / `manual_port_required`：只有清单显式填写 `apkPackages` 的规则才建立对应关系；`ported` 也不证明完整功能对等或站点当前可用。未映射的原生 Triomi 规则仍可出现在兼容目录中。
+
+当前显式移植5项，不是把全部APK换成JSON：
+
+| 兼容规则 | 行为范围与本轮证据 |
+| --- | --- |
+| MangaDex | 中文作品/章节、图片及低流量；Windows生产JS实网发现20部、搜索、211章/88页中的首图实际解码通过 |
+| Komiic | 游客/已保存网站会话的公开GraphQL与图片额度；公开接口和单张JPEG取回通过，Windows Dart TLS握手失败另列为当前网络限制；没有移植APK邮箱密码登录/续期 |
+| xkcd | 官方API最近列表、编号/URL搜索、单图条漫；生产JS实网20部及第1期图片解码通过，标题搜索不提供假结果 |
+| 漫画柜 | 公开HTML目录与受限数据解码，不执行网页脚本；公开reader和一张WebP取回通过，当前主机部分DNS/TLS/搜索请求受限 |
+| WEBTOON繁中 | 完整公开网页解析与离线真实JS契约通过；实网viewer未完成，当前站点返回停机页/TLS错误，不宣称可读已验收 |
+
+拷贝漫画公开章节API返回210并要求官方App解除限制，网页样本也没有可读章节；本次没有发布半成品JSON。原Android APK继续提供，不为追求“全库兼容”绕过站点访问权限。兼容报告中`ported`仅表示有明确规则实现和包映射，不表示账号、全部语言或实站网络全功能对等。规则必须持续随站点变化维护。
+
+### 规则清单和离线发布
+
+维护者在 `triomi/rules/*.json` 编辑真实规则，并在 `triomi/catalog.json` 登记每个文件一次：
+
+```json
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "file": "example.json",
+      "license": "MIT",
+      "upstreamUrl": "https://example.org/source",
+      "attribution": "Original author and port maintainer",
+      "apkPackages": ["org.example.extension"]
+    }
+  ]
+}
+```
+
+示例只说明字段，不是可安装规则；`apkPackages` 可省略，但填写时必须指向当前 Android 索引中实际存在的包。许可证和上游 URL 必须来自对应源的实际授权与出处，不能由脚本推断。
+
+规则根对象要求 `id`、`name`、`type: "manga"`、`engine: "js"`、`lang`、SemVer `version`、HTTPS `baseUrl`、布尔 `requireLogin`、非空 `feeds` 和 `script`。脚本必须定义 `discover`、`search`、`detail`、`content`；可选 `capabilities` 是这四个函数名组成的数组，必须与定义一致。可选 `nsfw` 必须为布尔值。规则和脚本分别限制为 2 MiB 和 1 MiB。
+
+```powershell
+python tools/build_triomi.py
+python tools/build_triomi.py --check
+python -m unittest discover -s tools -p "test_build_triomi.py"
+```
+
+脚本完全离线：逐字节复制已登记规则到 `repo/triomi/rules/`，生成带 SHA-256 固定校验值和绝对 HTTPS 地址的 `repo/triomi/index.json`，同步分发 `attribution.json` 和兼容性报告。输出按 ID/文件名/包名排序，无时间戳；`--check` 不写文件，拒绝缺失、过期、多余文件以及哈希或内容漂移。编辑规则后应将重新生成的输出一并提交。
+
+这些检查仅覆盖结构、基本元数据、大小、HTTPS 地址、函数声明和能力一致性；**不会执行 JavaScript，也不证明脚本语义、登录流程、网络访问或漫画站点可用**。真实 JavaScript/应用测试须另行完成。专用 Triomi 工作流在推送和 PR 上检查已提交输出，手动触发时只构建/发布 Triomi，不下载全部上游归档。每周索引刷新和归档刷新同样保留、重新生成并发布 Triomi 目录；只替换生成的 `repo/triomi/`，不会覆盖作者维护的 `triomi/` 输入。
+
+
 ## 内容和更新策略
 
 - 当前索引汇集 Keiyoushi、Fucked by FAKKU、copymanga-copy20、Kavita、Suwayomi 和 Tachiyomi 历史索引。
 - 按包名、源 ID 和跨仓库站点地址去重；同一上游仓库明确并存的不同实现会保留。
-- 当前构建共包含 1,481 个扩展，具体来源数量和排除原因见 `repo/build-report.json`（该数字会随上游刷新变化）。
+- 当前扩展数量以 `repo/build-report.json` 为准，不把兼容规则数量等同于APK数量。
 - 聚合索引中的全部扩展都会复制到本仓库的分片归档 Release；归档文件不改签，并在上传前校验包名、版本和签名证书。
 - 每个已归档插件保留当前版和上一版。即使上游仓库删除插件，最后归档版本仍会继续出现在本索引中。
 - 自维护的 E-Hentai 和 Super Hentais 扩展的 APK/JAR 与图标放在 `repo/`，方便 Mihon 与 Suwayomi 使用同一索引。
@@ -87,4 +145,4 @@ python tools/validate_index.py --check-urls --url-report repo/url-report.json
 
 ## 许可和归属
 
-本仓库只维护索引、校验脚本和 E-Hentai 源的分发入口。各上游扩展的代码、图标、APK/JAR 和许可证归其原作者及对应项目所有，详见 [SOURCES.md](SOURCES.md)。
+本仓库维护索引、校验脚本、独立 Triomi JavaScript 规则及 E-Hentai 源的分发入口。各上游扩展的代码、图标、APK/JAR 和许可证归其原作者及对应项目所有；Triomi 规则的逐文件许可与出处保存在 `triomi/catalog.json`，随发布复制为 `repo/triomi/attribution.json`，详见 [SOURCES.md](SOURCES.md)。

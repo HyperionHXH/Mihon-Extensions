@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "file": "mangadex.json",
+      "license": "GPL-3.0-or-later; site content rights remain with publishers",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/feat/ios/assets/rules/mangadex-api-js.json",
+      "attribution": "Triomi MangaDex public API adapter; stable mangadex source identity, Chinese chapters and data-saver support; no APK code copied.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.all.mangadex"
+      ]
+    },
+    {
+      "file": "komiic.json",
+      "license": "Apache-2.0",
+      "upstreamUrl": "https://github.com/HyperionHXH/E-extensions/tree/13df3c318e448c0295e0cf805b0c3755fbbb5fe0/src/zh/komiic",
+      "attribution": "Komiic public GraphQL guest reading port, modified from maintained E-extensions; embedded Apache license and modification notice. Account login/refresh and sponsorship are not ported; site quota/auth enforced.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.komiic"
+      ]
+    },
+    {
+      "file": "xkcd.json",
+      "license": "GPL-3.0-or-later; xkcd content CC BY-NC 2.5",
+      "upstreamUrl": "https://xkcd.com/json.html",
+      "attribution": "Independently authored official xkcd JSON API adapter. Latest issues and number/URL search only; official API does not provide arbitrary title search.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.all.xkcd"
+      ]
+    },
+    {
+      "file": "manhuagui.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/5b95ccc4b6a96fb9a4a28cead59255b0af99276e/src/zh/manhuagui",
+      "attribution": "Independent ManHuaGui public HTML/data port. Bounded LZ/word decoding treats website scripts as data; no eval or page-script execution. Hidden/restricted chapters are not unlocked.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.manhuagui"
+      ]
+    },
+    {
+      "file": "webtoons-zh.json",
+      "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
+      "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/main/src/all/webtoons",
+      "attribution": "Independently authored Traditional Chinese WEBTOON public HTML adapter. No login/paid/app-only episode bypass or signed image rewriting; no upstream implementation copied.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.all.webtoons"
+      ]
+    }
+  ]
+}

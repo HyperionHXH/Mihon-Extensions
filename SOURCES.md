@@ -45,6 +45,16 @@ The generated `repo/build-report.json` records how many entries were fetched and
 - **LIVID (18+)** is `livid96/Aniyomi-Adult-Extensions`. Those APKs implement Aniyomi video providers, not Mihon manga sources, so they cannot be loaded by Mihon and are intentionally excluded.
 - **Keiyoushi** is the primary configured repository and is included in full before cross-repository deduplication.
 
+## Triomi JavaScript rules
+
+- Authored rule inputs: `triomi/rules/*.json`; the authoritative per-file license, upstream HTTPS source URL, and attribution are recorded in `triomi/catalog.json`.
+- Published attribution: `repo/triomi/attribution.json`, generated from that manifest alongside byte-for-byte rule copies and their SHA-256 catalog pins.
+- A manifest row is required for every published rule. The generator does not infer a license from an APK, source ID, website, or another project's license.
+- Optional `apkPackages` mappings explicitly associate a hand-maintained rule with an existing Android package. `repo/triomi/compatibility.json` reports these associations and the remaining packages requiring manual ports; it is not a certificate of feature parity or live-site functionality.
+- The Android aggregate and archived APK/JAR files remain separate. Only the explicitly authored Triomi subset is compatible with the JavaScript runtime; no universal conversion of the Android catalog is claimed.
+- Static validation does not execute upstream binaries or JavaScript. Review the original license and preserve required notices when creating or updating a port; execute real runtime and site tests separately before release.
+
+
 ## Scope
 
 Only entries present in configured, attributable indexes are published. A source can disappear when its upstream maintainer removes it or when validation fails. The repository does not redistribute unknown binaries merely to increase its count.

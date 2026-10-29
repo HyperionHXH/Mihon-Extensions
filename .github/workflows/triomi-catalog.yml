@@ -1,0 +1,107 @@
+name: Validate and publish Triomi catalog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "triomi/**"
+      - "repo/triomi/**"
+      - "repo/index.json"
+      - "repo/repo.json"
+      - "tools/build_triomi.py"
+      - "tools/test_build_triomi.py"
+      - ".github/workflows/triomi-catalog.yml"
+  pull_request:
+    paths:
+      - "triomi/**"
+      - "repo/triomi/**"
+      - "repo/index.json"
+      - "repo/repo.json"
+      - "tools/build_triomi.py"
+      - "tools/test_build_triomi.py"
+      - ".github/workflows/triomi-catalog.yml"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: extension-index
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Test offline generator
+        run: python -m unittest discover -s tools -p 'test_build_triomi.py'
+
+      - name: Validate committed catalog and rule hashes
+        if: github.event_name != 'workflow_dispatch'
+        run: python tools/build_triomi.py --check
+
+      - name: Build publication without upstream archive refresh
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          python tools/build_triomi.py
+          python tools/build_triomi.py --check
+
+      - name: Upload verified Triomi publication
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: triomi-catalog
+          path: repo/triomi
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository for publishing
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Download verified Triomi publication
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: triomi-catalog
+          path: triomi-bundle
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install generated publication
+        run: |
+          rm -rf repo/triomi
+          cp -R triomi-bundle repo/triomi
+
+      - name: Verify downloaded publication against authored inputs
+        run: python tools/build_triomi.py --check
+
+      - name: Commit generated Triomi publication only
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add repo/triomi
+          git diff --cached --quiet || git commit -m "Publish Triomi source catalog"
+          git push
