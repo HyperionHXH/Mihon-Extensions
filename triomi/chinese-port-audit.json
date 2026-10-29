@@ -16,7 +16,12 @@
   "contractValidation": {
     "windowsRuntime": "QuickJS with real selectors and deterministic HTTP fixtures",
     "testsPassed": 128,
-    "iosRuntime": "pending actual WebKit CI; not inferred from desktop tests"
+    "iosRuntime": "Actual production IosJsRuntime/WKWebView on iOS Simulator: all 128 source contracts passed with deterministic HTTP fixtures; not an upstream-network claim.",
+    "iosRunId": 40890601599,
+    "iosAppCommit": "0227cf6a90f70237313905ac4eab28a4dfc3bbbe",
+    "iosIntegrationTestsPassed": 136,
+    "iosVisualTourCaptures": 56,
+    "hostRelease": "https://github.com/HyperionHXH/triomi/releases/tag/v0.12.0-ios.177"
   },
   "sources": [
     {

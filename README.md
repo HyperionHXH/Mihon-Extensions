@@ -81,6 +81,8 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 
 本轮最终Windows生产`JsSource + QuickJS + Dart HTTPS`实网链路有11个新增来源完成发现、所声明的搜索、章节、首图真实解码；Webmota为独立Python公开阅读成功、Windows Dart TLS受限，不能混称应用实网通过。实际字节摘要/计数和边界写入中文审计。实网发现的相对重定向、普通页面含Cloudflare jsd脚本导致的误判及杂志API空结果/空格目录已修正为1.0.1；没有放宽站点域名、TLS或真实验证页拒绝策略。
 
+实际iOS验收也已完成：Triomi源码`0227cf6`的[macOS运行40890601599](https://github.com/HyperionHXH/triomi/actions/runs/40890601599)中，新增规则128项真实WKWebView契约、整套136项集成及56状态视觉巡检通过。建议使用[独立iOS177版](https://github.com/HyperionHXH/triomi/releases/tag/v0.12.0-ios.177)修复仓库管理收键盘负边距崩溃；已有176支持相同规则协议，但没有这项宿主修复。该iOS规则协议验收不等于所有站点实网/付费账号或实体iPhone均已验证。
+
 未发布项目也已记录：baozimh主站、Comicabc、漫画屋和MH160遇访问验证/图片错误；毒漫屋、如漫画及Mangabz遇连接或证书问题；Vomic要求账号；CCC创作集需要当前宿主没有的二进制图片解码。另查DM5和漫画人，公开阅读可达但图片必须携带章节专属Referer，当前客户端不能持久保存并传给图片/离线下载，故不发布“能列作品但图全失败”的JSON。原APK不变，不关闭TLS校验、不绕过付费/验证或制作成人内容检索阅读插件。
 
 ### 规则清单和离线发布
