@@ -15,7 +15,7 @@
   },
   "contractValidation": {
     "windowsRuntime": "QuickJS with real selectors and deterministic HTTP fixtures",
-    "testsPassed": 116,
+    "testsPassed": 128,
     "iosRuntime": "pending actual WebKit CI; not inferred from desktop tests"
   },
   "sources": [
@@ -225,5 +225,209 @@
       "installable": false,
       "reason": "公开目录/章节及正确Referer图片可读，但同图使用来源根Referer返回404。当前ChapterContent无法保留章节专属图片请求头；需先补齐客户端传输及离线持久化，不能仅发布JSON。"
     }
-  ]
+  ],
+  "productionNetworkValidation": {
+    "environment": "Windows production JsSource + QuickJS + Dart HTTPS; real first-page Flutter image decode, anonymous and verified TLS",
+    "passed": 11,
+    "limited": 1,
+    "sources": [
+      {
+        "id": "bh3",
+        "status": "passed",
+        "ruleSha256": "f2845a9a6dfcd6197d1ed884054e9ef56fa5ed2d82524de07e2cce8a734a44a1",
+        "discoverCount": 23,
+        "searchSupported": true,
+        "searchCount": 1,
+        "chapterCount": 7,
+        "image": {
+          "pageCount": 29,
+          "host": "act-webstatic.mihoyo.com",
+          "bytes": 148724,
+          "sha256": "a1282395a8bbe48d3de4293c3ad1a04fbcac9cbdf99f211a07f9f2ab103a86b9",
+          "width": 800,
+          "height": 1131
+        }
+      },
+      {
+        "id": "terrahistoricus",
+        "status": "passed",
+        "ruleSha256": "0200d25d77a98a0af339e9939e81637043f8b532a4687462f9cc7deb73633ec9",
+        "discoverCount": 21,
+        "searchSupported": true,
+        "searchCount": 1,
+        "chapterCount": 1,
+        "image": {
+          "pageCount": 58,
+          "host": "res01.hycdn.cn",
+          "bytes": 1534154,
+          "sha256": "a10fcf3fbd48820340c9d81dc54d0fdbdda9d80546684e52348ccbe69e9e290f",
+          "width": 1200,
+          "height": 1670
+        }
+      },
+      {
+        "id": "kuaikanmanhua",
+        "status": "passed",
+        "ruleSha256": "f393049e0ddab272fcd18e10ee3fc6270f918c67ebb079fbc00d57eb40690fcf",
+        "discoverCount": 42,
+        "searchSupported": true,
+        "searchCount": 2,
+        "chapterCount": 254,
+        "image": {
+          "pageCount": 72,
+          "host": "hs1-p1.v3mh.com",
+          "bytes": 98550,
+          "sha256": "0851ee3689093146d03ef3abbef36855e43955698672c8b1f4200a841d0e7b7d",
+          "width": 1280,
+          "height": 1000
+        }
+      },
+      {
+        "id": "mh1234",
+        "status": "passed",
+        "ruleSha256": "53ee7efe4591a8be2ae30e65f0e6351ee50a63340607dee65a0a777dcf1cfbaa",
+        "discoverCount": 21,
+        "searchSupported": true,
+        "searchCount": 1,
+        "chapterCount": 554,
+        "image": {
+          "pageCount": 12,
+          "host": "wmh1234.wszwhg.net",
+          "bytes": 107956,
+          "sha256": "4ef85aa6de557d045e8001d75889a6f2509ba9b61a1a0874da533923ddcb727d",
+          "width": 800,
+          "height": 1132
+        }
+      },
+      {
+        "id": "guazimanhua",
+        "status": "passed",
+        "ruleSha256": "b42727df731bf355e3f5222491b669c4515438942741978883382271afdd9651",
+        "discoverCount": 36,
+        "searchSupported": true,
+        "searchCount": 1,
+        "chapterCount": 341,
+        "image": {
+          "pageCount": 12,
+          "host": "img.guazicdn.com",
+          "bytes": 215429,
+          "sha256": "bdc9bbd4ca3cdc1e7d2cfdaa7da2d6be52f7bda01d334865c998dad57a0fc268",
+          "width": 900,
+          "height": 1200
+        }
+      },
+      {
+        "id": "miaoqu",
+        "status": "passed",
+        "ruleSha256": "edf4789fa0e58df6b14f4e1330bf6aca8cf96a167d1a80f29bfd603ef0206c2b",
+        "discoverCount": 35,
+        "searchSupported": false,
+        "searchCount": null,
+        "chapterCount": 224,
+        "image": {
+          "pageCount": 52,
+          "host": "s2.bzcdn.net",
+          "bytes": 249831,
+          "sha256": "445ad15413bcb68d9582972a178547a1b4e5bda58fb410b5cec4d34663de0593",
+          "width": 822,
+          "height": 1200
+        }
+      },
+      {
+        "id": "iqiyi",
+        "status": "passed",
+        "ruleSha256": "fba4b3d458427fe502c533ff5da9042cb904cd76ad3f1e11c1cbd4ad4551008f",
+        "discoverCount": 100,
+        "searchSupported": true,
+        "searchCount": 12,
+        "chapterCount": 151,
+        "image": {
+          "pageCount": 37,
+          "host": "manhua.iqiyipic.com",
+          "bytes": 46332,
+          "sha256": "441445832d8fa1d1ca06148098ce9f52560f7e27b3c979b1489f552355adebe0",
+          "width": 1216,
+          "height": 1080
+        }
+      },
+      {
+        "id": "dongmanmanhua",
+        "status": "passed",
+        "ruleSha256": "52f3403a61f55f2c45e5b7c915a26d9fca22c8cfea6c26a4fa13a72cb4451e79",
+        "discoverCount": 1319,
+        "searchSupported": true,
+        "searchCount": 1,
+        "chapterCount": 11,
+        "image": {
+          "pageCount": 176,
+          "host": "cdn.dongmanmanhua.cn",
+          "bytes": 33511,
+          "sha256": "24c1477db1f75bf56e7404e6e77fab00a58009dcabb80d92e56ce12fac1a511c",
+          "width": 690,
+          "height": 824
+        }
+      },
+      {
+        "id": "baozimanhuaplus",
+        "status": "failed",
+        "ruleSha256": "8a035fcdfa27648456cca641f9fee5ae90406fb8faf72d1939fdb3a8e49b5a03",
+        "discoverCount": null,
+        "searchSupported": null,
+        "searchCount": null,
+        "chapterCount": null,
+        "limitation": "Windows Dart TLS handshake terminated; anonymous Python public reader and first/last images succeeded; no application-network pass claimed."
+      },
+      {
+        "id": "baozimhorg",
+        "status": "passed",
+        "ruleSha256": "7adb6f802576e65ec6223696fcbdc0c150d467f96866cb8cfac6239e8a85c3c7",
+        "discoverCount": 18,
+        "searchSupported": true,
+        "searchCount": 30,
+        "chapterCount": 3875,
+        "image": {
+          "pageCount": 17,
+          "host": "c-nd2-1.6wm.top",
+          "bytes": 104602,
+          "sha256": "af4f6f3b40ddd40884b024d2399842f36b74bcbdf9407338421b070dd1116736",
+          "width": 800,
+          "height": 1131
+        }
+      },
+      {
+        "id": "zaimanhua",
+        "status": "passed",
+        "ruleSha256": "88a64f41dbc8181fa3aa443493e8b2828f359a1acbb1952235424244ba52f8eb",
+        "discoverCount": 10,
+        "searchSupported": true,
+        "searchCount": 20,
+        "chapterCount": 2,
+        "image": {
+          "pageCount": 62,
+          "host": "images.zaimanhua.com",
+          "bytes": 234993,
+          "sha256": "70bc38eb00fde2004e5d20879094de007c6425f3f255177de2024dba63814d3e",
+          "width": 1080,
+          "height": 1534
+        }
+      },
+      {
+        "id": "zazhimi",
+        "status": "passed",
+        "ruleSha256": "0cbeab5f66702ad330743c11a04017aac566cf7b93b07b76ff82a96e00102ae8",
+        "discoverCount": 19,
+        "searchSupported": true,
+        "searchCount": 20,
+        "chapterCount": 1,
+        "image": {
+          "pageCount": 252,
+          "host": "img2020.zazhimi.net",
+          "bytes": 368534,
+          "sha256": "f2b686d6522739406dad4762b9cfdef9009907e39901a7a352bdb310636a932b",
+          "width": 1446,
+          "height": 1920
+        }
+      }
+    ]
+  }
 }

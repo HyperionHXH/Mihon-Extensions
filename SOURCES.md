@@ -55,7 +55,7 @@ The generated `repo/build-report.json` records how many entries were fetched and
 - Static validation does not execute upstream binaries or JavaScript. Review the original license and preserve required notices when creating or updating a port; execute real runtime and site tests separately before release.
 - General Chinese-source assessment: `triomi/chinese-port-audit.json` records every one of the 21 upstream-SAFE Chinese packages, twelve new installable ports, nine evidence-backed blockers, and the additional DM5/Manhuaren image-header transport limitation.
 - A working browse-only source may omit `search` entirely. The generator still requires `discover`, `detail` and `content`, emits only actual exports, and rejects claimed-but-unimplemented capabilities. No empty search stub is used to satisfy publication.
-- The same 116 source behavior contracts execute against desktop QuickJS and are wired into actual iOS WebKit acceptance; deterministic HTTP fixtures are separate from the recorded anonymous public-site probes. CI result is recorded in the app status, not inferred from schema validation.
+- The same 128 source behavior contracts execute against desktop QuickJS and are wired into actual iOS WebKit acceptance; deterministic HTTP fixtures are separate from the recorded anonymous public-site probes. Eleven new rules passed the production Windows JsSource/Dart HTTPS/image-decoding chain; Webmota's independent Python reader succeeded but Windows Dart TLS failed. CI result is recorded in the app status, not inferred from schema validation or Python transport.
 
 
 ## Scope
