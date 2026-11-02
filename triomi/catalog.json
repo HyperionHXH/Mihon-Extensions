@@ -153,6 +153,15 @@
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.zh.zazhimi"
       ]
+    },
+    {
+      "file": "copymanga.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://www.copy4000.com/",
+      "attribution": "Independent CopyManga public website HTML/JSON adapter with independently authored AES-128-CBC/PKCS7 data decoding. No upstream implementation copied, website scripts executed, app API or account/access-control bypass. Live chapter availability varies; login is not established as a prerequisite.",
+      "apkPackages": [
+        "eu.kanade.tachiyomi.extension.zh.copymanga"
+      ]
     }
   ]
 }

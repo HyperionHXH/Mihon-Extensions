@@ -3,9 +3,9 @@
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
     "androidPackages": 1590,
-    "ported": 17,
-    "manualPortRequired": 1573,
-    "trackedRules": 17
+    "ported": 18,
+    "manualPortRequired": 1572,
+    "trackedRules": 18
   },
   "extensions": [
     {
@@ -9245,8 +9245,10 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.copymanga",
       "name": "CopyManga",
-      "status": "manual_port_required",
-      "ruleIds": []
+      "status": "ported",
+      "ruleIds": [
+        "copymanga"
+      ]
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.creativecomic",

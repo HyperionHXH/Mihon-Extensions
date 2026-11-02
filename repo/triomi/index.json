@@ -51,6 +51,22 @@
       "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0"
     },
     {
+      "id": "copymanga",
+      "name": "拷贝漫画（公开网页）",
+      "type": "manga",
+      "lang": "zh",
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/copymanga.json",
+      "hash": "6494a4929d5eb0a4653827fd3a1363776c38befa24afe1568843b45b7c8e56bf",
+      "capabilities": [
+        "discover",
+        "search",
+        "detail",
+        "content"
+      ],
+      "license": "GPL-3.0-or-later; independent public-protocol implementation"
+    },
+    {
       "id": "dongmanmanhua",
       "name": "咚漫（简体中文官方公开网页）",
       "type": "manga",
