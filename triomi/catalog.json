@@ -14,7 +14,7 @@
       "file": "komiic.json",
       "license": "Apache-2.0",
       "upstreamUrl": "https://github.com/HyperionHXH/E-extensions/tree/13df3c318e448c0295e0cf805b0c3755fbbb5fe0/src/zh/komiic",
-      "attribution": "Komiic public GraphQL guest reading port, modified from maintained E-extensions; embedded Apache license and modification notice. Account login/refresh and sponsorship are not ported; site quota/auth enforced.",
+      "attribution": "Komiic public GraphQL guest reading port, modified from maintained E-extensions; official komiic.cc transport with canonical .com work/chapter identity. Embedded Apache license and modification notice. Account login/refresh and sponsorship are not ported; site quota/auth enforced.",
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.zh.komiic"
       ]
@@ -32,7 +32,7 @@
       "file": "manhuagui.json",
       "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
       "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/5b95ccc4b6a96fb9a4a28cead59255b0af99276e/src/zh/manhuagui",
-      "attribution": "Independent ManHuaGui public HTML/data port. Bounded LZ/word decoding treats website scripts as data; no eval or page-script execution. Hidden/restricted chapters are not unlocked.",
+      "attribution": "Independent ManHuaGui public HTML/data port with explicit selection among four official HTTPS mirrors and canonical work/chapter identity. Bounded LZ/word decoding treats website scripts as data; no eval or page-script execution. Hidden/restricted chapters are not unlocked.",
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.zh.manhuagui"
       ]
@@ -41,7 +41,7 @@
       "file": "webtoons-zh.json",
       "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
       "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/main/src/all/webtoons",
-      "attribution": "Independently authored Traditional Chinese WEBTOON public HTML adapter. No login/paid/app-only episode bypass or signed image rewriting; no upstream implementation copied.",
+      "attribution": "Independently authored Traditional Chinese WEBTOON public HTML and official mobile episode-catalog adapter. No login/paid/app-only episode bypass or signed image rewriting; no upstream implementation copied.",
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.all.webtoons"
       ]
@@ -157,8 +157,8 @@
     {
       "file": "copymanga.json",
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
-      "upstreamUrl": "https://www.copy4000.com/",
-      "attribution": "Independent CopyManga public website HTML/JSON adapter with independently authored AES-128-CBC/PKCS7 data decoding. No upstream implementation copied, website scripts executed, app API or account/access-control bypass. Live chapter availability varies; login is not established as a prerequisite.",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/52dd86ec1295d3fd47f2bada095d9dcf261d2464/assets/rules/copymanga-js.json",
+      "attribution": "Independent CopyManga App API protocol implementation aligned with the current 1.4.85 Android extension. Anonymous reading, full grouped catalog pagination and page ordering; optional native Triomi 178 settings/account/text discussion support. No website script execution, access-control bypass or credentials bundled.",
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.zh.copymanga"
       ]
