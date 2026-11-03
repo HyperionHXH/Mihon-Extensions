@@ -91,6 +91,22 @@ class TriomiCatalogTests(unittest.TestCase):
         for name, expected in first.items():
             self.assertEqual((self.root / "repo/triomi" / name).read_bytes(), expected)
 
+    def test_host_requirements_are_preserved_in_catalog(self):
+        self.manifest["sources"][0]["hostRequirements"] = "Native gateway required; legacy host unsupported"
+        self.save("triomi/catalog.json", self.manifest)
+        build_triomi.build(self.root)
+        self.assertEqual(
+            self.load("repo/triomi/index.json")["sources"][0]["hostRequirements"],
+            self.manifest["sources"][0]["hostRequirements"],
+        )
+
+    def test_invalid_host_requirements_are_rejected(self):
+        for value in ("", 178, "unsafe\ncontrol", "x" * 1001):
+            self.manifest["sources"][0]["hostRequirements"] = value
+            self.save("triomi/catalog.json", self.manifest)
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "hostRequirements"):
+                build_triomi.expected_outputs(self.root)
+
     def test_check_detects_tampered_rule_without_writing(self):
         build_triomi.build(self.root)
         path = self.root / "repo/triomi/rules/example.json"
@@ -228,6 +244,38 @@ class TriomiCatalogTests(unittest.TestCase):
         (self.root / "triomi/catalog.json").write_text('{"schemaVersion": 1, "sources": [], "invalid": NaN}', encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "invalid JSON numeric constant"):
             build_triomi.expected_outputs(self.root)
+
+
+class ReleasedHostReaderCatalogTests(unittest.TestCase):
+    def test_four_readers_keep_nsfw_and_warn_about_native_gateways(self):
+        root = Path(__file__).resolve().parents[1]
+        output = build_triomi.expected_outputs(root)
+        entries = {row['id']: row for row in json.loads(output['index.json'])['sources']}
+        self.assertEqual(entries['wnacg']['version'], '1.0.0')
+        self.assertEqual(entries['ehentai']['version'], '1.1.0')
+        self.assertTrue(entries['wnacg']['nsfw'])
+        self.assertTrue(entries['ehentai']['nsfw'])
+        for source_id in ('jmcomic', 'picacomic'):
+            entry = entries[source_id]
+            self.assertEqual(entry['version'], '1.0.0')
+            self.assertTrue(entry['nsfw'])
+            self.assertIn('需原生网关宿主', entry['name'])
+            self.assertIn('67ce2cd', entry['hostRequirements'])
+            self.assertIn('unsupported', entry['hostRequirements'])
+            rule = json.loads(output[f'rules/{source_id}.json'])
+            self.assertEqual(rule['name'], entry['name'])
+            self.assertEqual(rule['requireLogin'], source_id == 'picacomic')
+
+    def test_host_blockers_are_documented_not_mislabeled_as_legacy_compatible(self):
+        root = Path(__file__).resolve().parents[1]
+        audit = json.loads((root / 'triomi/reader-port-compatibility.json').read_text(encoding='utf-8'))
+        decisions = {row['id']: row['decision'] for row in audit['candidates']}
+        self.assertEqual(decisions, {
+            'wnacg': 'catalog_ready', 'ehentai': 'catalog_ready_limited',
+            'jmcomic': 'published_native_host_required',
+            'picacomic': 'published_native_host_required',
+        })
+        self.assertIn('NOT prevented', audit['enforcement'])
 
 
 if __name__ == "__main__":

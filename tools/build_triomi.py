@@ -239,6 +239,9 @@ def expected_outputs(root: Path) -> dict[str, bytes]:
         entry["license"] = row["license"]
         if "nsfw" in rule:
             entry["nsfw"] = rule["nsfw"]
+        # Informational for legacy clients; the visible name must warn too.
+        if "hostRequirements" in row:
+            entry["hostRequirements"] = text(row["hostRequirements"], f"{filename}: hostRequirements", 1000)
         entries.append(entry)
     if listed != present:
         raise ValueError(f"manifest must list every rule exactly once; unlisted={sorted(present - listed)}, missing={sorted(listed - present)}")

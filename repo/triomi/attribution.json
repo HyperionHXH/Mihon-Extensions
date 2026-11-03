@@ -47,6 +47,12 @@
       ]
     },
     {
+      "file": "ehentai.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/ehentai-js.json",
+      "attribution": "Independent public E-Hentai adapter, modified for released Triomi 178 generic JS: selected-gallery chapters of ten pages, script-side HTTPS image resolution. No native page resolver, ExHentai, account, quota bypass or image-transform dependency. Refresh chapters to renew expired URLs."
+    },
+    {
       "file": "guazimanhua.json",
       "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
       "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/guazimanhua",
@@ -63,6 +69,13 @@
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.zh.iqiyi"
       ]
+    },
+    {
+      "file": "jmcomic.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/jmcomic-js.json",
+      "attribution": "Independent Triomi jmcomic rule. Native JmcomicClient API decryption and binary JM image restoration; native support exists in app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2, NOT official iOS178 (0c27925). No account credentials or signing constants included in this catalog. Installation alone does not add native support.",
+      "hostRequirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
     },
     {
       "file": "komiic.json",
@@ -119,6 +132,13 @@
       ]
     },
     {
+      "file": "picacomic.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/picacomic-js.json",
+      "attribution": "Independent Triomi picacomic rule. Native PicacomicJsSource secure account/signing gateway and system secure storage; native support exists in app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2, NOT official iOS178 (0c27925). No account credentials or signing constants included in this catalog. Installation alone does not add native support.",
+      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
+    },
+    {
       "file": "terrahistoricus.json",
       "license": "GPL-3.0-or-later; public-protocol reference Apache-2.0",
       "upstreamUrl": "https://github.com/keiyoushi/extensions-source/tree/dbf6c05d6a9520c60533f1626616263522bbe71a/src/zh/terrahistoricus",
@@ -135,6 +155,12 @@
       "apkPackages": [
         "eu.kanade.tachiyomi.extension.all.webtoons"
       ]
+    },
+    {
+      "file": "wnacg.json",
+      "license": "GPL-3.0-or-later; independent public-protocol implementation",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/wnacg-js.json",
+      "attribution": "Independent WNACG public HTML adapter using the official .buzz mirror; numeric identities and NSFW labeling retained. Generic released Triomi JS host, no native gateway, credentials or website script execution."
     },
     {
       "file": "xkcd.json",

@@ -53,7 +53,22 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 
 **Android扩展数量不等于iOS规则数量。** 这里只发布已人工编写、单独维护且列入 `triomi/catalog.json` 的 Triomi 规则，不提供通用 APK 转 JavaScript 转换器。`repo/triomi/compatibility.json` 按 Android 包名列出 `ported` / `manual_port_required`：只有清单显式填写 `apkPackages` 的规则才建立对应关系；`ported` 也不证明完整功能对等或站点当前可用。未映射的原生 Triomi 规则仍可出现在兼容目录中。
 
-当前显式移植18项，不是把全部APK换成JSON。本轮把Copy旧1.0.0网页规则替换为1.1.0实际Android1.4.85 App API协议，另修Komiic官方镜像、漫画柜官方镜像选路和WEBTOON公开目录API；Triomi源码0c27925的[最终iOS验收41600804216](https://github.com/HyperionHXH/triomi/actions/runs/41600804216)发布门槛已通过。此前12个一般中文来源保留，历史逐项评估见 [中文来源审计](triomi/chinese-port-audit.json)。
+当前目录共22项（原18项加WNACG、E-Hentai、JMComic和哔咔），不是把全部APK换成JSON。Copy1.1.0使用实际Android1.4.85 App API协议，Komiic官方镜像、漫画柜镜像选路和WEBTOON公开目录API保留；Triomi源码0c27925的[最终iOS验收41600804216](https://github.com/HyperionHXH/triomi/actions/runs/41600804216)记录不扩大为新增候选已实站可读。此前12个一般中文来源保留，历史逐项评估见 [中文来源审计](triomi/chinese-port-audit.json)。
+
+### 四个阅读源与宿主要求
+
+四个来源都从同一兼容仓库自主安装；**能安装不代表旧宿主支持原生功能**：
+
+- **绅士漫画 WNACG 1.0.0**：通用JS读取官方`.buzz`镜像，保留数字身份和NSFW标记，无额外原生网关。
+- **E-Hentai公开图库 1.1.0**：专门适配现有通用JS宿主，脚本解析真实HTTPS图片URL，不把`/s/`网页冒充图片。每个选定图库按10页拆成章节，版本图库作为独立作品；不支持ExHentai、登录、额度/验证绕过。过期图片需刷新章节，站点变更页数需刷新目录。仅协议合成测试，不冒称修改后真实iOS/实站图片验收。
+- **JMComic 1.0.0（需原生网关宿主）**：需要原生API解密和二进制图片还原。
+- **哔咔 1.0.0（需原生网关宿主）**：需要原生签名、安全账号网关与系统安全存储。用户只在支持的客户端内登录，不把账号Secrets、签名常量、密码或token加入本仓库；真实账号阅读未验收。
+
+**正式iOS178（源码`0c27925`）只适用于前两条，不支持JM/哔咔。** 后两条需要包含`67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2`原生实现的宿主或兼容后继。已有[候选运行41627388664](https://github.com/HyperionHXH/triomi/actions/runs/41627388664)包含该实现，但它与正式178的版本号同为0.12.0+178，不能只按版本号判断。没有为本次插件发布新IPA；旧宿主无法只靠JSON补齐原生能力。`hostRequirements`是说明字段，旧客户端不会据此阻止安装，故条目名称也保留显式警告。
+
+用户使用步骤是「漫画 → 浏览 → JS / API漫画来源目录 → 管理兼容仓库 → 添加上面的原网址 → 返回并刷新 → 选择来源安装」。启用排除NSFW筛选时看不到这四个条目；保留原分级，不改为安全来源伪装展示。已有仓库无需更换网址，新来源须由用户明确安装，不自动替换书库/下载。
+
+本次仅发布插件仓库更新，不构建、推送或发布软件IPA，不触发账号Secrets测试。逐项依赖和限制见 [阅读源兼容性记录](triomi/reader-port-compatibility.json)。
 
 | 兼容规则 | 行为范围与本轮证据 |
 | --- | --- |
@@ -86,7 +101,7 @@ R178的新宿主功能需要Triomi178：Copy独立线路/平台/分辨率/筛选
 
 实际iOS验收也已完成：Triomi源码`0227cf6`的[macOS运行40890601599](https://github.com/HyperionHXH/triomi/actions/runs/40890601599)中，新增规则128项真实WKWebView契约、整套136项集成及56状态视觉巡检通过。建议使用[独立iOS177版](https://github.com/HyperionHXH/triomi/releases/tag/v0.12.0-ios.177)修复仓库管理收键盘负边距崩溃；已有176支持相同规则协议，但没有这项宿主修复。该iOS规则协议验收不等于所有站点实网/付费账号或实体iPhone均已验证。
 
-未发布项目也已记录：baozimh主站、Comicabc、漫画屋和MH160遇访问验证/图片错误；毒漫屋、如漫画及Mangabz遇连接或证书问题；Vomic要求账号；CCC创作集需要当前宿主没有的二进制图片解码。另查DM5和漫画人，公开阅读可达但图片必须携带章节专属Referer，当前客户端不能持久保存并传给图片/离线下载，故不发布“能列作品但图全失败”的JSON。原APK不变，不关闭TLS校验、不绕过付费/验证或制作成人内容检索阅读插件。
+未发布项目也已记录：baozimh主站、Comicabc、漫画屋和MH160遇访问验证/图片错误；毒漫屋、如漫画及Mangabz遇连接或证书问题；Vomic要求账号；CCC创作集需要当前宿主没有的二进制图片解码。另查DM5和漫画人，公开阅读可达但图片必须携带章节专属Referer，当前客户端不能持久保存并传给图片/离线下载，故不发布“能列作品但图全失败”的JSON。原APK不变，不关闭TLS校验、不绕过付费/验证或绕过站点访问限制。
 
 ### 规则清单和离线发布
 
