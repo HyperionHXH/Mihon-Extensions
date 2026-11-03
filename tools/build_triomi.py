@@ -160,6 +160,13 @@ def validate_rule(rule: Any, filename: str) -> dict[str, Any]:
             raise ValueError(f"{filename}: capabilities must match the required function definitions exactly")
     if "nsfw" in rule and type(rule["nsfw"]) is not bool:
         raise ValueError(f"{filename}: nsfw must be a boolean")
+    if "requiresHost" in rule:
+        features = rule["requiresHost"]
+        if (not isinstance(features, list) or len(features) > 32 or
+                any(not isinstance(value, str) or len(value) > 100 or
+                    not re.fullmatch(r"[a-z][a-z0-9]*(?:\.[a-z0-9]+)+", value)
+                    for value in features) or len(features) != len(set(features))):
+            raise ValueError(f"{filename}: invalid requiresHost contracts")
     return rule
 
 
@@ -239,6 +246,8 @@ def expected_outputs(root: Path) -> dict[str, bytes]:
         entry["license"] = row["license"]
         if "nsfw" in rule:
             entry["nsfw"] = rule["nsfw"]
+        if "requiresHost" in rule:
+            entry["requiresHost"] = rule["requiresHost"]
         # Informational for legacy clients; the visible name must warn too.
         if "hostRequirements" in row:
             entry["hostRequirements"] = text(row["hostRequirements"], f"{filename}: hostRequirements", 1000)

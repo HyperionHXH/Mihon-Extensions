@@ -1,5 +1,5 @@
 {
-  "scope": "Four reader rules in the existing catalog; no IPA or application release. WNACG/E-Hentai support official178; JM/Pica require native host support.",
+  "scope": "Four reader rules; host179 build is separately authorized, not released by this plugin repository.",
   "catalogUrl": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/index.json",
   "hostBaseline": "0c27925277588952711ad6c5a16d36dd175c51db",
   "candidates": [
@@ -26,18 +26,26 @@
     {
       "id": "jmcomic",
       "decision": "published_native_host_required",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "requirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient.",
-      "evidence": "Existing native production contracts and iOS candidate evidence are separate from catalog installation. No real Pica account acceptance; no real JM image acceptance claimed."
+      "evidence": "Existing native production contracts and iOS candidate evidence are separate from catalog installation. No real Pica account acceptance; no real JM image acceptance claimed.",
+      "requiresHost": [
+        "jmcomic.api.v1",
+        "jmcomic.image.v1"
+      ]
     },
     {
       "id": "picacomic",
       "decision": "published_native_host_required",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "requirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient.",
-      "evidence": "Existing native production contracts and iOS candidate evidence are separate from catalog installation. No real Pica account acceptance; no real JM image acceptance claimed."
+      "evidence": "Existing native production contracts and iOS candidate evidence are separate from catalog installation. No real Pica account acceptance; no real JM image acceptance claimed.",
+      "requiresHost": [
+        "picacomic.account.v1"
+      ]
     }
   ],
   "nativeHostCommit": "67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2",
-  "enforcement": "Old catalog clients ignore hostRequirements. Native-only names carry a visible warning; installation is NOT prevented, and does not add missing native support."
+  "enforcement": "Old catalog clients ignore hostRequirements. Native-only names carry a visible warning; installation is NOT prevented, and does not add missing native support. Host179 enforces structured requiresHost before rule installation/import/loading; its iOS build is being validated, not claimed delivered yet.",
+  "host179CandidateCommit": "1e87054"
 }

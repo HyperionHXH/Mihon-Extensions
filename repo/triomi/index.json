@@ -136,9 +136,9 @@
       "name": "JMComic（禁漫天堂）（需原生网关宿主）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/jmcomic.json",
-      "hash": "d58b0c2a6a65f0b41d57e9861d963ea2b39a66476a1ec88aa85b9324e4d76491",
+      "hash": "2fca619622e68adce076575acc0ee5c100328b3b57f0194a1bd502aa2e92400d",
       "capabilities": [
         "discover",
         "search",
@@ -147,7 +147,11 @@
       ],
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
       "nsfw": true,
-      "hostRequirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
+      "requiresHost": [
+        "jmcomic.api.v1",
+        "jmcomic.image.v1"
+      ],
+      "hostRequirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient. Host179 declares and enforces requiresHost; legacy clients ignore this field."
     },
     {
       "id": "komiic",
@@ -249,9 +253,9 @@
       "name": "哔咔漫画（需原生网关宿主）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/picacomic.json",
-      "hash": "5c122e96a888120f22388ea731f42b79d1d3be9296796e1af825c97ce5ee07c9",
+      "hash": "3ec51e3a3a3f6feac5a0db91589282e7d65168f3c9902090d0dccefc9969cb3e",
       "capabilities": [
         "discover",
         "search",
@@ -260,7 +264,10 @@
       ],
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
       "nsfw": true,
-      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
+      "requiresHost": [
+        "picacomic.account.v1"
+      ],
+      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient. Host179 declares and enforces requiresHost; legacy clients ignore this field."
     },
     {
       "id": "terrahistoricus",

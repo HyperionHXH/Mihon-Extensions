@@ -73,9 +73,9 @@
     {
       "file": "jmcomic.json",
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
-      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/jmcomic-js.json",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/1e87054/assets/rules/jmcomic-js.json",
       "attribution": "Independent Triomi jmcomic rule. Native JmcomicClient API decryption and binary JM image restoration; native support exists in app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2, NOT official iOS178 (0c27925). No account credentials or signing constants included in this catalog. Installation alone does not add native support.",
-      "hostRequirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
+      "hostRequirements": "Native JmcomicClient API decryption and binary JM image restoration. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient. Host179 declares and enforces requiresHost; legacy clients ignore this field."
     },
     {
       "file": "komiic.json",
@@ -134,9 +134,9 @@
     {
       "file": "picacomic.json",
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
-      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/picacomic-js.json",
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/1e87054/assets/rules/picacomic-js.json",
       "attribution": "Independent Triomi picacomic rule. Native PicacomicJsSource secure account/signing gateway and system secure storage; native support exists in app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2, NOT official iOS178 (0c27925). No account credentials or signing constants included in this catalog. Installation alone does not add native support.",
-      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient."
+      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi app commit 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2 or a compatible successor; official iOS178 commit 0c27925 is unsupported. Same version label 0.12.0+178 is insufficient. Host179 declares and enforces requiresHost; legacy clients ignore this field."
     },
     {
       "file": "terrahistoricus.json",

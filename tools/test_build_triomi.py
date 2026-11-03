@@ -100,6 +100,17 @@ class TriomiCatalogTests(unittest.TestCase):
             self.manifest["sources"][0]["hostRequirements"],
         )
 
+    def test_native_contracts_are_preserved_in_catalog(self):
+        self.rule["requiresHost"] = ["jmcomic.api.v1", "jmcomic.image.v1"]
+        self.save("triomi/rules/example.json", self.rule)
+        build_triomi.build(self.root)
+        self.assertEqual(self.load("repo/triomi/index.json")["sources"][0]["requiresHost"], self.rule["requiresHost"])
+
+    def test_invalid_native_contracts_are_rejected(self):
+        for value in ("a.b", [1], ["a.b", "a.b"], ["bad feature"], ["a.b"] * 33):
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "requiresHost"):
+                build_triomi.validate_rule({**self.rule, "requiresHost": value}, "example.json")
+
     def test_invalid_host_requirements_are_rejected(self):
         for value in ("", 178, "unsafe\ncontrol", "x" * 1001):
             self.manifest["sources"][0]["hostRequirements"] = value
@@ -257,7 +268,7 @@ class ReleasedHostReaderCatalogTests(unittest.TestCase):
         self.assertTrue(entries['ehentai']['nsfw'])
         for source_id in ('jmcomic', 'picacomic'):
             entry = entries[source_id]
-            self.assertEqual(entry['version'], '1.0.0')
+            self.assertEqual(entry['version'], '1.0.1')
             self.assertTrue(entry['nsfw'])
             self.assertIn('需原生网关宿主', entry['name'])
             self.assertIn('67ce2cd', entry['hostRequirements'])
@@ -265,6 +276,8 @@ class ReleasedHostReaderCatalogTests(unittest.TestCase):
             rule = json.loads(output[f'rules/{source_id}.json'])
             self.assertEqual(rule['name'], entry['name'])
             self.assertEqual(rule['requireLogin'], source_id == 'picacomic')
+            self.assertEqual(entry['requiresHost'], rule['requiresHost'])
+            self.assertTrue(entry['requiresHost'])
 
     def test_host_blockers_are_documented_not_mislabeled_as_legacy_compatible(self):
         root = Path(__file__).resolve().parents[1]
