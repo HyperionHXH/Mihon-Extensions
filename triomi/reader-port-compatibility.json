@@ -48,6 +48,6 @@
     }
   ],
   "nativeHostCommit": "67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2",
-  "enforcement": "Legacy clients ignore hostRequirements and requiresHost. Host179 and successors enforce structured requiresHost before installation/import/loading. Pica 1.0.2 requires account.v2 (iOS180) and is rejected by 179; update the application first. Capability declarations do not grant native authority. See the application Release for actual build/acceptance status.",
+  "enforcement": "Legacy clients ignore hostRequirements and requiresHost; installation is NOT prevented on these clients and does not add missing native support. Host179 and successors enforce structured requiresHost before installation/import/loading. Pica 1.0.2 requires account.v2 (iOS180) and is rejected by 179; update the application first. Capability declarations do not grant native authority. See the application Release for actual build/acceptance status.",
   "host179CandidateCommit": "1e87054"
 }
