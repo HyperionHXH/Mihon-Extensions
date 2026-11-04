@@ -91,6 +91,15 @@ class TriomiCatalogTests(unittest.TestCase):
         for name, expected in first.items():
             self.assertEqual((self.root / "repo/triomi" / name).read_bytes(), expected)
 
+    def test_development_source_ids_cannot_be_published(self):
+        for source_id in ("local-fixture", "local-fixture-js", "local-fixture-anime", "local-fixture-novel"):
+            with self.subTest(source_id=source_id):
+                self.rule["id"] = source_id
+                self.save("triomi/rules/example.json", self.rule)
+                with self.assertRaisesRegex(ValueError, "development source id"):
+                    build_triomi.build(self.root)
+                self.assertFalse((self.root / "repo/triomi").exists())
+
     def test_host_requirements_are_preserved_in_catalog(self):
         self.manifest["sources"][0]["hostRequirements"] = "Native gateway required; legacy host unsupported"
         self.save("triomi/catalog.json", self.manifest)

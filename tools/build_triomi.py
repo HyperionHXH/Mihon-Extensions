@@ -25,6 +25,9 @@ MAX_RULE_BYTES = 2 * 1024 * 1024
 MAX_SCRIPT_BYTES = 1024 * 1024
 MAX_CATALOG_BYTES = 2 * 1024 * 1024
 MAX_RULES = 1000
+DEVELOPMENT_SOURCE_IDS = frozenset({
+    "local-fixture", "local-fixture-js", "local-fixture-anime", "local-fixture-novel",
+})
 FUNCTIONS = ("discover", "search", "detail", "content")
 REQUIRED_FUNCTIONS = ("discover", "detail", "content")
 SEMVER = re.compile(
@@ -119,6 +122,8 @@ def validate_rule(rule: Any, filename: str) -> dict[str, Any]:
     source_id = text(rule.get("id"), f"{filename}: id", 128)
     if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9._-]*", source_id):
         raise ValueError(f"{filename}: id contains unsupported characters")
+    if source_id in DEVELOPMENT_SOURCE_IDS:
+        raise ValueError(f"{filename}: development source id cannot be published: {source_id}")
     for key in ("name", "lang", "version"):
         text(rule.get(key), f"{filename}: {key}")
     if not re.fullmatch(r"[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*", rule["lang"]):
