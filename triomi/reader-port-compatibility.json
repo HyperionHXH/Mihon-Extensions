@@ -6,14 +6,15 @@
     {
       "id": "wnacg",
       "decision": "catalog_ready",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "requirements": "Generic JS host with public imageHeaders; no native gateway",
-      "evidence": "Unchanged rule has real iOS discover/search20/24 and synthetic content contracts; actual upstream images are not validated."
+      "evidence": "Unchanged rule has real iOS discover/search20/24 and synthetic content contracts; actual upstream images are not validated.",
+      "readingRepair": "Decode inert document.writeln string data, scan balanced imglist array ignoring brackets in captions; preserve all ordered pages. No eval or site script execution."
     },
     {
       "id": "ehentai",
       "decision": "catalog_ready_limited",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "requirements": "Generic JS host with public imageHeaders; resolves direct image URLs in script",
       "limitations": [
         "Selected gallery only; gallery versions are separate items",
@@ -21,7 +22,8 @@
         "Full thumbnail collection capped at100 pages/5000 images; no login, ExHentai, quota or verification bypass",
         "Expiring CDN image URLs require refreshing the chapter"
       ],
-      "evidence": "Generic-host installation and synthetic ordered image resolution tests; changed rule is not claimed real iOS/live-image accepted."
+      "evidence": "Generic-host installation and synthetic ordered image resolution tests; changed rule is not claimed real iOS/live-image accepted.",
+      "readingRepair": "Accept valid HTTPS ports on .hath.network image nodes only; preserve TLS checks and rejection of credentials/private hosts/quotas/challenges. Native host179 resolver requires the matching application repair."
     },
     {
       "id": "jmcomic",

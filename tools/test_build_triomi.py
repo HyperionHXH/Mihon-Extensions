@@ -262,8 +262,8 @@ class ReleasedHostReaderCatalogTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         output = build_triomi.expected_outputs(root)
         entries = {row['id']: row for row in json.loads(output['index.json'])['sources']}
-        self.assertEqual(entries['wnacg']['version'], '1.0.0')
-        self.assertEqual(entries['ehentai']['version'], '1.1.0')
+        self.assertEqual(entries['wnacg']['version'], '1.0.1')
+        self.assertEqual(entries['ehentai']['version'], '1.1.1')
         self.assertTrue(entries['wnacg']['nsfw'])
         self.assertTrue(entries['ehentai']['nsfw'])
         for source_id in ('jmcomic', 'picacomic'):

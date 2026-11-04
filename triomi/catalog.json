@@ -166,14 +166,14 @@
     {
       "file": "wnacg.json",
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
-      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/wnacg-js.json",
-      "attribution": "Independent WNACG public HTML adapter using the official .buzz mirror; numeric identities and NSFW labeling retained. Generic released Triomi JS host, no native gateway, credentials or website script execution."
+      "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/6488305/assets/rules/wnacg-js.json",
+      "attribution": "Independent WNACG public HTML adapter with inert document.writeln decoding and balanced image-array parsing, preserving every ordered page and excluding the exact site bookmark banner. Official .buzz mirror, NSFW retained. No native gateway, credentials or website script execution."
     },
     {
       "file": "ehentai.json",
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
       "upstreamUrl": "https://github.com/HyperionHXH/triomi/blob/67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2/assets/rules/ehentai-js.json",
-      "attribution": "Independent public E-Hentai adapter, modified for released Triomi 178 generic JS: selected-gallery chapters of ten pages, script-side HTTPS image resolution. No native page resolver, ExHentai, account, quota bypass or image-transform dependency. Refresh chapters to renew expired URLs."
+      "attribution": "Independent public E-Hentai adapter, modified for released Triomi 178 generic JS: selected-gallery chapters of ten pages, script-side HTTPS image resolution. No native page resolver, ExHentai, account, quota bypass or image-transform dependency. Refresh chapters to renew expired URLs. Fix: allow valid HTTPS ports for official .hath.network image nodes while retaining other host, quota and verification restrictions."
     },
     {
       "file": "jmcomic.json",

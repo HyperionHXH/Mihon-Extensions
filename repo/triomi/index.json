@@ -87,9 +87,9 @@
       "name": "E-Hentai（公开图库·通用JS）",
       "type": "manga",
       "lang": "all",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/ehentai.json",
-      "hash": "8776c623916f6963c64a2cda4d264405fb9333dceba09af2e28427f508ef1aef",
+      "hash": "b7d6f4641bb8a5bb21afe90a9cf4064bc0a9a7a7bf4253e4e93934e1ec1c3982",
       "capabilities": [
         "discover",
         "search",
@@ -306,9 +306,9 @@
       "name": "绅士漫画（WNACG）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/wnacg.json",
-      "hash": "045ad8d47b5ea2c659db9fd2dea939723f44e1b065552df9727c826ae5228bf4",
+      "hash": "aaafd35ed3989cab4e9be0867e18326587b37453fe2a2cdf7775e2ae5e1d9758",
       "capabilities": [
         "discover",
         "search",
