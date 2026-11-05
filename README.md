@@ -64,13 +64,13 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 - **绅士漫画 WNACG 1.0.1**：通用JS读取官方`.buzz`镜像，保留数字身份和NSFW标记，无额外原生网关。
 - **E-Hentai公开图库 1.1.1**：专门适配现有通用JS宿主，脚本解析真实HTTPS图片URL，不把`/s/`网页冒充图片。每个选定图库按10页拆成章节，版本图库作为独立作品；不支持ExHentai、登录、额度/验证绕过。过期图片需刷新章节，站点变更页数需刷新目录。仅协议合成测试，不冒称修改后真实iOS/实站图片验收。
 - **JMComic 1.0.1（需原生网关宿主）**：需要原生API解密和二进制图片还原。
-- **哔咔 1.0.3（需 iOS181 原生网关宿主）**：需要原生签名、安全账号网关与系统安全存储。用户只在支持的客户端内登录，不把账号Secrets、签名常量、密码或token加入本仓库；真实账号登录与阅读未验收。
+- **哔咔 1.0.4（需 iOS181 原生网关宿主）**：修复目录总页数超过200时单页浏览/搜索被误拒绝；章节与图片全量遍历仍限制200页及20000项。需要原生签名、安全账号网关与系统安全存储。用户只在支持的客户端内登录，不把账号Secrets、签名常量、密码或token加入本仓库；授权测试账号在181生产协议下登录通过，但JS真实目录/阅读未验收。
 
-**历史正式iOS178（源码`0c27925`）不支持JM/哔咔。** JM 1.0.1 从正式iOS179开始获得 `jmcomic.api.v1` / `jmcomic.image.v1` 宿主支持；当前哔咔 1.0.3 需要iOS181（`0.12.0+181`）或声明 `picacomic.account.v3` 的兼容后继。实际IPA发布及验收状态以[应用仓库Release](https://github.com/HyperionHXH/triomi/releases)为准。旧宿主无法只靠JSON补齐原生能力。`hostRequirements`是说明字段，旧客户端不会据此阻止安装，故条目名称也保留显式警告。
+**历史正式iOS178（源码`0c27925`）不支持JM/哔咔。** JM 1.0.1 从正式iOS179开始获得 `jmcomic.api.v1` / `jmcomic.image.v1` 宿主支持；当前哔咔 1.0.4 需要iOS181（`0.12.0+181`）或声明 `picacomic.account.v3` 的兼容后继。实际IPA发布及验收状态以[应用仓库Release](https://github.com/HyperionHXH/triomi/releases)为准。旧宿主无法只靠JSON补齐原生能力。`hostRequirements`是说明字段，旧客户端不会据此阻止安装，故条目名称也保留显式警告。
 
 用户使用步骤是「漫画 → 浏览 → JS / API漫画来源目录 → 管理兼容仓库 → 添加上面的原网址 → 返回并刷新 → 选择来源安装」。启用排除NSFW筛选时看不到这四个条目；保留原分级，不改为安全来源伪装展示。已有仓库无需更换网址，新来源须由用户明确安装，不自动替换书库/下载。
 
-本仓库只发布插件，不构建软件IPA。JM 1.0.1 使用 `jmcomic.api.v1` / `jmcomic.image.v1`，正式 iOS179 支持。哔咔 1.0.3 要求 **iOS181（0.12.0+181）或声明 `picacomic.account.v3` 的后继宿主**：宿主对齐两个独立参考实现登录时发送空 `Authorization` 请求头的行为，并安全分类 HTTP 400 错误。179/180 会明确提示缺少 v3，须先更新应用，再更新插件；仅换 JSON 无法补齐旧宿主。181 构建验收状态以应用仓库对应 Release 为准。隔离请求不能证明真实账号登录通过；本次未使用真实账号或 GitHub Secrets，用户报告的 HTTP 400 根因仍未得到真实服务端响应验证。逐项依赖和限制见 [阅读源兼容性记录](triomi/reader-port-compatibility.json)。
+本仓库只发布插件，不构建软件IPA。JM 1.0.1 使用 `jmcomic.api.v1` / `jmcomic.image.v1`，正式 iOS179 支持。哔咔 1.0.4 要求 **iOS181（0.12.0+181）或声明 `picacomic.account.v3` 的后继宿主**：宿主对齐两个独立参考实现登录时发送空 `Authorization` 请求头的行为，并安全分类 HTTP 400 错误。1.0.4 只改JS目录分页，不增加原生能力；179/180 仍会明确提示缺少 v3，须先更新应用。授权测试账号已在181生产登录/分类路径通过，但真实目录、详情、图片与本人阅读未验。本次未使用 GitHub Secrets。逐项依赖和限制见 [阅读源兼容性记录](triomi/reader-port-compatibility.json)。
 
 | 兼容规则 | 行为范围与本轮证据 |
 | --- | --- |
