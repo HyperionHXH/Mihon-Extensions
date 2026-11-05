@@ -277,7 +277,7 @@ class ReleasedHostReaderCatalogTests(unittest.TestCase):
         self.assertTrue(entries['ehentai']['nsfw'])
         for source_id in ('jmcomic', 'picacomic'):
             entry = entries[source_id]
-            self.assertEqual(entry['version'], '1.0.2' if source_id == 'picacomic' else '1.0.1')
+            self.assertEqual(entry['version'], '1.0.3' if source_id == 'picacomic' else '1.0.1')
             self.assertTrue(entry['nsfw'])
             self.assertIn('需原生网关宿主', entry['name'])
             self.assertIn('67ce2cd', entry['hostRequirements'])
@@ -287,6 +287,10 @@ class ReleasedHostReaderCatalogTests(unittest.TestCase):
             self.assertEqual(rule['requireLogin'], source_id == 'picacomic')
             self.assertEqual(entry['requiresHost'], rule['requiresHost'])
             self.assertTrue(entry['requiresHost'])
+            if source_id == 'picacomic':
+                self.assertEqual(entry['requiresHost'], ['picacomic.account.v3'])
+                self.assertIn('iOS181 (0.12.0+181)', entry['hostRequirements'])
+                self.assertIn('Host179/180', entry['hostRequirements'])
 
     def test_host_blockers_are_documented_not_mislabeled_as_legacy_compatible(self):
         root = Path(__file__).resolve().parents[1]

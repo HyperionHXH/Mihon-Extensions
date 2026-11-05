@@ -64,13 +64,13 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 - **绅士漫画 WNACG 1.0.1**：通用JS读取官方`.buzz`镜像，保留数字身份和NSFW标记，无额外原生网关。
 - **E-Hentai公开图库 1.1.1**：专门适配现有通用JS宿主，脚本解析真实HTTPS图片URL，不把`/s/`网页冒充图片。每个选定图库按10页拆成章节，版本图库作为独立作品；不支持ExHentai、登录、额度/验证绕过。过期图片需刷新章节，站点变更页数需刷新目录。仅协议合成测试，不冒称修改后真实iOS/实站图片验收。
 - **JMComic 1.0.1（需原生网关宿主）**：需要原生API解密和二进制图片还原。
-- **哔咔 1.0.2（需 iOS180 原生网关宿主）**：需要原生签名、安全账号网关与系统安全存储。用户只在支持的客户端内登录，不把账号Secrets、签名常量、密码或token加入本仓库；真实账号阅读未验收。
+- **哔咔 1.0.3（需 iOS181 原生网关宿主）**：需要原生签名、安全账号网关与系统安全存储。用户只在支持的客户端内登录，不把账号Secrets、签名常量、密码或token加入本仓库；真实账号登录与阅读未验收。
 
-**正式iOS178（源码`0c27925`）只适用于前两条，不支持JM/哔咔。** 后两条需要包含`67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2`原生实现的宿主或兼容后继。已有[候选运行41627388664](https://github.com/HyperionHXH/triomi/actions/runs/41627388664)包含该实现，但它与正式178的版本号同为0.12.0+178，不能只按版本号判断。没有为本次插件发布新IPA；旧宿主无法只靠JSON补齐原生能力。`hostRequirements`是说明字段，旧客户端不会据此阻止安装，故条目名称也保留显式警告。
+**历史正式iOS178（源码`0c27925`）不支持JM/哔咔。** JM 1.0.1 从正式iOS179开始获得 `jmcomic.api.v1` / `jmcomic.image.v1` 宿主支持；当前哔咔 1.0.3 需要iOS181（`0.12.0+181`）或声明 `picacomic.account.v3` 的兼容后继。实际IPA发布及验收状态以[应用仓库Release](https://github.com/HyperionHXH/triomi/releases)为准。旧宿主无法只靠JSON补齐原生能力。`hostRequirements`是说明字段，旧客户端不会据此阻止安装，故条目名称也保留显式警告。
 
 用户使用步骤是「漫画 → 浏览 → JS / API漫画来源目录 → 管理兼容仓库 → 添加上面的原网址 → 返回并刷新 → 选择来源安装」。启用排除NSFW筛选时看不到这四个条目；保留原分级，不改为安全来源伪装展示。已有仓库无需更换网址，新来源须由用户明确安装，不自动替换书库/下载。
 
-本仓库只发布插件，不构建软件IPA。JM 1.0.1 使用 `jmcomic.api.v1` / `jmcomic.image.v1`，正式 iOS179 支持。哔咔 1.0.2 要求 **iOS180（0.12.0+180）或声明 `picacomic.account.v2` 的后继宿主**：修正精确 JSON Content-Type 在底层 HTTP 中的冲突。179 会明确提示缺少 v2，须先更新应用，再更新插件；仅换 JSON 无法修复旧宿主。180 构建验收状态以应用仓库对应 Release 为准。隔离 adapter 已覆盖成功与 400/401 拒绝，未使用真实账号或 GitHub Secrets，不能据此声称真实账号登录通过。逐项依赖和限制见 [阅读源兼容性记录](triomi/reader-port-compatibility.json)。
+本仓库只发布插件，不构建软件IPA。JM 1.0.1 使用 `jmcomic.api.v1` / `jmcomic.image.v1`，正式 iOS179 支持。哔咔 1.0.3 要求 **iOS181（0.12.0+181）或声明 `picacomic.account.v3` 的后继宿主**：宿主对齐两个独立参考实现登录时发送空 `Authorization` 请求头的行为，并安全分类 HTTP 400 错误。179/180 会明确提示缺少 v3，须先更新应用，再更新插件；仅换 JSON 无法补齐旧宿主。181 构建验收状态以应用仓库对应 Release 为准。隔离请求不能证明真实账号登录通过；本次未使用真实账号或 GitHub Secrets，用户报告的 HTTP 400 根因仍未得到真实服务端响应验证。逐项依赖和限制见 [阅读源兼容性记录](triomi/reader-port-compatibility.json)。
 
 | 兼容规则 | 行为范围与本轮证据 |
 | --- | --- |

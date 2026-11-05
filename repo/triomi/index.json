@@ -253,9 +253,9 @@
       "name": "哔咔漫画（需原生网关宿主）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/picacomic.json",
-      "hash": "2a0bfd3965c9b3d2bddae14309a1691532d8bd136618a6d05e2e9dd2a55a9898",
+      "hash": "13c31da849375596e8926c3a031000c17050673422a9a3dcdd15c60355071e30",
       "capabilities": [
         "discover",
         "search",
@@ -265,9 +265,9 @@
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
       "nsfw": true,
       "requiresHost": [
-        "picacomic.account.v2"
+        "picacomic.account.v3"
       ],
-      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi iOS180 (0.12.0+180) or a successor declaring picacomic.account.v2, which preserves the exact signed JSON Content-Type through the HTTP transport. Host179 only declares picacomic.account.v1 and is unsupported by rule 1.0.2. Initial native implementation: 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2. Legacy clients ignore requiresHost; update the application before installing this rule."
+      "hostRequirements": "Native PicacomicJsSource secure account/signing gateway and system secure storage. Requires Triomi iOS181 (0.12.0+181) or a successor declaring picacomic.account.v3, which sends the reference protocol empty Authorization header on sign-in and safely classifies HTTP 400 responses. Host179/180 are unsupported by rule 1.0.3. Initial native implementation: 67ce2cd4b9b9c0a87dcf556d0eb3aa9951634da2. Legacy clients ignore requiresHost; update the application before installing this rule. Real account login acceptance and the reported HTTP 400 root cause remain unverified."
     },
     {
       "id": "terrahistoricus",
