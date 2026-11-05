@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1590,
+    "androidPackages": 1601,
     "ported": 18,
-    "manualPortRequired": 1572,
+    "manualPortRequired": 1583,
     "trackedRules": 22
   },
   "extensions": [
@@ -757,6 +757,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.stashapp",
       "name": "StashApp",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.swarm",
+      "name": "Swarm",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2253,6 +2259,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.kensscan",
+      "name": "Kensscan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.keroscans",
       "name": "KeroScans",
       "status": "manual_port_required",
@@ -3317,6 +3329,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.oriyami",
       "name": "OriYami",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.otranslations",
+      "name": "O Translations",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4923,6 +4941,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.crunchyscan",
+      "name": "CrunchyScan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.fr.dassouscan",
       "name": "Dassou Scan",
       "status": "manual_port_required",
@@ -5247,6 +5271,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.id.areakomik",
+      "name": "Area Komik",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.id.astralscans",
       "name": "Astral Scans",
       "status": "manual_port_required",
@@ -5261,6 +5291,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.id.bacami",
       "name": "Bacami",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.id.cgbum",
+      "name": "CGBUM",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5829,6 +5865,18 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.it.hentaiita",
+      "name": "Hentai ITA",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.it.hentaizone",
+      "name": "Hentai Zone",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.it.juinjutsuteamreader",
       "name": "Juin Jutsu Team Reader",
       "status": "manual_port_required",
@@ -6227,6 +6275,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ja.idolgravureprincessdate",
       "name": "Idol. gravureprincess .date",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.jestful",
+      "name": "Jestful",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7055,6 +7109,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.pt.hentaiteca",
       "name": "Hentai Teca",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.hentaitecanet",
+      "name": "Hentai Teca.net",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9433,6 +9493,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.manwa",
       "name": "Manwa",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.manwamanhua",
+      "name": "Manwa Manhua",
       "status": "manual_port_required",
       "ruleIds": []
     },
