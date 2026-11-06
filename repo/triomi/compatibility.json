@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1601,
+    "androidPackages": 1612,
     "ported": 18,
-    "manualPortRequired": 1583,
+    "manualPortRequired": 1594,
     "trackedRules": 22
   },
   "extensions": [
@@ -1473,6 +1473,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.baetoon",
+      "name": "Baetoon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.bakkin",
       "name": "Bakkin",
       "status": "manual_port_required",
@@ -1619,6 +1625,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.comix",
       "name": "Comix",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.comizy",
+      "name": "Comizy",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2523,6 +2535,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.mangacherri",
+      "name": "MangaCherri",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.mangack",
       "name": "Mangack",
       "status": "manual_port_required",
@@ -2651,6 +2669,18 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.mangahereonl",
       "name": "MangaHere.onl",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.mangahome",
+      "name": "MangaHome",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.mangahot",
+      "name": "MangaHot",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2801,6 +2831,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.mangareadorg",
       "name": "MangaRead.org",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.mangastash",
+      "name": "Mangastash",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2975,6 +3011,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.manhwaget",
       "name": "ManhwaGet",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.manhwah",
+      "name": "ManhwaH",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4942,7 +4984,7 @@
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.fr.crunchyscan",
-      "name": "CrunchyScan",
+      "name": "CrunchyScan (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5015,6 +5057,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.fr.japscan",
       "name": "Japscan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.kanakonohast",
+      "name": "Kana Konoha (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5099,6 +5147,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.fr.mangasoriginesfr",
       "name": "Mangas-Origines.fr",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.mangasoriginesst",
+      "name": "Mangas Origines (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5235,6 +5289,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.sushiscanst",
+      "name": "Sushiscan (unoriginal)",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.fr.toonfr",
       "name": "Toon FR",
       "status": "manual_port_required",
@@ -5243,6 +5303,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.fr.twatt",
       "name": "Twatt",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.universotakust",
+      "name": "Univers Otaku (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
