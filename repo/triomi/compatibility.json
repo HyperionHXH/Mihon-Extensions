@@ -2,15 +2,21 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1699,
+    "androidPackages": 1720,
     "ported": 18,
-    "manualPortRequired": 1681,
+    "manualPortRequired": 1702,
     "trackedRules": 22
   },
   "extensions": [
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.ahottie",
       "name": "AHottie",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.ahrigallery",
+      "name": "Ahri Gallery",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -357,6 +363,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.all.jagodibuja",
+      "name": "Jago Dibuja",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.all.jjcos",
       "name": "JJCOS",
       "status": "manual_port_required",
@@ -413,6 +425,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.komga",
       "name": "Komga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.kusowanka",
+      "name": "Kusowanka",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2157,6 +2175,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.hentai18",
+      "name": "Hentai18",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.hentai1io",
       "name": "Hentai1.io",
       "status": "manual_port_required",
@@ -2291,6 +2315,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.hentaixyuri",
       "name": "HentaiXYuri",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.hentaiyoga",
+      "name": "Hentai.yoga",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3189,6 +3219,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.manhwa210",
+      "name": "Manhwa210",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.manhwa68",
       "name": "Manhwa68",
       "status": "manual_port_required",
@@ -3310,7 +3346,7 @@
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.manhwax",
-      "name": "Manhwax",
+      "name": "ManhwaX (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3647,6 +3683,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.pornhwadbreader",
       "name": "PornhwaDB Reader",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.pornhwame",
+      "name": "Pornhwa.me",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4131,6 +4173,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.thefarside",
+      "name": "The Far Side",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.thegirlfromrandomchattingmangaonline",
       "name": "The Girl from Random Chatting Manga Online",
       "status": "manual_port_required",
@@ -4353,6 +4401,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.webtoonhentai",
+      "name": "Webtoon Hentai (unoriginal)",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.webtoonlib",
       "name": "WebtoonLib",
       "status": "manual_port_required",
@@ -4469,6 +4523,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.yorai",
       "name": "Yorai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.yurivan",
+      "name": "Yurivan",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4653,6 +4713,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.es.elvosque",
+      "name": "El Vosque",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.es.emperorscan",
       "name": "Emperor Scan",
       "status": "manual_port_required",
@@ -4725,6 +4791,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.es.hmanga",
+      "name": "HManga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.es.houseofotakus",
       "name": "House Of Otakus",
       "status": "manual_port_required",
@@ -4793,6 +4865,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.es.koinoboriscan",
       "name": "Koinobori Scan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.es.kokkokuteiscankt",
+      "name": "Kokkokutei Scan KT",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5105,6 +5183,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.es.shadowmanga",
       "name": "Shadow Manga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.es.sinergiasincontrol",
+      "name": "Sinergia sin control",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -6939,6 +7023,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.mangarawink",
+      "name": "Mangaraw.ink",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ja.mangaruu",
       "name": "Mangaruu",
       "status": "manual_port_required",
@@ -8039,6 +8129,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.pt.superhentais",
       "name": "Super Hentais",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.superhq",
+      "name": "SuperHQ",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -10013,6 +10109,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.jiulingmanhua",
+      "name": "90Manhua",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.zh.komiic",
       "name": "Komiic",
       "status": "ported",
@@ -10027,6 +10129,12 @@
       "ruleIds": [
         "kuaikanmanhua"
       ]
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.manben",
+      "name": "Manben",
+      "status": "manual_port_required",
+      "ruleIds": []
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mangabz",
@@ -10113,6 +10221,12 @@
       ]
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.mikagogo",
+      "name": "Mikagogo",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.zh.mycomic",
       "name": "MyComic",
       "status": "manual_port_required",
@@ -10151,6 +10265,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.rumanhua",
       "name": "Rumanhua",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.rumanhuaunoriginal",
+      "name": "Rumanhua (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -10213,6 +10333,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.yidan",
       "name": "Yidan Girl",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.yiqiqimanhua",
+      "name": "177Manhua",
       "status": "manual_port_required",
       "ruleIds": []
     },
