@@ -136,9 +136,9 @@
       "name": "JMComic（禁漫天堂）（需原生网关宿主）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/jmcomic.json",
-      "hash": "2fca619622e68adce076575acc0ee5c100328b3b57f0194a1bd502aa2e92400d",
+      "hash": "1c753497d77ebab42f3dc6d0b589b6585d0ef72bb28dbe9efbf1f2a0c56be621",
       "capabilities": [
         "discover",
         "search",
@@ -306,9 +306,9 @@
       "name": "绅士漫画（WNACG）",
       "type": "manga",
       "lang": "zh",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/wnacg.json",
-      "hash": "0649f69f8f5e3968e7f5ddcb43406d5eecc11d15ec90acee48573e073f397c80",
+      "hash": "cdf8ea4c21c5ac79cac66a607ddcb9d4478af578eb50d321691e674015357a02",
       "capabilities": [
         "discover",
         "search",
