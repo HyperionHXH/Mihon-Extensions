@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1720,
+    "androidPackages": 1731,
     "ported": 18,
-    "manualPortRequired": 1702,
+    "manualPortRequired": 1713,
     "trackedRules": 22
   },
   "extensions": [
@@ -143,6 +143,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.deviantart",
       "name": "DeviantArt",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.dlsite",
+      "name": "DLsite",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -449,6 +455,18 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.leagueoflegends",
       "name": "League of Legends",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.lectorhentai",
+      "name": "Lector Hentai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.lemoon",
+      "name": "Lemoon",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1031,6 +1049,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ar.arabshentai",
       "name": "Arabs Hentai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ar.arabtaku",
+      "name": "Arabtaku",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1685,6 +1709,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.characterdesignreferences",
       "name": "Character Design References",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.chikari",
+      "name": "Chikari",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3161,6 +3191,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplusorg",
       "name": "ManhuaPlus (Unoriginal)",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplustop",
+      "name": "ManhuaPlus.top",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5775,6 +5811,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.id.apkomik",
+      "name": "APKOMIK",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.id.areakomik",
       "name": "Area Komik",
       "status": "manual_port_required",
@@ -7563,6 +7605,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.dropescan",
+      "name": "Drope Scan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.pt.duoscans",
       "name": "Duo Scans",
       "status": "manual_port_required",
@@ -9045,6 +9093,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.merlinmanga",
+      "name": "Merlin Manga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.tr.merlinscans",
       "name": "Merlin Scans",
       "status": "manual_port_required",
@@ -10103,6 +10157,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.jisumanhua",
+      "name": "Jisu Manhua",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.zh.jiuermanhua",
       "name": "92Manhua",
       "status": "manual_port_required",
@@ -10111,6 +10171,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.jiulingmanhua",
       "name": "90Manhua",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.kaobeimanhua",
+      "name": "Copy Manga",
       "status": "manual_port_required",
       "ruleIds": []
     },
