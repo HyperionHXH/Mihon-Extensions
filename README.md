@@ -57,6 +57,8 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 
 `repo/index.json` 和 `repo/repo.json` 的 `triomi` 字段只是附加发现信息；原 Android/Windows 扩展条目、签名与 APK/JAR 下载地址保留，旧版列表 `repo/index.min.json` 不增加该字段。
 
+标签搜索修复（Copy1.1.1、WNACG1.0.2、MangaDex1.0.6）：Copy主题标签使用源站slug并保留显示名别名，WNACG详情标签进入真实tag端点，MangaDex标签筛选不附空title条件并保留服务端AND/分页/中文语言约束。Triomi iOS198修订1同时修复宿主标签ID映射与动漫播放源丢标签。已有安装请在原兼容仓库刷新后明确点“更新”；不会在启动时覆盖已安装/自定义/停用规则或重新启用已移除来源。更新可能按既有代码指纹策略撤销旧来源会话，账号仍只在应用内管理。离线生产JS/路由与安装器升级测试不代表所有实网站点或本人账号可用。
+
 **Android扩展数量不等于iOS规则数量。** 这里只发布已人工编写、单独维护且列入 `triomi/catalog.json` 的 Triomi 规则，不提供通用 APK 转 JavaScript 转换器。`repo/triomi/compatibility.json` 按 Android 包名列出 `ported` / `manual_port_required`：只有清单显式填写 `apkPackages` 的规则才建立对应关系；`ported` 也不证明完整功能对等或站点当前可用。未映射的原生 Triomi 规则仍可出现在兼容目录中。
 
 当前目录共22项（原18项加WNACG、E-Hentai、JMComic和哔咔），不是把全部APK换成JSON。Copy1.1.0使用实际Android1.4.85 App API协议，Komiic官方镜像、漫画柜镜像选路和WEBTOON公开目录API保留；Triomi源码0c27925的[最终iOS验收41600804216](https://github.com/HyperionHXH/triomi/actions/runs/41600804216)记录不扩大为新增候选已实站可读。此前12个一般中文来源保留，历史逐项评估见 [中文来源审计](triomi/chinese-port-audit.json)。
