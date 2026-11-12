@@ -84,12 +84,12 @@
     },
     {
       "id": "ehentai",
-      "name": "E-Hentai（公开图库·通用JS）",
+      "name": "E-Hentai（公开图库）",
       "type": "manga",
       "lang": "all",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "url": "https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/rules/ehentai.json",
-      "hash": "b7d6f4641bb8a5bb21afe90a9cf4064bc0a9a7a7bf4253e4e93934e1ec1c3982",
+      "hash": "2ea1a292ad8c091ca3337f4ac5adf7c61c48d7a90db9b401dc08b8d62376b5d1",
       "capabilities": [
         "discover",
         "search",
@@ -97,7 +97,10 @@
         "content"
       ],
       "license": "GPL-3.0-or-later; independent public-protocol implementation",
-      "nsfw": true
+      "nsfw": true,
+      "requiresHost": [
+        "ehentai.native.v1"
+      ]
     },
     {
       "id": "guazimanhua",

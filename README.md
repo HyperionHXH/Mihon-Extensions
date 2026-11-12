@@ -61,6 +61,8 @@ https://raw.githubusercontent.com/HyperionHXH/Mihon-Extensions/main/repo/triomi/
 
 后续实网修复：WNACG **1.0.3** 将分类菜单与详情标签分为不同名称空间，重复的“漢化 / 日語 / English”分类不再截获同名详情标签；分类ID保持不变。JMComic **1.0.3** 按真实API的`type: slug`与`type: search`区分分类和搜索入口，中文搜索入口不再触发“分类标识无效”，多标签使用源站AND查询。两者均为规则更新，无需变更原生宿主或应用版本，仍需明确更新已安装规则。JM上游个别搜索记录（例如`中文`第二页的74549）标题为空，详情接口也缺名；保留可见数据错误，不编造标题或静默丢弃作品。
 
+E-Hentai **1.2.0**：改由 Triomi iOS 0.15.5+199 起的原生宿主实现（`requiresHost: ehentai.native.v1`），对齐 Android E-Hentai 1.6.36：单章节完整图库、ExHentai 与三 Cookie、收藏夹/关注流和 21 项筛选。规则内脚本仅为旧版客户端的“需要更新应用”提示；旧版 Triomi 更新此规则后 E-Hentai 将不可用，请先升级应用再更新规则。
+
 **Android扩展数量不等于iOS规则数量。** 这里只发布已人工编写、单独维护且列入 `triomi/catalog.json` 的 Triomi 规则，不提供通用 APK 转 JavaScript 转换器。`repo/triomi/compatibility.json` 按 Android 包名列出 `ported` / `manual_port_required`：只有清单显式填写 `apkPackages` 的规则才建立对应关系；`ported` 也不证明完整功能对等或站点当前可用。未映射的原生 Triomi 规则仍可出现在兼容目录中。
 
 当前目录共22项（原18项加WNACG、E-Hentai、JMComic和哔咔），不是把全部APK换成JSON。Copy1.1.0使用实际Android1.4.85 App API协议，Komiic官方镜像、漫画柜镜像选路和WEBTOON公开目录API保留；Triomi源码0c27925的[最终iOS验收41600804216](https://github.com/HyperionHXH/triomi/actions/runs/41600804216)记录不扩大为新增候选已实站可读。此前12个一般中文来源保留，历史逐项评估见 [中文来源审计](triomi/chinese-port-audit.json)。
