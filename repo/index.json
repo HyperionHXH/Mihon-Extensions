@@ -2891,19 +2891,19 @@
         "name": "BaoziManhuaPlus",
         "packageName": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
         "resources": {
-          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.baozimanhuaplus-v1.4.4.apk",
+          "apkUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/apk/tachiyomi-zh.baozimanhuaplus-v1.6.6.apk",
           "iconUrl": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/icon/eu.kanade.tachiyomi.extension.zh.baozimanhuaplus.png"
         },
-        "extensionLib": "1.4",
-        "versionCode": "4",
-        "versionName": "1.4.4",
+        "extensionLib": "1.6",
+        "versionCode": "6",
+        "versionName": "1.6.6",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
             "id": "4654438345013653772",
             "name": "包子漫画+",
             "language": "zh",
-            "homeUrl": "https://www.webmota.com/"
+            "homeUrl": "https://tw.webmota.com/"
           }
         ]
       },
