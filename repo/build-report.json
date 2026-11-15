@@ -1,12 +1,12 @@
 {
-  "fetched": 1623,
-  "included": 1749,
+  "fetched": 1693,
+  "included": 1819,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1603,
-      "included": 1602
+      "fetched": 1673,
+      "included": 1672
     },
     {
       "name": "Fucked by FAKKU",
@@ -73,7 +73,7 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.komga",
       "repository": "Tachiyomi archive",
-      "reason": "duplicate package; kept Keiyoushi 1.6.75"
+      "reason": "duplicate package; kept Keiyoushi 1.6.76"
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.lanraragi",
