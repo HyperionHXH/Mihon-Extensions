@@ -1,12 +1,12 @@
 {
-  "fetched": 1693,
-  "included": 1819,
+  "fetched": 1712,
+  "included": 1838,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1673,
-      "included": 1672
+      "fetched": 1692,
+      "included": 1691
     },
     {
       "name": "Fucked by FAKKU",
