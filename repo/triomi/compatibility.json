@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1838,
+    "androidPackages": 1856,
     "ported": 18,
-    "manualPortRequired": 1820,
+    "manualPortRequired": 1838,
     "trackedRules": 22
   },
   "extensions": [
@@ -1607,6 +1607,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.de.mangatube",
       "name": "Manga Tube",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.de.onepiecetube",
+      "name": "OnePiece-Tube",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3705,6 +3711,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.mymangalist",
+      "name": "MyMangaList",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.myreadingcomic",
       "name": "MyReadingComic",
       "status": "manual_port_required",
@@ -5481,6 +5493,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.es.noranofansub",
+      "name": "Nora no Fansub",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.es.novamanhwa",
       "name": "Nova Manhwas",
       "status": "manual_port_required",
@@ -5877,6 +5895,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.hotmanga",
+      "name": "Hot Manga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.fr.japscan",
       "name": "Japscan",
       "status": "manual_port_required",
@@ -5897,6 +5921,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.fr.kiwiyascans",
       "name": "Kiwiya Scans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.fr.komiko",
+      "name": "Komiko",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -6508,7 +6538,7 @@
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.id.mangakuri",
-      "name": "Mangakuri",
+      "name": "Mushinook",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -6875,6 +6905,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.it.nifteam",
       "name": "NIFTeam",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.it.pelateam",
+      "name": "PelaTeam",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7425,6 +7461,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.mangakoma",
+      "name": "Manga Koma",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ja.mangakuro",
       "name": "MangaKuro",
       "status": "manual_port_required",
@@ -7702,7 +7744,7 @@
     },
     {
       "packageName": "eu.kanade.tachiyomi.extension.ja.rawxz",
-      "name": "MiuRaw",
+      "name": "RawNaver",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7923,6 +7965,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.akaitomangas",
+      "name": "Akaito Mangás",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.pt.amuy",
       "name": "Amuy",
       "status": "manual_port_required",
@@ -7991,6 +8039,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.pt.bakai",
       "name": "Bakai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.baozinho",
+      "name": "Baozinho",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9243,8 +9297,20 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.th.rankermanga",
+      "name": "Ranker-Manga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.th.readrealm",
       "name": "ReadRealm",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.th.readtoon",
+      "name": "ReadToon",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9303,6 +9369,18 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.th.toonjai",
+      "name": "Toonjai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.th.whytoon",
+      "name": "WhyToon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.tr.aerotoon",
       "name": "AeroToon",
       "status": "manual_port_required",
@@ -9323,6 +9401,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.tr.aftertoon",
       "name": "AfterToon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.ailurascans",
+      "name": "Ailura Scans",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9741,6 +9825,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.piescans",
+      "name": "Piescans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.tr.ragnarscans",
       "name": "Ragnar Scans",
       "status": "manual_port_required",
@@ -9761,6 +9851,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.tr.ruyamanganet",
       "name": "Rüya Manga.net",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.seitoon",
+      "name": "Seitoon",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -10329,6 +10425,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.vi.sanyteam",
+      "name": "Sany Team",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.vi.sayhentai",
       "name": "SayHentai",
       "status": "manual_port_required",
@@ -10619,6 +10721,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.boylove",
       "name": "BoyLove",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.budingmanhua",
+      "name": "Buding Manhua",
       "status": "manual_port_required",
       "ruleIds": []
     },
