@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1856,
+    "androidPackages": 1860,
     "ported": 18,
-    "manualPortRequired": 1838,
+    "manualPortRequired": 1842,
     "trackedRules": 22
   },
   "extensions": [
@@ -279,6 +279,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.all.galleryepic",
+      "name": "Gallery Epic",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.all.globalcomix",
       "name": "GlobalComix",
       "status": "manual_port_required",
@@ -305,6 +311,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.hennojin",
       "name": "Hennojin",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.hentai20ink",
+      "name": "Hentai20.ink (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2441,6 +2453,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.hentaidad",
       "name": "HentaiDad",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.hentaideck",
+      "name": "HentaiDeck",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7919,6 +7937,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ko.rawdex",
       "name": "RawDEX",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.ridibooks",
+      "name": "RidiBooks",
       "status": "manual_port_required",
       "ruleIds": []
     },
