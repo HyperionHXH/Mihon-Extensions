@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1860,
+    "androidPackages": 1861,
     "ported": 18,
-    "manualPortRequired": 1842,
+    "manualPortRequired": 1843,
     "trackedRules": 22
   },
   "extensions": [
@@ -9803,6 +9803,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.tr.norascans",
       "name": "Nora Scans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.oblivionscans",
+      "name": "Oblivion Scans",
       "status": "manual_port_required",
       "ruleIds": []
     },
