@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1861,
+    "androidPackages": 1866,
     "ported": 18,
-    "manualPortRequired": 1843,
+    "manualPortRequired": 1848,
     "trackedRules": 22
   },
   "extensions": [
@@ -431,6 +431,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.inkrush",
       "name": "INKRUSH",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.internetarchive",
+      "name": "Internet Archive",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1895,6 +1901,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.cartoonporn",
       "name": "CartoonPorn",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.cathexis",
+      "name": "Cathexis",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4197,6 +4209,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.reinbach",
+      "name": "Reinbach Art",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.renascans",
       "name": "Renascans",
       "status": "manual_port_required",
@@ -6329,6 +6347,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.id.dreamteamsscans",
       "name": "DreamTeams Scans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.id.hatsu",
+      "name": "Hatsu",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9881,6 +9905,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.tr.ruyamanganet",
       "name": "Rüya Manga.net",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.sacguzellik",
+      "name": "Saç Güzellik",
       "status": "manual_port_required",
       "ruleIds": []
     },
