@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1866,
+    "androidPackages": 1868,
     "ported": 18,
-    "manualPortRequired": 1848,
+    "manualPortRequired": 1850,
     "trackedRules": 22
   },
   "extensions": [
@@ -1151,6 +1151,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.yabai",
       "name": "Yabai",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.yaoihavenreborn",
+      "name": "Yaoi Haven Reborn",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9689,6 +9695,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.tr.mangakusu",
       "name": "Manga Kusu",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.tr.mangakutuphanem",
+      "name": "Manga Kütüphanem",
       "status": "manual_port_required",
       "ruleIds": []
     },
