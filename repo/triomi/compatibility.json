@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1868,
+    "androidPackages": 1883,
     "ported": 18,
-    "manualPortRequired": 1850,
+    "manualPortRequired": 1865,
     "trackedRules": 22
   },
   "extensions": [
@@ -101,6 +101,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.comicklive",
       "name": "Comick (Unoriginal)",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.comicomoe",
+      "name": "Comico.moe",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -603,6 +609,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.all.mangaclub",
+      "name": "Manga Club",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.all.mangacrazy",
       "name": "MangaCrazy",
       "status": "manual_port_required",
@@ -793,6 +805,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.namicomi",
       "name": "NamiComi",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.networkshare",
+      "name": "Network Share",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1021,6 +1039,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.swordmangas",
       "name": "SwordMangas",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.sxypix",
+      "name": "SxyPix",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1601,6 +1625,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.bg.utsukushii",
       "name": "Utsukushii",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.bn.banglamanga",
+      "name": "Bangla Manga",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -2291,6 +2321,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.fairyscans",
       "name": "Fairy Scans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.fanon",
+      "name": "Fanon",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3821,6 +3857,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.novelcrow",
       "name": "NovelCrow",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.noveldex",
+      "name": "NovelDex",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -6303,6 +6345,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.id.blkomik",
+      "name": "BLKomik",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.id.cgbum",
       "name": "CGBUM",
       "status": "manual_port_required",
@@ -7941,14 +7989,38 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.ddtoon",
+      "name": "DDToon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ko.goodtoon",
       "name": "GoodToon",
       "status": "manual_port_required",
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.jjaptoon",
+      "name": "Jjaptoon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ko.manatoki",
       "name": "Manatoki",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.manga24",
+      "name": "Manga24",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.nameetoon",
+      "name": "NameeToon",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -8111,6 +8183,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.pt.blackoutcomics",
       "name": "Blackout Comics",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.pt.blackparadise",
+      "name": "Black Paradise",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -10779,6 +10857,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.bilibilimanga",
+      "name": "BILIBILI MANGA",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.zh.bilimanga",
       "name": "BiliManga",
       "status": "manual_port_required",
@@ -11059,6 +11143,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.manwamanhua",
       "name": "Manwa Manhua",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.manwame",
+      "name": "Manwame",
       "status": "manual_port_required",
       "ruleIds": []
     },
