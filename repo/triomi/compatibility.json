@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1883,
+    "androidPackages": 1886,
     "ported": 18,
-    "manualPortRequired": 1865,
+    "manualPortRequired": 1868,
     "trackedRules": 22
   },
   "extensions": [
@@ -333,6 +333,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.all.hentaiclap",
+      "name": "HentaiClap",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.all.hentaicosplay",
       "name": "Hentai Cosplay",
       "status": "manual_port_required",
@@ -389,6 +395,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.hentairox",
       "name": "HentaiRox",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.hentairun",
+      "name": "HentaiRun",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -533,12 +545,6 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.kusowanka",
       "name": "Kusowanka",
-      "status": "manual_port_required",
-      "ruleIds": []
-    },
-    {
-      "packageName": "eu.kanade.tachiyomi.extension.all.kyokotsu",
-      "name": "Kyokotsu",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1281,12 +1287,6 @@
       "ruleIds": []
     },
     {
-      "packageName": "eu.kanade.tachiyomi.extension.ar.asgardscans",
-      "name": "AsgardScans",
-      "status": "manual_port_required",
-      "ruleIds": []
-    },
-    {
       "packageName": "eu.kanade.tachiyomi.extension.ar.azora",
       "name": "Azora",
       "status": "manual_port_required",
@@ -1829,12 +1829,6 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.atsumaru",
       "name": "Atsumaru",
-      "status": "manual_port_required",
-      "ruleIds": []
-    },
-    {
-      "packageName": "eu.kanade.tachiyomi.extension.en.auntmanhwa",
-      "name": "Aunt Manhwa",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -5601,6 +5595,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.es.omniscientscan",
+      "name": "Omniscient Scan",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.es.onfmangas",
       "name": "ONF MANGAS",
       "status": "manual_port_required",
@@ -6671,6 +6671,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.id.manhwaindo",
       "name": "Manhwa Indo",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.id.manhwalandbaby",
+      "name": "ManhwaLand.baby (unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -8019,6 +8025,18 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.mangatoki",
+      "name": "Mangatoki",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.marumaru",
+      "name": "Marumaru",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ko.nameetoon",
       "name": "NameeToon",
       "status": "manual_port_required",
@@ -8033,6 +8051,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ko.newxtoon",
       "name": "NewXToon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.pandatoons",
+      "name": "PandaToons",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -8075,12 +8099,6 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.pl.mangahona",
       "name": "MangaHoNa",
-      "status": "manual_port_required",
-      "ruleIds": []
-    },
-    {
-      "packageName": "eu.kanade.tachiyomi.extension.pt.acervoeremita",
-      "name": "AcervoEremita",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -9915,12 +9933,6 @@
       "ruleIds": []
     },
     {
-      "packageName": "eu.kanade.tachiyomi.extension.tr.norascans",
-      "name": "Nora Scans",
-      "status": "manual_port_required",
-      "ruleIds": []
-    },
-    {
       "packageName": "eu.kanade.tachiyomi.extension.tr.oblivionscans",
       "name": "Oblivion Scans",
       "status": "manual_port_required",
@@ -11207,6 +11219,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.zh.picacomic",
       "name": "Picacomic",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.zh.qimanwu",
+      "name": "Qimanwu",
       "status": "manual_port_required",
       "ruleIds": []
     },
