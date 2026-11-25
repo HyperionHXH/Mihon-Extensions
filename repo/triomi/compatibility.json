@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1886,
+    "androidPackages": 1887,
     "ported": 18,
-    "manualPortRequired": 1868,
+    "manualPortRequired": 1869,
     "trackedRules": 22
   },
   "extensions": [
@@ -10319,6 +10319,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.vi.hangtruyenonline",
       "name": "HangTruyenOnline",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.vi.hentaibox",
+      "name": "HentaiBox",
       "status": "manual_port_required",
       "ruleIds": []
     },
