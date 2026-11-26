@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1887,
+    "androidPackages": 1888,
     "ported": 18,
-    "manualPortRequired": 1869,
+    "manualPortRequired": 1870,
     "trackedRules": 22
   },
   "extensions": [
@@ -2141,6 +2141,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.divascans",
       "name": "Diva Scans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.dorotoons",
+      "name": "Doro Toons",
       "status": "manual_port_required",
       "ruleIds": []
     },

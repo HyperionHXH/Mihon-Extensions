@@ -1,12 +1,12 @@
 {
-  "fetched": 1727,
-  "included": 1887,
+  "fetched": 1728,
+  "included": 1888,
   "repositories": [
     {
       "name": "Keiyoushi",
       "indexUrl": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
-      "fetched": 1707,
-      "included": 1706
+      "fetched": 1708,
+      "included": 1707
     },
     {
       "name": "Fucked by FAKKU",
@@ -83,7 +83,7 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.tachidesk",
       "repository": "Tachiyomi archive",
-      "reason": "duplicate package; kept Suwayomi 1.4.29"
+      "reason": "duplicate package; kept Suwayomi 1.4.30"
     }
   ],
   "repositoriesExcluded": [
