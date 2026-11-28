@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "notice": "Explicit authored-rule mappings only; ported does not imply feature parity, live-site verification, or APK conversion.",
   "counts": {
-    "androidPackages": 1888,
+    "androidPackages": 1905,
     "ported": 18,
-    "manualPortRequired": 1870,
+    "manualPortRequired": 1887,
     "trackedRules": 22
   },
   "extensions": [
@@ -291,6 +291,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.all.gaoqingpao",
+      "name": "Gaoqingpao",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.all.globalcomix",
       "name": "GlobalComix",
       "status": "manual_port_required",
@@ -569,6 +575,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.all.lemoon",
       "name": "Lemoon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.all.lezhin",
+      "name": "Lezhin",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -1953,6 +1965,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.clanmanhwa",
+      "name": "ClanManhwa",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.clonemanga",
       "name": "Clone Manga",
       "status": "manual_port_required",
@@ -2457,6 +2475,18 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.harimangacouk",
+      "name": "HariManga.co.uk",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.harimangauscom",
+      "name": "HariManga.us.com",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.hdporncomics",
       "name": "HD Porn Comics",
       "status": "manual_port_required",
@@ -2885,6 +2915,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.ksgroupscans",
       "name": "KSGroupScans",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.kunmangacouk",
+      "name": "KunManga.co.uk",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -3563,6 +3599,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.manhwabuddy",
       "name": "ManhwaBuddy",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.manhwaclan",
+      "name": "ManhwaFan",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -4683,6 +4725,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.en.toptoon",
+      "name": "Toptoon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.en.towerofgodmangaonline",
       "name": "Tower Of God Manga Online",
       "status": "manual_port_required",
@@ -4931,6 +4979,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.en.zinmanga",
       "name": "Zinmanga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.en.zinmangaart",
+      "name": "ZinManga.art",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -6621,6 +6675,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.id.lightsaberscanlation",
+      "name": "Lightsaber Scanlation",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.id.lumoskomik",
       "name": "LumosKomik",
       "status": "manual_port_required",
@@ -7461,6 +7521,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.klmanga",
+      "name": "Klmanga",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ja.klraw",
       "name": "KL Raw",
       "status": "manual_port_required",
@@ -7487,6 +7553,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ja.kuragebunch",
       "name": "Kurage Bunch",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.lezhincomics",
+      "name": "Lezhin Comics",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7815,6 +7887,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.rawfree",
+      "name": "Rawfree",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ja.rawinu",
       "name": "RawINU",
       "status": "manual_port_required",
@@ -7823,6 +7901,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ja.rawkuma",
       "name": "Rawkuma",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.rawlazy",
+      "name": "RawLazy",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -7893,6 +7977,12 @@
       "ruleIds": []
     },
     {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.spoilerplus",
+      "name": "SpoilerPlus",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
       "packageName": "eu.kanade.tachiyomi.extension.ja.sugocomics",
       "name": "Sugo Comics",
       "status": "manual_port_required",
@@ -7901,6 +7991,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ja.sundaywebevery",
       "name": "Sunday Web Every",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ja.syosetuunoriginal",
+      "name": "Syosetu (Unoriginal)",
       "status": "manual_port_required",
       "ruleIds": []
     },
@@ -8015,6 +8111,12 @@
     {
       "packageName": "eu.kanade.tachiyomi.extension.ko.jjaptoon",
       "name": "Jjaptoon",
+      "status": "manual_port_required",
+      "ruleIds": []
+    },
+    {
+      "packageName": "eu.kanade.tachiyomi.extension.ko.lezhincomics",
+      "name": "Lezhin Comics",
       "status": "manual_port_required",
       "ruleIds": []
     },
